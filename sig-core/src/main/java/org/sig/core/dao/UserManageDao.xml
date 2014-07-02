@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.sig.core.dao.UserManageDao">
+	<!--<cache type="com.sogou.crm.common.mybatis.RedisCache"/>-->
+	
+	<!-- 新添加用户 -->
+	<insert id="addNewUser" parameterType="org.sig.core.bo.User" >
+            insert into s_user  set user_name='${userName}', email='${email}', password='${password}', create_time = '${createTime}'
+	</insert>
+	
+     <select id="getPassword" parameterType="String" resultType="org.sig.core.bo.User">
+     	  select su.user_name userName, su.user_id userId, su.email email, su.is_enabled  enabled, 
+     	             su.role_id roleId, su.password password 
+     	  from s_user su 
+     	  where su.email = #{email}
+     </select>
+</mapper>
+

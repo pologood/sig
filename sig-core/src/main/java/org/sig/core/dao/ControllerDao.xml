@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.sig.core.dao.ControllerDao">
+	<!--<cache type="com.sogou.crm.common.mybatis.RedisCache"/>-->
+	
+	<!-- 获取来源网站 -->
+	<select id="getSrcWebsite" resultType="org.sig.core.bo.SrcWebsite">
+            select website_id websiteId, website_name websiteName from s_ref_website 
+	</select>
+	
+	 <select  id="getPostClass" resultType="org.sig.core.bo.PostClass" >
+		   select class_id classID, class_name className from s_post_class
+	</select>
+
+	
+</mapper>
+
