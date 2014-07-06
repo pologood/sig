@@ -11,7 +11,7 @@ import lombok.Setter;
  *
  **/
 public class Const {
-	       
+	          
 	
 	public static final int SRC_POST = 1; //引用帖子
 	
