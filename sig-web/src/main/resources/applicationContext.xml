@@ -9,6 +9,7 @@
 		<property name="locations">
 			<list>
 				<value>classpath:jdbc.properties</value>
+				<value>classpath:mongodb.properties</value>
 			</list>
 		</property>
 		</bean>
@@ -57,6 +58,22 @@
 		<property name="basePackage" value="org.sig.core.dao" />
 	</bean>
 
+	<bean id="mongoOptions" class="com.mongodb.MongoOptions">
+	</bean>
+	
+	<bean id="mongodbTemplate" class="org.atlantis.core.dao.impl.base.MongodbTemplate">
+     	<property name="mongoOptions" ref="mongoOptions" />
+     	<property name="servers" >
+             	<value>${mongodb.servers}</value>
+     	</property>
+     	<property name="user" >
+     	       <value>${mongo.username}</value>
+     	</property>
+     	<property name="password" >
+     	       <value>${mongo.password}</value>
+     	</property>
+	</bean>
 	<context:component-scan base-package="org.sig" />
+	<context:component-scan base-package="org.atlantis" />
 	
 </beans>
