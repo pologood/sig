@@ -1,6 +1,10 @@
 package org.atlantis.core.dao.impl;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import org.atlantis.core.dao.GraphDao;
+import org.atlantis.core.dao.impl.base.MongodbTemplate;
 
 import com.mongodb.BasicDBList;
 import com.mongodb.DBObject;
@@ -15,6 +19,8 @@ import com.mongodb.DBObject;
  */
 public class GraphDaoImpl implements GraphDao {
 
+	@Getter @Setter private MongodbTemplate mongodbTemplate;
+	
 	@Override
 	public BasicDBList queryGraphsByItemTitle(DBObject query) {
 		// TODO Auto-generated method stub
