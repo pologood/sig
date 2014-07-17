@@ -1,6 +1,6 @@
 package org.sig.web.action;
 
-import org.sig.core.service.TestService;
+import org.atlantis.core.service.impl.TestServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -16,7 +16,7 @@ import org.springframework.stereotype.Component;
 public class TestAction {
 	
 	@Autowired
-	private TestService service;
+	private TestServiceImpl service;
 	
 	public String sayHello(){
 		return service.sayHello();

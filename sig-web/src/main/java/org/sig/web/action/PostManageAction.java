@@ -5,7 +5,7 @@ import java.util.List;
 import org.sig.common.DwrResult;
 import org.sig.core.bo.Post;
 import org.sig.core.bo.PostClass;
-import org.sig.core.service.PostManageService;
+import org.sig.core.service.impl.PostManageService;
 import org.sig.web.Form.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

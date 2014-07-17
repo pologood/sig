@@ -38,7 +38,7 @@ public class TestDaoImpl implements TestDao {
 		query.put("test", words);
 		
 		DBObject obj = collection.findOne(query);
-		return (String)obj.get("test");
+		return (String)obj.get("test") + "  mongodb";
 	}
 
 }

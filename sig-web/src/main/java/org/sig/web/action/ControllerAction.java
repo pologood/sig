@@ -8,7 +8,7 @@ import java.util.Map;
 
 import org.sig.core.bo.PostClass;
 import org.sig.core.bo.SrcWebsite;
-import org.sig.core.service.ControllerService;
+import org.sig.core.service.impl.ControllerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
