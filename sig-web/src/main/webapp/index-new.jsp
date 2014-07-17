@@ -17,5 +17,8 @@
 	<div id="Foot"></div>
 	<div id="MessageBox" style="display:none"></div>
 	<div id="Mask" style="display:none"></div>
+	
+	<script src="assets/js/lib.js"></script>
+     <script src="assets/js/all.js"></script>
 </body>
 </html>

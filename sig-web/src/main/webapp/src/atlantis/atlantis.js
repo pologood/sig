@@ -17,7 +17,7 @@ Atlantis.Widgets.Panel = {}; //抽屉实例
 
 Atlantis.init = function() {
     //加载模版
-    $.Mustache.load('assets/atlantis/tpl/main.html').done(function() {
+    $.Mustache.load('assets/tpl/main.html').done(function() {
         //实例化Router
         Atlantis.router = new Atlantis.Router();
         //开始监听hash

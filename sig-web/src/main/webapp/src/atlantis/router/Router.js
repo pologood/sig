@@ -1,10 +1,10 @@
 /*
- * Agent Router
+ * Atlantis Router
  * @author : liangxiao
  * @date   : 2012
  */
 
-Agent.Router = Backbone.Router.extend({
+Atlantis.Router = Backbone.Router.extend({
     routes: {
         //管理首页
         '': 'index',
@@ -72,15 +72,15 @@ Agent.Router = Backbone.Router.extend({
      */
     initialize: function() {
         //创建Head
-        Agent.Widgets.Head = new Agent.Views.Head();
+        Atlantis.Widgets.Head = new Atlantis.Views.Head();
         //创建TopNav
-        Agent.Widgets.TopNav = new Agent.Views.TopNav();
+        Atlantis.Widgets.TopNav = new Atlantis.Views.TopNav();
         //创建TabNav
-        Agent.Widgets.TabNav = new Agent.Views.TabNav();
+        Atlantis.Widgets.TabNav = new Atlantis.Views.TabNav();
         //创建Foot
-        Agent.Widgets.Foot = new Agent.Views.Foot();
+        Atlantis.Widgets.Foot = new Atlantis.Views.Foot();
         //创建MessageBox
-        Agent.Widgets.MessageBox = new Agent.Views.MessageBox();
+        Atlantis.Widgets.MessageBox = new Atlantis.Views.MessageBox();
     },
     
     /*
@@ -91,23 +91,23 @@ Agent.Router = Backbone.Router.extend({
      */
     startRout: function(title, name, query) {
         //销毁当前View
-        var view = Agent.Page.cur;
+        var view = Atlantis.Page.cur;
         view && view.destroy && view.destroy();
         
         //隐藏提示
-        Agent.Widgets.MessageBox.hide();
-        Agent.Widgets.MessageBox.hideMask();
+        Atlantis.Widgets.MessageBox.hide();
+        Atlantis.Widgets.MessageBox.hideMask();
         
         //设置标题
         document.title = title;
         
         //创建新View
-        Agent.Page.cur = new Agent.Views[name]({
-            model: Agent.Cache[name] || (Agent.Cache[name] = new Agent.Models[name]())
+        Atlantis.Page.cur = new Atlantis.Views[name]({
+            model: Atlantis.Cache[name] || (Atlantis.Cache[name] = new Atlantis.Models[name]())
         });
         
         //渲染
-        Agent.Page.cur.render(typeof query == 'undefined' ? '' : query);
+        Atlantis.Page.cur.render(typeof query == 'undefined' ? '' : query);
     },
     
     /*
@@ -135,8 +135,8 @@ Agent.Router = Backbone.Router.extend({
     },
     
     custAdmin: function() {
-        var hash = this.getFirstHash(Agent.TreeNav.Cust);
-        Agent.router.navigate(hash, {trigger: true});
+        var hash = this.getFirstHash(Atlantis.TreeNav.Cust);
+        Atlantis.router.navigate(hash, {trigger: true});
     },
     
     accountCenter: function(query) {
