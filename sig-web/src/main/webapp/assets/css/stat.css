@@ -1,0 +1,79 @@
+/*
+ * 统计信息
+ * @author : liangxiao
+ * @date   : 2013
+ */
+
+/*报告切换*/
+.report-switch{padding:10px 0 10px 20px; border-bottom:1px #a8bfd1 solid; color:#333}
+.report-switch div{height:30px; line-height:30px}
+.report-switch div input{vertical-align:middle}
+.report-switch div label{margin-right:10px}
+
+/*查询区域*/
+.query-form{padding-top:10px; color:#333}
+.query-form .block{height:30px; line-height:30px; padding-left:20px; overflow:hidden}
+.query-form .block strong{float:left}
+.query-form .block span{float:left}
+.query-form .block span.song{font-family:"宋体"; margin-right:5px}
+.query-form .block .time{float:left}
+.query-form .block .time span{margin-right:20px}
+.query-form .block .time span strong{float:none}
+.query-form .block .time span.toggle-date{width:167px; height:21px; margin:4px 0 0 0; cursor:pointer; background:url(img/btn.png) 0 -123px}
+.query-form .block .time span.toggle-date-show{background:url(img/btn.png) 0 -144px}
+
+/*增存量界定日期*/
+.query-form .duration-cal{height:45px; line-height:45px; border:1px #d7e5f6 solid; border-left:0; border-right:0; background:#f0f5fb}
+.query-form .duration-cal span{float:left; margin-right:10px}
+.query-form #DurationCal1{padding-left:78px}
+.query-form #DurationCal2{padding-left:114px}
+
+/*Tab*/
+.query-form .tab{padding-left:20px; height:27px; margin:10px 0; background:url(img/bg.png) 0 -201px}
+.query-form .tab a{width:90px; height:27px; line-height:27px; float:left; text-align:center; text-decoration:none; color:#000; background:url(img/btn.png) -90px -165px; margin-right:3px}
+.query-form .tab a.active{color:#3b6bad; background:url(img/btn.png) 0 -165px; font-weight:bold}
+.query-form .tab a.wide{width:110px; background:url(img/btn.png) 0 -306px}
+.query-form .tab a.wide-active{width:110px; color:#3b6bad; background:url(img/btn.png) 0 -279px; font-weight:bold}
+
+/*覆盖控件*/
+.query-form .ui-text{float:left; margin:4px 10px 0 0}
+.query-form .ui-button{float:left; margin:4px 10px 0 0}
+.query-form .ui-select{float:left; margin:4px 10px 0 0}
+.query-form .ui-checkbox{float:left; margin-top:8px; margin-top:5px \9/*for ie*/}
+.query-form .ui-checkbox-label{float:left; margin:0 15px 0 0}
+.query-form .ui-cal{float:left; margin:4px 20px 0 0}
+.query-form .duration-cal .ui-cal{float:left; margin:12px 20px 0 0}
+.query-form .ui-multiselect{margin-top:4px}
+.query-form button{padding:0; height:22px; line-height:22px}
+
+/*高级查询*/
+.ad-query{display:block; width:94px; height:21px; margin:7px 0 0 20px; background:url(img/btn.png) -89px -81px; text-decoration:none}
+.ad-query-show{background:url(img/btn.png) -89px -102px}
+.ad-block{margin-top:10px; padding:5px; border:1px #d7e5f6 solid; border-left:0; border-right:0; background:#f0f5fb}
+.ad-block .block{height:36px; line-height:36px; padding-left:20px; overflow:hidden}
+.ad-block .block span{float:left}
+.ad-block .ui-select{font-family:"宋体"; float:left; margin:7px 8px 0 0}
+.ad-block .ui-text{float:left; margin:7px 20px 0 0}
+.ad-block .ui-mcal{margin:7px 8px 0 0}
+.ad-block button{float:left; margin:7px 8px 0 0; padding:0; height:22px; line-height:22px}
+.ad-block .ui-multiselect{margin-top:7px}
+
+/*查询结果*/
+.result{margin-top:20px}
+.info{height:45px; line-height:45px; padding:0 20px; font-size:14px; color:#666; text-align:center}
+.topbar{height:30px; overflow:hidden; padding:0 25px 5px 20px}
+.topbar .title{float:left; height:30px; line-height:30px; font-size:14px; font-weight:bold; color:#333}
+.topbar .duration{float:left; height:30px; line-height:30px; font-size:14px; color:#666; margin-left:10px}
+.topbar .download{float:right; width:89px; height:29px; margin-left:10px; background:url(img/btn.png) 0 -35px; text-decoration:none}
+.topbar .download:hover{background:url(img/btn.png) 0 -64px}
+.topbar .download:active{background:url(img/btn.png) 0 -93px}
+.topbar .download-btn{float:right; width:116px; height:29px; line-height:29px; padding-left:26px; margin-left:10px; background:url(img/btn.png) 0 -192px; text-decoration:none; font-weight:bold; color:#2b5f8f}
+.topbar .download-btn:hover{background:url(img/btn.png) 0 -221px}
+.topbar .download-btn:active{background:url(img/btn.png) 0 -250px}
+
+/*每日消耗*/
+span.perday{float:left; width:16px; height:16px; background:url(img/btn.png) -165px -42px; vertical-align:middle; margin-left:20px; cursor:pointer}
+
+/*图表*/
+#ChartTitle{margin:20px 0 0 0}
+#ChartTitle a{color:#06c}

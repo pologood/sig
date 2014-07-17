@@ -1,0 +1,74 @@
+/*
+ * 通用样式
+ * @author : liangxiao
+ * @date   : 2012
+ */
+
+body{margin:0; font-size:12px; font-family:Arial; background:#fff; height:100%; cursor:default}
+input{font-family:Arial}
+img{border:0}
+
+/*头部*/
+#Head{height:67px; overflow:hidden}
+#Head .logo{float:left; width:390px; height:67px; background:url(img/logo.png); cursor:default; text-decoration:none}
+#Head .username{float:right; width:380px; height:22px; padding:45px 20px 0 0; text-align:right; color:#666}
+#Head .username a{color:#06c; text-decoration:none}
+#Head .username a:hover{text-decoration:underline}
+
+/*导航*/
+#Nav{height:35px; padding-left:20px; overflow:hidden; background:url(img/bg.png?v=3)}
+#Nav a{float:left; width:90px; height:35px; line-height:39px; background:url(img/bg.png) 0 -35px; text-align:center; font-size:14px; color:#fff; font-weight:bold; text-decoration:none}
+#Nav a:hover{background:url(img/bg.png) 0 -70px}
+#Nav a.active{color:#036; line-height:35px; background:url(img/btn.png?v=3)}
+
+/*页面框架*/
+#Main{background:#e8f0fa}
+#Main #Left{float:left; padding-bottom:10px; border-top:1px #fff solid; position:relative}
+#Main #Right{background-color:#fff; background-repeat:repeat-y; padding-bottom:30px}
+#Main .left-show{width:190px}
+#Main .left-hide{width:20px}
+#Main .no-left{display:none}
+#Main .right-normal{margin-left:190px; background-image:url(img/split.png); padding-left:5px}
+#Main .right-expand{margin-left:20px}
+#Main .right-max{margin-left:0; background-image:none; padding-left:0}
+
+/*底部*/
+#Foot{height:80px; padding-top:20px; line-height:25px; text-align:center; color:#333; border-top:1px #a7bfd1 solid}
+#Foot a{color:#333; text-decoration:none}
+#Foot a:hover{text-decoration:underline}
+
+/*页面尺寸*/
+#Head, #Main, #Foot{min-width:1150px}
+#Nav{min-width:1130px}
+#Right{min-height:520px}
+
+/*伸缩按钮*/
+#Left #Slider{width:9px; height:42px; cursor:pointer; position:absolute; top:260px; right:0}
+#Left .slide-left{background:url(img/btn.png) -165px 0}
+#Left .slide-right{background:url(img/btn.png) -174px 0}
+
+/*提示信息*/
+#MessageBox{z-index:101; position:fixed; top:20px; left:50%; margin-left:-90px; padding:0 10px; height:30px; line-height:30px; border:1px #f0c36d solid; background:#f9edbe; border-radius:3px; box-shadow:2px 2px 3px #ccc; text-align:center}
+#Mask{z-index:100; position:absolute; top:0; left:0; width:100%; height:100%; background:#000; filter:alpha(opacity=20); -moz-opacity:0.2; opacity:0.2}
+
+/*查询按钮*/
+.query{display:block; width:75px; height:27px; margin:10px 0 0 20px; background:url(img/btn.png) -90px 0; text-decoration:none}
+.query:hover{background:url(img/btn.png) -90px -27px}
+.query:active{background:url(img/btn.png) -90px -54px}
+
+/*小问号*/
+span.help{width:16px; height:16px; background:url(img/help.png); display:inline-block; vertical-align:middle; margin-left:3px}
+
+/*控制折行*/
+div.ellipsis{float:left; text-overflow:ellipsis; overflow:hidden; white-space:nowrap}
+div.break{word-break:break-all; word-wrap:break-word; white-space:normal; line-height:18px}
+
+/*按钮*/
+a.add{color:#06c; background:url(img/icon-add.png) left center no-repeat; padding-left:15px; text-decoration:none}
+a.del{color:#06c; background:url(img/icon-del.png) left center no-repeat; padding-left:15px; text-decoration:none}
+a.add:hover, a.del:hover{text-decoration:underline}
+
+/*搜狗兼容提示*/
+.se-tip{margin:0; padding-left:30px; height:40px; line-height:40px; border-bottom:1px #c1c1c1 solid; background:url(img/se-tip-bg.png)}
+.se-tip span{float:left}
+.se-tip span.se-close{width:80px; height:24px; margin-top:8px; background:url(img/btn.png) -94px -531px; cursor:pointer}

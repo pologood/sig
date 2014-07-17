@@ -1,0 +1,184 @@
+/*
+ * 控件样式
+ * @author : liangxiao
+ * @date   : 2013
+ */
+
+/*分时问候语*/
+#Greeting{float:left; margin-top:20px; padding:2px 5px 2px 30px; height:24px; line-height:24px; color:#666; border:1px #c9c9c9 solid; border-radius:3px; box-shadow:2px 2px 3px #eee}
+.g1{background:url(img/greeting1.gif) 3px 2px no-repeat, url(img/greeting-bg.png)}
+.g2{background:url(img/greeting2.gif) 3px 2px no-repeat, url(img/greeting-bg.png)}
+.g3{background:url(img/greeting3.gif) 3px 2px no-repeat, url(img/greeting-bg.png)}
+.g4{background:url(img/greeting4.gif) 3px 2px no-repeat, url(img/greeting-bg.png)}
+.g5{background:url(img/greeting5.gif) 3px 2px no-repeat, url(img/greeting-bg.png)}
+.g6{background:url(img/greeting6.gif) 3px 2px no-repeat, url(img/greeting-bg.png)}
+.g7{background:url(img/greeting7.gif) 3px 2px no-repeat, url(img/greeting-bg.png)}
+.g8{background:url(img/greeting8.gif) 3px 2px no-repeat, url(img/greeting-bg.png)}
+
+/*Outlook菜单*/
+#Left div.tab{height:33px; line-height:33px; padding-left:12px; border-bottom:1px #adbfd5 solid; background:url(img/bg.png) 0 -105px; color:#396aad; font-size:15px; font-weight:bold}
+#Left div.active{border-bottom:1px #cbcbb3 solid; background:url(img/bg.png) 0 -138px}
+#Left div.tab a,
+#Left div.tab span{display:block; padding-left:20px; background-position:left center; background-repeat:no-repeat}
+#Left div.tab a{color:#396aad; text-decoration:none}
+#Left div.active a{color:#000}
+#Left div.tab a.task, #Left div.tab span.task{background-image:url(img/menu-icon1.png)}
+#Left div.tab a.pay, #Left div.tab span.pay{background-image:url(img/menu-icon2.png)}
+#Left div.tab a.ka, #Left div.tab span.ka{background-image:url(img/menu-icon3.png)}
+#Left div.tab span.mc{background-image:url(img/menu-icon5.png)}
+#Left div.hr{height:3px; border-top:1px #b8c6e9 solid; border-bottom:1px #b8c6e9 solid; background:#cfdef1; font-size:0}
+
+/*树形菜单*/
+#TreeNav{height:420px; overflow-x:hidden; overflow-y:auto}
+#TreeNav a{display:block; width:155px; height:30px; line-height:30px; padding-left:35px; text-decoration:none}
+#TreeNav a.node{font-size:14px; font-weight:bold; color:#3a6aad; background:url(img/minus.png) 20px center no-repeat}
+#TreeNav a.fold{background:url(img/plus.png) 20px center no-repeat}
+#TreeNav a.leaf, #TreeNav a.external{color:#333}
+#TreeNav a.active{font-weight:bold; color:#fff; background:url(img/bg.png) 0 -171px}
+#TreeNav a.leaf:hover, #TreeNav a.external:hover{background:#c7dbf6}
+#TreeNav a.active:hover{background:url(img/bg.png) 0 -171px}
+
+/*页码*/
+.page{height:45px; line-height:45px; padding:0 25px 0 10px; color:#333}
+.page-size{float:left}
+.page-size span{float:left}
+.page-size .ui-select{float:left; margin:12px 5px 0 5px}
+.row-count{margin-left:20px}
+.page-no{float:right; padding-top:15px}
+
+/*表格*/
+.grid{overflow-x:auto; overflow-y:hidden; *overflow-y:auto; _overflow-y:auto}
+.grid table{width:100%; border:0; border-collapse:collapse; color:#252525}
+.grid th{height:18px; line-height:18px; padding:4px 8px; background:#e5e5e5 url(img/th-bg.png) right top repeat-y; border:1px #d1d1d1 solid; white-space:nowrap}
+.grid td{border:1px #e6e6e6 solid; padding:4px 8px; text-align:right; white-space:nowrap}
+.grid td.text{text-align:left}
+.grid td.c{text-align:center}
+.grid tr th:first-child, .grid tr td:first-child{border-left:0}
+.grid tr:hover{background:#f6f9ff}
+.grid tr.sum{background:#fefbe7}
+.grid a{color:#06c; text-decoration:underline}
+.noti-grid a{color:#252525; text-decoration:none}
+.noti-grid a.top{color:#06c; text-decoration:none}
+
+/*排序表头*/
+.grid th.sortable{cursor:pointer}
+.grid th.sortable:hover{background:#fff}
+.grid th.sortable .sort{width:7px; height:10px; background:url(img/sort.png) 0 -20px; display:inline-block; vertical-align:middle; margin-left:3px}
+.grid th.des,
+.grid th.asc,
+.grid th.des:hover,
+.grid th.asc:hover{background:url(img/th-sortable-high.png)}
+.grid th.des .sort{background:url(img/sort.png)}
+.grid th.asc .sort{background:url(img/sort.png) 0 -10px}
+
+/*覆盖esui*/
+.ui-select{border-color:#a7bfd1; font-family:Arial}
+.ui-select-layer{border-color:#a7bfd1; z-index:103; font-family:"宋体"; max-height:144px}
+.ui-select-item-hover{background:#eef6fc}
+.ui-select-item-selected{background:#cee1ef}
+.ui-text{font-size:12px; border-color:#a7bfd1; vertical-align:middle}
+.ui-text-hover{border-color:#6291b3}
+.ui-textarea{font-family:Arial; font-size:12px; border-color:#a7bfd1}
+.ui-textarea-hover{border-color:#6291b3}
+.ui-cal{float:left; border-color:#a7bfd1}
+.ui-cal-hover{border-color:#6291b3}
+.ui-cal-layer-head{background:#b8d0ee; border:1px #a7bfd1 solid; border-bottom:0}
+.ui-month{border-color:#a7bfd1}
+.ui-month-title{background:#e8f0fa}
+.ui-cal-text{font-weight:bold}
+.ui-mcal{height:20px; line-height:20px; float:left; margin:4px 20px 0 0; width:255px}
+.ui-mcal-arrow{margin:8px 5px 0 0}
+.ui-mcal-layer{z-index:11; border-top:2px #a8bfd1 solid}
+.ui-mcal-text{width:160px}
+.ui-mcal-side-func{background:#b8d0ee; border:1px #a7bfd1 solid; border-bottom:0}
+.ui-mcal-layer .ui-month{border-color:#a7bfd1}
+.ui-pager ul{border-color:#a7bfd1}
+.ui-pager li{color:#3a6aad}
+.ui-pager .ui-pager-hover, .ui-pager .ui-pager-press, .ui-pager .ui-pager-active {background:#cee1ef}
+.ui-dialog{border:1px #315a97 solid; border-radius:10px}
+.ui-dialog-head{background:#315a97 url(img/confirm-title.png); border-top-left-radius:10px; border-top-right-radius:10px}
+.ui-dialog-body{overflow:hidden; padding:20px}
+.ui-dialog-icon{display:block; float:left; width:44px; height:44px}
+.ui-dialog-icon-warning{background:url(img/confirm.png)}
+.ui-dialog-text{float:left; padding-left:10px; height:44px; line-height:22px}
+.ui-dialog-foot{padding:15px 15px 15px 0; margin:0; border-top:1px #d2d2d2 solid; text-align:right}
+.ui-mask{z-index:104}
+
+/*覆盖行业选择*/
+.ui-state-default{font-weight:normal}
+.ui-multiselect-checkboxes li.ui-treeselect-optgroup-label {text-align:left; font-weight:normal; border-bottom:none}
+.ui-multiselect-checkboxes li.ui-treeselect-optgroup-label a {display:block; padding:0px; margin:1px 0; text-decoration:none}
+.ui-multiselect-checkboxes li.ui-treeselect-opt-label {text-align:left; font-weight:normal; border-bottom:none}
+.ui-multiselect-checkboxes li.ui-treeselect-opt-label label {display:block; padding:0px 0px 0px 20px; margin:1px 0; text-decoration:none}
+
+/*滑动面板-Base*/
+.slide-panel-mask{z-index:102; position:absolute; top:0; left:0; width:100%; height:100%; background:#000; filter:alpha(opacity=20); -moz-opacity:0.2; opacity:0.2}
+.slide-panel{position:absolute; top:0; left:100%; z-index:102; width:100%; height:100%}
+.slide-panel-show{left:0}
+.slide-panel .mask{float:left; width:310px; height:100%}
+.slide-panel .mask-level2{width:466px}
+.slide-panel .body{position:relative; overflow:auto; height:100%; background:#fff; border-left:1px #888 solid; -webkit-box-shadow:-3px 0 8px #888; box-shadow:-3px 0 8px #888}
+.slide-panel h1{margin:0; padding:30px 0 0 60px; height:40px; line-height:40px; font-size:14px; color:#383838; border-bottom:1px #a7bfd1 solid}
+.slide-panel h1 span{float:left}
+.slide-panel h1 span.name{font-weight:normal}
+.slide-panel h1 span.error{margin:8px 0 0 20px; padding:0 10px; height:22px; line-height:22px; font-size:12px; font-weight:normal; border:1px #f0c36d solid; background:#f9edbe; border-radius:3px; box-shadow:2px 2px 3px #ccc; text-align:center}
+.slide-panel h1 a.help{float:left; font-size:12px; font-weight:normal; color:#06c; text-decoration:none; padding-left:20px; margin-left:15px; background:url(img/help.png) left center no-repeat}
+.slide-panel h1 a.help:hover{color:#1380ec}
+.slide-panel .content{padding:25px 0; color:#383838}
+.slide-panel .bottom{padding:0 0 60px 60px; height:27px}
+.slide-panel .bottom a{float:left; margin-right:10px; height:27px; text-decoration:none; background-image:url(img/panel.png)}
+.slide-panel .bottom a.save{width:110px; background-position:0 0}
+.slide-panel .bottom a.cancel{width:75px; background-position:-24px -27px}
+.slide-panel .bottom a.hide{width:75px; background-position:-24px -54px}
+.slide-panel a.close{position:absolute; left:0; top:50%; margin-top:-49px; display:block; width:24px; height:98px; background:url(img/panel.png) 0 -27px; text-decoration:none}
+.slide-panel p.tips{padding-left:60px; margin:0 0 10px 0}
+.slide-panel p.tips span{display:inline-block; height:22px; line-height:22px; padding:0 5px; border:1px #e0dfab solid; background:#fefed8}
+.slide-panel .row{height:36px; line-height:36px; padding-left:60px; overflow:hidden}
+.slide-panel .row label{float:left; width:95px; font-weight:bold}
+.slide-panel .row label span{color:#cb0000; font-family:"宋体"; font-weight:normal; margin-right:5px}
+.slide-panel .row .ui-text,
+.slide-panel .row .ui-textarea{float:left; margin-top:7px}
+.slide-panel .row .ui-radiobox,
+.slide-panel .row .ui-checkbox{float:left; margin-top:11px; margin-top:8px \9}
+.slide-panel .row .ui-radiobox-label,
+.slide-panel .row .ui-checkbox-label{font-weight:normal; width:auto; margin-right:10px}
+.slide-panel .row span{float:left}
+.slide-panel .row span.tips{color:#9d9d9d; margin-left:10px}
+.slide-panel .row span.error{margin-top:7px; padding:0 10px; height:22px; line-height:22px; border:1px #f0c36d solid; background:#f9edbe; border-radius:3px; box-shadow:2px 2px 3px #ccc}
+.slide-panel .row a.add{float:left}
+.slide-panel .tree-wrap{margin-left:60px; padding-left:5px; border:1px #a8adb6 solid; width:290px; height:400px; overflow:auto}
+
+/*对话框*/
+.slide-dialog{position:absolute; width:300px; border:1px #8b93a6 solid; background:#fff; box-shadow:5px 5px 10px #ccc}
+.slide-dialog h3{margin:0; height:30px; line-height:30px; padding-left:16px; font-size:12px; background:url(img/bg.png) 0 -299px}
+.slide-dialog .content{padding:10px 16px}
+.slide-dialog .content .block{height:30px; line-height:30px; overflow:hidden}
+.slide-dialog .content span{float:left; height:30px; line-height:30px}
+.slide-dialog .content .ui-select{float:left; margin:4px 0 0 10px}
+.slide-dialog .content .bottom{height:21px; margin-top:10px; padding-top:10px; border-top:1px #bcbcbc dashed}
+.slide-dialog .content .bottom a{float:right; width:50px; height:21px; margin-left:10px; text-decoration:none}
+.slide-dialog .content .bottom a.ok{background:url(img/btn.png) -94px -441px}
+.slide-dialog .content .bottom a.cancel{background:url(img/btn.png) -94px -462px}
+
+/*信息列选择器*/
+.cs-trigger{position:absolute; top:0; left:0; display:block; width:94px; height:21px; background-image:url(img/btn.png); background-position:0 -531px; text-decoration:none}
+.cs-trigger-down{background-position:0 -552px}
+.cs-panel p{margin:0 0 5px 0; height:15px; line-height:15px; text-align:right; color:#666}
+.cs-panel{position:absolute; z-index:11; top:24px; left:0; width:235px; _width:240px; *width:240px; padding:10px; border:1px #8b93a6 solid; background:#fff; box-shadow:5px 5px 10px #ccc}
+.cs-panel .item{height:20px; line-height:20px; overflow:hidden}
+.cs-panel .highlight{background:#ecf3fd}
+.cs-panel input{float:left; margin:0 3px 0 0}
+.cs-panel label{float:left; width:95px}
+.cs-panel .btn{height:21px; padding:10px 0 0 0; margin-top:12px; border-top:1px #bcbcbc dashed; text-align:center}
+.cs-panel .btn a{display:inline-block; width:50px; height:21px; text-decoration:none}
+.cs-panel .btn .ok{background:url(img/btn.png) -94px -441px; margin-right:10px}
+.cs-panel .btn .cancel{background:url(img/btn.png) -94px -462px}
+
+/*浮窗*/
+.float-window{width:262px; height:165px; background:url(img/float-window.png);
+position:fixed; right:5px; bottom:5px}
+.float-window .top{height:31px; line-height:31px; padding:0 10px}
+.float-window .title{float:left; color:#fff; font-weight:bold}
+.float-window .close{float:right; margin-top:7px; text-decoration:none; width:31px; height:17px; background:url(img/float-window.png) 0 -165px}
+.float-window .close:hover{background:url(img/float-window.png) -31px -165px}
+.float-window .content{height:100px; padding:17px; line-height:28px}

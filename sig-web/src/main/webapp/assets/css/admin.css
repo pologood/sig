@@ -1,0 +1,58 @@
+/*
+ * 系统管理
+ * @author : liangxiao
+ * @date   : 2013
+ */
+
+/*权限管理*/
+.auth-wrap{overflow:hidden}
+.company-arch{float:left; width:335px; height:100px}
+.company-title{padding-left:25px; height:36px; line-height:36px; background:url(img/bg.png) 0 -262px}
+.company-title span{float:left; font-weight:bold; color:#333}
+.company-op{float:right; width:105px; position:relative}
+.company-op a{float:left; margin-right:12px}
+#DelRolePanel{top:35px; right:12px}
+#DelRolePanel span{font-weight:normal}
+.company-tree{padding-left:20px; height:484px; overflow-x:hidden; overflow-y:auto}
+.company-info,
+.auth-wrap .account-info{min-height:520px; margin-left:335px; border-left:1px #a7c0d1 solid}
+.company-info .tab{height:36px; background:url(img/bg.png) 0 -262px}
+.company-info .tab a{width:120px; height:36px; line-height:36px; float:left; text-align:center; text-decoration:none; font-weight:bold; color:#333; background:url(img/btn.png) 0 -369px}
+.company-info .tab a.active{color:#3b6bad; background:url(img/btn.png) 0 -333px}
+.company-intro{padding:10px 0 0 33px}
+.company-intro p{margin:0; height:35px; line-height:35px; color:#666}
+.company-intro span{display:inline-block; width:70px; color:#000}
+
+/*批量操作*/
+#Batch{position:relative; height:21px; padding:5px 0; margin-left:20px}
+.batch{position:absolute; top:0; left:0; display:block; width:94px; height:21px; background:url(img/btn.png) 0 -441px; text-decoration:none}
+.batch-show{background:url(img/btn.png) 0 -462px}
+#BatchPanel{top:24px; left:0}
+
+/*添加用户*/
+#Superior{height:auto}
+.superior-wrap{float:left; width:515px}
+
+/*账号管理*/
+.account-info a{color:#06c; text-decoration:none}
+.account-info a:hover{text-decoration:underline}
+.account-info h3{margin:0; padding-left:20px; height:36px; line-height:36px; font-size:12px; color:#333; background:url(img/bg.png) 0 -262px}
+.account-info h3 a{font-weight:normal; margin-left:20px}
+.account-info .pay-wrap{margin-top:20px}
+.account-info .pay-wrap h3{border-top:1px #a7c0d1 solid}
+.account-info p{margin:0; padding-left:20px; height:35px; line-height:35px}
+.account-info p.tips span{float:left; width:auto; line-height:30px; padding:0 5px; border:1px #e0dfab solid; background:#fefed8}
+.account-info p span{display:inline-block; width:70px; color:#000}
+.account-info p a{margin-left:20px}
+.account-info .psw{border:1px #d7e5f6 solid; border-left:0; border-right:0; background:#f0f5fb}
+.account-info .psw a{float:left; width:50px; height:21px; margin-top:4px; text-decoration:none}
+.account-info .psw a.ok{background:url(img/btn.png) -94px -441px; margin-left:70px}
+.account-info .psw a.cancel{background:url(img/btn.png) -94px -462px; margin-left:10px}
+.account-info .psw span{float:left}
+.account-info .psw span.error{width:auto; margin:7px 0 0 10px; padding:0 10px; height:20px; line-height:20px; border:1px #f0c36d solid; background:#f9edbe; border-radius:3px; box-shadow:2px 2px 3px #ccc}
+.account-info .psw .ui-text{float:left; margin-top:7px}
+
+/*付款信息*/
+.payee{margin:5px 0; border:1px #d7e5f6 solid; background:#f0f5fb}
+.account-info .payee{padding-left:14px}
+.account-info .payee p{padding-left:5px}

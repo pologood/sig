@@ -1,0 +1,51 @@
+/*
+ * 客户管理
+ * @author : liangxiao
+ * @date   : 2013
+ */
+
+/*提示信息*/
+#Right .alert{height:30px; line-height:30px; padding-left:40px; background:#fdf8d0 url(img/alert.png) 20px 7px no-repeat}
+
+/*操作详情*/
+.grid td.op div{height:18px; line-height:18px; width:225px; text-overflow:ellipsis; overflow:hidden; white-space:nowrap}
+.grid td.op div.h{color:green}
+
+/*账户优化title*/
+.report-switch h3{margin:0; height:30px; line-height:30px; font-size:14px; font-weight:bold; color:#333}
+
+/*优化详情*/
+.bread{height:34px; line-height:34px; padding-left:20px; background:url(img/bg.png) 0 -228px; font-family:"宋体"}
+.bread a{color:#06c}
+.summary{height:30px; line-height:30px; padding-left:20px; border-top:1px #d7e5f6 solid; border-bottom:1px #d7e5f6 solid; background:#f0f5fb}
+.summary strong{float:left}
+.summary .company{max-width:250px; text-overflow:ellipsis; overflow:hidden; white-space:nowrap}
+.summary span{float:left; margin-right:20px}
+.summary a{color:#06c; text-decoration:none}
+.summary img{vertical-align:middle}
+span.opt{display:block; width:35px; height:35px; margin:0 auto; background-image:url(img/opt.png)}
+span.opt-type1{background-position:0 0}
+span.opt-type2{background-position:0 -35px}
+span.opt-type3{background-position:0 -70px}
+span.opt-type4{background-position:0 -105px}
+span.opt-type5{background-position:0 -140px}
+span.opt-type6{background-position:0 -175px}
+span.opt-type7{background-position:0 -210px}
+span.opt-type8{background-position:0 -245px}
+
+/*操作提醒title*/
+.query-form .block h3{margin:0; float:left; height:30px; line-height:30px; font-size:14px; font-weight:bold; color:#333}
+.query-form .block h3 span{float:none}
+
+/*滑动面板-修改匹配方式*/
+.match .content{padding:0; margin-bottom:10px; overflow:hidden; background:url(img/panel-bg.png) #fff repeat-y; border-bottom:1px #a7bfd1 solid}
+.match .plan-list{width:185px; float:left}
+.match .plan-title{height:33px; line-height:33px; padding-left:12px; font-size:14px; border-bottom:1px #adbfd5 solid; background:url(img/bg.png) 0 -105px; color:#396aad; font-size:15px; font-weight:bold}
+.match .plan-title span{display:block; padding-left:20px; background:url(img/menu-icon4.png) left center no-repeat}
+.match .plan-list a{display:block; width:145px; height:30px; line-height:30px; padding:0 5px 0 35px; color:#383838; text-decoration:none; background:url(img/li.png) 27px center no-repeat; text-overflow:ellipsis; overflow:hidden; white-space:nowrap}
+.match .plan-list a:hover{background-color:#cee3fe}
+.match .plan-list a.active{background-color:#c7dbf6; font-weight:bold}
+.match .kw-list{margin-left:185px; border-left:1px #a7bfd1 solid; background:#fff}
+.match .kw-list .topbar{padding:0 0 0 20px; margin:10px 0}
+.match .kw-list .topbar .ui-select, .kw-list .topbar .ui-button{float:left; margin:4px 10px 0 0}
+.match .load-tip{height:30px; line-height:30px; padding-left:35px; color:#383838}
