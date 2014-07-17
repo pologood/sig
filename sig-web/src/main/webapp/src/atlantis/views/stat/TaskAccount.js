@@ -1,10 +1,10 @@
 /*
- * Agent View - TaskAccount
+ * Atlantis View - TaskAccount
  * @author : liangxiao
  * @date   : 2012
  */
 
-Agent.Views.TaskAccount = Backbone.View.extend({
+Atlantis.Views.TaskAccount = Backbone.View.extend({
     el: $("#Right"),
     
     events: {
@@ -21,15 +21,15 @@ Agent.Views.TaskAccount = Backbone.View.extend({
         this.model.unbind();
         this.$el.unbind();
         this.$el.html("");
-        Agent.Widgets.TreeNav.destroy();
+        Atlantis.Widgets.TreeNav.destroy();
     },
     
     renderTopNav: function() {
-        Agent.Widgets.TopNav.render(4);
+        Atlantis.Widgets.TopNav.render(4);
     },
     
     renderTreeNav: function() {
-        Agent.Widgets.TreeNav = new Agent.Views.TreeNav(0, 0, 2);
+        Atlantis.Widgets.TreeNav = new Atlantis.Views.TreeNav(0, 0, 2);
     },
     
     render: function(query) {

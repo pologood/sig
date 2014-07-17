@@ -1,10 +1,10 @@
 /*
- * Agent Model - IncrementSales 
+ * Atlantis Model - IncrementSales 
  * @author : liangxiao
  * @date   : 2012
  */
 
-Agent.Models.IncrementSales = Backbone.Model.extend({
+Atlantis.Models.IncrementSales = Backbone.Model.extend({
     defaults: {
         data: null
     },

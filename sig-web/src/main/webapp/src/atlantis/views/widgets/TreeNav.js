@@ -1,10 +1,10 @@
 /*
- * Agent View - TreeNav
+ * Atlantis View - TreeNav
  * @author : liangxiao
  * @date   : 2012
  */
 
-Agent.Views.TreeNav = Backbone.View.extend({
+Atlantis.Views.TreeNav = Backbone.View.extend({
     el: $("#Left"),
     
     events: {
@@ -16,7 +16,7 @@ Agent.Views.TreeNav = Backbone.View.extend({
     },
     
     initialize: function() {
-        this.$el.html(this.createHTML(Agent.TreeNav.Stat));
+        this.$el.html(this.createHTML(Atlantis.TreeNav.Stat));
         this.setMenu(arguments[0], arguments[1], arguments[2]);
         this.$el.removeClass("left-hide");
         $("#Right").removeClass("right-expand");
@@ -173,7 +173,7 @@ Agent.Views.TreeNav = Backbone.View.extend({
      * 跳转
      */
     jump: function(tabIndex, nodeIndex, leafIndex, tab) {
-        var config = Agent.TreeNav.Stat[tabIndex]["sub"][nodeIndex]["sub"][leafIndex],
+        var config = Atlantis.TreeNav.Stat[tabIndex]["sub"][nodeIndex]["sub"][leafIndex],
             url;
         if (!config.sub) {
             url = config.url;
@@ -190,7 +190,7 @@ Agent.Views.TreeNav = Backbone.View.extend({
         //改变hash
         var hash = url.split("#")[1],
             param = tab ? "target=tab" : "";
-        Agent.router.navigate(hash + param, {trigger: true});
+        Atlantis.router.navigate(hash + param, {trigger: true});
     },
     
     /*

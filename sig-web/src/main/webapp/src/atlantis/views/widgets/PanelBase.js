@@ -4,7 +4,7 @@
  * @date   : 2013
  */
 
-Agent.Views.Panel.Base = Backbone.View.extend({
+Atlantis.Views.Panel.Base = Backbone.View.extend({
     events: {},
     
     init: function(args) {},

@@ -1,5 +1,5 @@
 /*
- * Agent View - 管理首页
+ * Atlantis View - 管理首页
  * @author : liangxiao
  * @date   : 2013
  */
@@ -20,10 +20,10 @@
  */
 
 /*
- * $("#AgentType").val()
+ * $("#AtlantisType").val()
  * 1 中小企业代理商
  */
-Agent.Views.Index = Backbone.View.extend({
+Atlantis.Views.Index = Backbone.View.extend({
     el: $("#Right"),
     
     events: {
@@ -36,14 +36,14 @@ Agent.Views.Index = Backbone.View.extend({
         var roleId = parseInt($("#RoleId").val(), 10);
         
         //任务完成情况权限
-        this.isKaAgent = $("#AgentType").val() == "1" ? false : true;
-        if (this.isKaAgent) {
+        this.isKaAtlantis = $("#AtlantisType").val() == "1" ? false : true;
+        if (this.isKaAtlantis) {
             this.viewTask = false;
         } else {
-            this.viewTask = Agent.Auth.ViewIndexTask;
-            this.viewCostTask = Agent.Auth.ViewIndexCostTask;
-            this.viewNewCustTask = Agent.Auth.ViewIndexNewCustTask;
-            this.viewAccountTask = Agent.Auth.ViewIndexAccountTask;
+            this.viewTask = Atlantis.Auth.ViewIndexTask;
+            this.viewCostTask = Atlantis.Auth.ViewIndexCostTask;
+            this.viewNewCustTask = Atlantis.Auth.ViewIndexNewCustTask;
+            this.viewAccountTask = Atlantis.Auth.ViewIndexAccountTask;
         }
         
         //本月账户概况权限
@@ -69,7 +69,7 @@ Agent.Views.Index = Backbone.View.extend({
         
         //我关注的客户权限
         this.hideStdAccount = false;
-        if (!Agent.Auth.ViewAccountClient || this.isKaAgent) {
+        if (!Atlantis.Auth.ViewAccountClient || this.isKaAtlantis) {
             this.hideStdAccount = true;
         }
         this.hideXuri = false;
@@ -102,12 +102,12 @@ Agent.Views.Index = Backbone.View.extend({
     },
     
     /*storeHeatmap: function(e) {
-        var view = Agent.Page.cur;
+        var view = Atlantis.Page.cur;
         view.heatmapData.push({x: e.pageX, y: e.pageY});
     },*/
     
     renderTopNav: function() {
-        Agent.Widgets.TopNav.render(0);
+        Atlantis.Widgets.TopNav.render(0);
     },
     
     sendClickLog: function(e) {
@@ -194,7 +194,7 @@ Agent.Views.Index = Backbone.View.extend({
         var view = this;
         dwr.request.run({
             context: "noLoading",
-            method: "AgentHomePageAction.latestSystemMessage",
+            method: "AtlantisHomePageAction.latestSystemMessage",
             args: [],
             success: function(response) {
                 view.renderMsg(response.data);
@@ -225,7 +225,7 @@ Agent.Views.Index = Backbone.View.extend({
         var view = this;
         dwr.request.run({
             context: "noLoading",
-            method: "AgentHomePageAction.listLatestNotices",
+            method: "AtlantisHomePageAction.listLatestNotices",
             args: [],
             success: function(response) {
                 view.renderNotice(response.data);
@@ -254,7 +254,7 @@ Agent.Views.Index = Backbone.View.extend({
         var view = this;
         dwr.request.run({
             context: "noLoading",
-            method: "AgentHomePageAction.displayAD",
+            method: "AtlantisHomePageAction.displayAD",
             args: [],
             success: function(response) {
                 view.renderAD(response.data);
@@ -272,7 +272,7 @@ Agent.Views.Index = Backbone.View.extend({
         var view = this;
         dwr.request.run({
             context: "noLoading",
-            method: "AgentHomePageAction.myFocusCustomers",
+            method: "AtlantisHomePageAction.myFocusCustomers",
             args: [],
             success: function(response) {
                 view.renderClientData(response.data);
@@ -440,7 +440,7 @@ Agent.Views.Index = Backbone.View.extend({
         var view = this;
         dwr.request.run({
             context: "noLoading",
-            method: "AgentHomePageAction.accountMonthTaskAndCostStatInfo",
+            method: "AtlantisHomePageAction.accountMonthTaskAndCostStatInfo",
             args: [],
             success: function(response) {
                 view.formatTaskData(response.data);
@@ -618,7 +618,7 @@ Agent.Views.Index = Backbone.View.extend({
         var view = this;
         dwr.request.run({
             context: "noLoading",
-            method: "AgentHomePageAction.latest7DayCostStat",
+            method: "AtlantisHomePageAction.latest7DayCostStat",
             args: [],
             success: function(response) {
                 view.$("#LineChart").css({background: "none"});
@@ -694,7 +694,7 @@ Agent.Views.Index = Backbone.View.extend({
         var view = this;
         dwr.request.run({
             context: "noLoading",
-            method: "AgentHomePageAction.agentBillInfo",
+            method: "AtlantisHomePageAction.agentBillInfo",
             args: [],
             success: function(response) {
                 view.renderInvest(response.data);

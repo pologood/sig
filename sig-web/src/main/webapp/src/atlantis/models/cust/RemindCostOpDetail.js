@@ -1,10 +1,10 @@
 /*
- * Agent Model - RemindCostOpDetail
+ * Atlantis Model - RemindCostOpDetail
  * @author : liangxiao
  * @date   : 2012
  */
 
-Agent.Models.RemindCostOpDetail = Backbone.Model.extend({
+Atlantis.Models.RemindCostOpDetail = Backbone.Model.extend({
     defaults: {
         data: null
     },
@@ -24,7 +24,7 @@ Agent.Models.RemindCostOpDetail = Backbone.Model.extend({
     
     format: function(response, args) {
         var baseUrl = "http://" + window.location.host
-                    + "/s/negativeOperationDetail?download=true&opType=" + encodeURIComponent(Agent.Page.cur.opType)
+                    + "/s/negativeOperationDetail?download=true&opType=" + encodeURIComponent(Atlantis.Page.cur.opType)
                     + "&startDate=" + args.startDate + "&endDate=" + args.endDate;
         
         var me = this;

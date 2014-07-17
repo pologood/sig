@@ -1,10 +1,10 @@
 /*
- * Agent View - 用户管理
+ * Atlantis View - 用户管理
  * @author : liangxiao
  * @date   : 2013
  */
 
-Agent.Views.AuthUser = Backbone.View.extend({
+Atlantis.Views.AuthUser = Backbone.View.extend({
     el: $("#Right"),
     
     events: {
@@ -45,15 +45,15 @@ Agent.Views.AuthUser = Backbone.View.extend({
         this.$el.unbind();
         this.$el.html("");
         this.$el.css({'padding-bottom': 20});
-        Agent.Widgets.TreeNavSimple.destroy();
+        Atlantis.Widgets.TreeNavSimple.destroy();
     },
     
     renderTopNav: function() {
-        Agent.Widgets.TopNav.render(7);
+        Atlantis.Widgets.TopNav.render(7);
     },
     
     renderTreeNav: function() {
-        Agent.Widgets.TreeNavSimple = new Agent.Views.TreeNavSimple(Agent.TreeNav.Admin, 0, 0);
+        Atlantis.Widgets.TreeNavSimple = new Atlantis.Views.TreeNavSimple(Atlantis.TreeNav.Admin, 0, 0);
     },
     
     render: function(query) {
@@ -155,7 +155,7 @@ Agent.Views.AuthUser = Backbone.View.extend({
     getUserByRole: function(roleId) {
         dwr.request.run({
             context: "noLoading",
-            method: "AgentUserManageAction.queryUsersByRoleId",
+            method: "AtlantisUserManageAction.queryUsersByRoleId",
             args: [{roleId: roleId}],
             success: function(response) {
                 var user;
@@ -484,7 +484,7 @@ Agent.Views.AuthUser = Backbone.View.extend({
         var opAuth = true;
         if (this.delegateAndReadonly) {
             opAuth = false;
-        } else if (!Agent.Auth.ViewAuthConfig || isBBSUser) {
+        } else if (!Atlantis.Auth.ViewAuthConfig || isBBSUser) {
             opAuth = false;
         }
         this.$(".account-info").html($.Mustache.render("tpl-auth-account-info", {
@@ -543,7 +543,7 @@ Agent.Views.AuthUser = Backbone.View.extend({
         
         var view = this;
         dwr.request.run({
-            method: "AgentUserManageAction.motifyPassword",
+            method: "AtlantisUserManageAction.motifyPassword",
             args: [{
                 userId: this.userId,
                 userPassword: md5(oldPsw),
@@ -579,7 +579,7 @@ Agent.Views.AuthUser = Backbone.View.extend({
         var view = this;
         dwr.request.run({
             context: "noLoading",
-            method: "AgentUserManageAction.checkHasChildren",
+            method: "AtlantisUserManageAction.checkHasChildren",
             args: [{userId: userId}],
             success: function(response) {
                 if (response.data) {
@@ -601,7 +601,7 @@ Agent.Views.AuthUser = Backbone.View.extend({
     callDel: function(userId) {
         var view = this;
         dwr.request.run({
-            method: "AgentUserManageAction.deleteUser",
+            method: "AtlantisUserManageAction.deleteUser",
             args: [{userId: userId}],
             success: function(response) {
                 view.hideDel();
@@ -616,7 +616,7 @@ Agent.Views.AuthUser = Backbone.View.extend({
     },
     
     addAccount: function() {
-        Agent.Widgets.Panel.Account = new Agent.Views.Panel.Account({
+        Atlantis.Widgets.Panel.Account = new Atlantis.Views.Panel.Account({
             parentView: this,
             edit: false,
             editSelf: false
@@ -624,7 +624,7 @@ Agent.Views.AuthUser = Backbone.View.extend({
     },
     
     editAccount: function() {
-        Agent.Widgets.Panel.Account = new Agent.Views.Panel.Account({
+        Atlantis.Widgets.Panel.Account = new Atlantis.Views.Panel.Account({
             parentView: this,
             edit: true,
             editSelf: false
@@ -632,7 +632,7 @@ Agent.Views.AuthUser = Backbone.View.extend({
     },
     
     editAuth: function() {
-        Agent.Widgets.Panel.Auth = new Agent.Views.Panel.Auth({
+        Atlantis.Widgets.Panel.Auth = new Atlantis.Views.Panel.Auth({
             userId: this.userId
         });
     },
@@ -640,10 +640,10 @@ Agent.Views.AuthUser = Backbone.View.extend({
     showError: function(msg) {
         clearTimeout(this.timer);
         
-        Agent.Widgets.MessageBox.show(msg);
+        Atlantis.Widgets.MessageBox.show(msg);
         
         this.timer = setTimeout(function() {
-            Agent.Widgets.MessageBox.hide();
+            Atlantis.Widgets.MessageBox.hide();
         }, 5000);
     },
     

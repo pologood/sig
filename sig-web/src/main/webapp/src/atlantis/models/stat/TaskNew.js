@@ -1,10 +1,10 @@
 /*
- * Agent Model - TaskNew
+ * Atlantis Model - TaskNew
  * @author : liangxiao
  * @date   : 2012
  */
 
-Agent.Models.TaskNew = Backbone.Model.extend({
+Atlantis.Models.TaskNew = Backbone.Model.extend({
     defaults: {
         data: null
     },

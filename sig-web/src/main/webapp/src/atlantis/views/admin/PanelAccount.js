@@ -4,7 +4,7 @@
  * @date   : 2013
  */
 
-Agent.Views.Panel.Account = Agent.Views.Panel.Base.extend({
+Atlantis.Views.Panel.Account = Atlantis.Views.Panel.Base.extend({
     events: {
         "click .save": "verify",
         "click .cancel": "hidePanel",
@@ -79,7 +79,7 @@ Agent.Views.Panel.Account = Agent.Views.Panel.Base.extend({
             var view = this;
             dwr.request.run({
                 context: "panel",
-                method: "AgentUserManageAction.checkHasChildren",
+                method: "AtlantisUserManageAction.checkHasChildren",
                 args: [{userId: account.userId}],
                 success: function(response) {
                     if (response.data) {
@@ -129,7 +129,7 @@ Agent.Views.Panel.Account = Agent.Views.Panel.Base.extend({
         var view = this;
         dwr.request.run({
             context: "panel",
-            method: "AgentUserManageAction.querySuperiorsByRoleId",
+            method: "AtlantisUserManageAction.querySuperiorsByRoleId",
             args: [{roleId: roleId}],
             success: function(response) {
                 callback.call(view, response);
@@ -395,12 +395,12 @@ Agent.Views.Panel.Account = Agent.Views.Panel.Base.extend({
             method;
         if (this.edit) {
             if (this.editSelf) {
-                method = "AgentUserManageAction.modifyUserBaseInfo";
+                method = "AtlantisUserManageAction.modifyUserBaseInfo";
             } else {
-                method = "AgentUserManageAction.modifyUser";
+                method = "AtlantisUserManageAction.modifyUser";
             }
         } else {
-            method = "AgentUserManageAction.addUser"
+            method = "AtlantisUserManageAction.addUser"
         }
         
         dwr.request.run({

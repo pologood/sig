@@ -1,10 +1,10 @@
 /*
- * Agent View - TaskNew
+ * Atlantis View - TaskNew
  * @author : liangxiao
  * @date   : 2012
  */
 
-Agent.Views.TaskNew = Backbone.View.extend({
+Atlantis.Views.TaskNew = Backbone.View.extend({
     el: $("#Right"),
     
     events: {
@@ -21,15 +21,15 @@ Agent.Views.TaskNew = Backbone.View.extend({
         this.model.unbind();
         this.$el.unbind();
         this.$el.html("");
-        Agent.Widgets.TreeNav.destroy();
+        Atlantis.Widgets.TreeNav.destroy();
     },
     
     renderTopNav: function() {
-        Agent.Widgets.TopNav.render(4);
+        Atlantis.Widgets.TopNav.render(4);
     },
     
     renderTreeNav: function() {
-        Agent.Widgets.TreeNav = new Agent.Views.TreeNav(0, 0, 1);
+        Atlantis.Widgets.TreeNav = new Atlantis.Views.TreeNav(0, 0, 1);
     },
     
     render: function(query) {
@@ -46,12 +46,12 @@ Agent.Views.TaskNew = Backbone.View.extend({
         this.args = {
             time: {
                 type: 0,
-                startYear: Agent.Calendar.lastYearOfMonthSelect,
-                startMonth: Agent.Calendar.lastMonthOfMonthSelect,
-                endYear: Agent.Calendar.lastYearOfMonthSelect,
-                endMonth: Agent.Calendar.lastMonthOfMonthSelect,
-                qYear: Agent.Calendar.lastYearOfQSelect,
-                q: Agent.Calendar.lastQOfQSelect
+                startYear: Atlantis.Calendar.lastYearOfMonthSelect,
+                startMonth: Atlantis.Calendar.lastMonthOfMonthSelect,
+                endYear: Atlantis.Calendar.lastYearOfMonthSelect,
+                endMonth: Atlantis.Calendar.lastMonthOfMonthSelect,
+                qYear: Atlantis.Calendar.lastYearOfQSelect,
+                q: Atlantis.Calendar.lastQOfQSelect
             }
         };
         
@@ -66,30 +66,30 @@ Agent.Views.TaskNew = Backbone.View.extend({
                 value: 0
             },
             TaskStartYear: {
-                datasource: Agent.Calendar.year,
+                datasource: Atlantis.Calendar.year,
                 value: this.args.time.startYear
             },
             TaskStartMonth: {
-                datasource: Agent.Calendar.thisMonth == 0
-                          ? Agent.Calendar.monthOfLastYear : Agent.Calendar.monthOfThisYear,
+                datasource: Atlantis.Calendar.thisMonth == 0
+                          ? Atlantis.Calendar.monthOfLastYear : Atlantis.Calendar.monthOfThisYear,
                 value: this.args.time.startMonth
             },
             TaskEndYear: {
-                datasource: Agent.Calendar.year,
+                datasource: Atlantis.Calendar.year,
                 value: this.args.time.endYear
             },
             TaskEndMonth: {
-                datasource: Agent.Calendar.thisMonth == 0
-                          ? Agent.Calendar.monthOfLastYear : Agent.Calendar.monthOfThisYear,
+                datasource: Atlantis.Calendar.thisMonth == 0
+                          ? Atlantis.Calendar.monthOfLastYear : Atlantis.Calendar.monthOfThisYear,
                 value: this.args.time.endMonth
             },
             TaskQYear: {
-                datasource: Agent.Calendar.year,
+                datasource: Atlantis.Calendar.year,
                 value: this.args.time.qYear
             },
             TaskQ: {
-                datasource: (Agent.Calendar.thisMonth == 0 || Agent.Calendar.thisMonth == 1 || Agent.Calendar.thisMonth == 2)
-                            ? Agent.Calendar.quarterOfLastYear : Agent.Calendar.quarterOfThisYear,
+                datasource: (Atlantis.Calendar.thisMonth == 0 || Atlantis.Calendar.thisMonth == 1 || Atlantis.Calendar.thisMonth == 2)
+                            ? Atlantis.Calendar.quarterOfLastYear : Atlantis.Calendar.quarterOfThisYear,
                 value: this.args.time.q
             }
         });
@@ -266,10 +266,10 @@ Agent.Views.TaskNew = Backbone.View.extend({
     showError: function(msg) {
         clearTimeout(this.timer);
         
-        Agent.Widgets.MessageBox.show(msg);
+        Atlantis.Widgets.MessageBox.show(msg);
         
         this.timer = setTimeout(function() {
-            Agent.Widgets.MessageBox.hide();
+            Atlantis.Widgets.MessageBox.hide();
         }, 5000);
     }
 });

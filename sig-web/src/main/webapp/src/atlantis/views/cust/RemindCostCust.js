@@ -1,10 +1,10 @@
 /*
- * Agent View - RemindCostCust
+ * Atlantis View - RemindCostCust
  * @author : liangxiao
  * @date   : 2012
  */
 
-Agent.Views.RemindCostCust = Backbone.View.extend({
+Atlantis.Views.RemindCostCust = Backbone.View.extend({
     el: $("#Right"),
     
     events: {
@@ -22,19 +22,19 @@ Agent.Views.RemindCostCust = Backbone.View.extend({
         this.model.unbind();
         this.$el.unbind();
         this.$el.html("");
-        Agent.Widgets.TreeNavSimple.destroy();
+        Atlantis.Widgets.TreeNavSimple.destroy();
     },
     
     renderTopNav: function() {
-        Agent.Widgets.TopNav.render(1);
+        Atlantis.Widgets.TopNav.render(1);
     },
     
     renderTreeNav: function() {
-        Agent.Widgets.TreeNavSimple = new Agent.Views.TreeNavSimple(Agent.TreeNav.Cust, 2, 0);
+        Atlantis.Widgets.TreeNavSimple = new Atlantis.Views.TreeNavSimple(Atlantis.TreeNav.Cust, 2, 0);
     },
     
     renderTabNav: function() {
-        Agent.Widgets.TabNav.render(Agent.TreeNav.Cust, 2, 0, 0);
+        Atlantis.Widgets.TabNav.render(Atlantis.TreeNav.Cust, 2, 0, 0);
     },
     
     sendLog: function(e) {

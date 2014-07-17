@@ -1,10 +1,10 @@
 /*
- * Agent Model - 账户优化
+ * Atlantis Model - 账户优化
  * @author : liangxiao
  * @date   : 2012
  */
 
-Agent.Models.OptAccount = Backbone.Model.extend({
+Atlantis.Models.OptAccount = Backbone.Model.extend({
     defaults: {
         data: null
     },

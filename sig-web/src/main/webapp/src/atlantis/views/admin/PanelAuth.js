@@ -4,7 +4,7 @@
  * @date   : 2013
  */
 
-Agent.Views.Panel.Auth = Agent.Views.Panel.Base.extend({
+Atlantis.Views.Panel.Auth = Atlantis.Views.Panel.Base.extend({
     events: {
         "click .save": "save",
         "click .cancel": "hidePanel",
@@ -34,7 +34,7 @@ Agent.Views.Panel.Auth = Agent.Views.Panel.Base.extend({
         var view = this;
         dwr.request.run({
             context: "panel",
-            method: "AgentRoleManageAction.getAgentFunctionAuthTree",
+            method: "AtlantisRoleManageAction.getAtlantisFunctionAuthTree",
             args: [{userId: view.userId}],
             success: function(response) {
                 $.each(response.data, function(index, val) {
@@ -55,7 +55,7 @@ Agent.Views.Panel.Auth = Agent.Views.Panel.Base.extend({
         var view = this;
         dwr.request.run({
             context: "panel",
-            method: "AgentRoleManageAction.getSelectedAgentFunctionAuth",
+            method: "AtlantisRoleManageAction.getSelectedAtlantisFunctionAuth",
             args: [{userId: view.userId}],
             success: function(response) {
                 view.renderMenuTree(response.data.authIds);
@@ -104,7 +104,7 @@ Agent.Views.Panel.Auth = Agent.Views.Panel.Base.extend({
         var view = this;
         dwr.request.run({
             context: "panel",
-            method: "AgentRoleManageAction.updateAgentFunctionAuth",
+            method: "AtlantisRoleManageAction.updateAtlantisFunctionAuth",
             args: [{
                 userId: this.userId,
                 authIds: authIds

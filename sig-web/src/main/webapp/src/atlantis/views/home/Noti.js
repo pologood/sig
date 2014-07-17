@@ -1,10 +1,10 @@
 /*
- * Agent View - 通知
+ * Atlantis View - 通知
  * @author : liangxiao
  * @date   : 2013
  */
 
-Agent.Views.Noti = Backbone.View.extend({
+Atlantis.Views.Noti = Backbone.View.extend({
     el: $("#Right"),
     
     events: {
@@ -25,7 +25,7 @@ Agent.Views.Noti = Backbone.View.extend({
     },
     
     renderTopNav: function() {
-        Agent.Widgets.TopNav.render(0);
+        Atlantis.Widgets.TopNav.render(0);
     },
     
     render: function(query) {

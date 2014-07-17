@@ -4,7 +4,7 @@
  * @date   : 2013
  */
 
-Agent.Views.Panel.Pay = Agent.Views.Panel.Base.extend({
+Atlantis.Views.Panel.Pay = Atlantis.Views.Panel.Base.extend({
     events: {
         "click .save": "save",
         "click .cancel": "hidePanel",
@@ -170,7 +170,7 @@ Agent.Views.Panel.Pay = Agent.Views.Panel.Base.extend({
         }
         
         var args = {
-            agentId: parseInt($("#AgentId").val(), 10),
+            agentId: parseInt($("#AtlantisId").val(), 10),
             contactor: contactor,
             tel: tel,
             gatherUnit: gatherUnit,
@@ -187,7 +187,7 @@ Agent.Views.Panel.Pay = Agent.Views.Panel.Base.extend({
             args: [args],
             success: function(response) {
                 view.hidePanel();
-                view.parentView.model.getPay({agentId: $("#AgentId").val()});
+                view.parentView.model.getPay({agentId: $("#AtlantisId").val()});
             },
             fail: function(response) {
                 view.showError(response.errorMsg);

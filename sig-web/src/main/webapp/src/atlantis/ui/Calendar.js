@@ -4,7 +4,7 @@
  * @date   : 2012
  */
 
-Agent.Calendar = {
+Atlantis.Calendar = {
     thisMonth: (new Date()).getMonth(),
     year: Util.date.getYearList(),
     yearWithout2011: Util.date.getYearList(),
@@ -13,22 +13,22 @@ Agent.Calendar = {
     quarterOfThisYear: Util.date.getQuarterList((new Date()).getFullYear()),
     quarterOfLastYear: Util.date.getQuarterList((new Date()).getFullYear() - 1)
 };
-Agent.Calendar.yearWithout2011.shift(); //2011年波动本期不可选第四季度
-Agent.Calendar.lastYearOfMonthSelect = Agent.Calendar.thisMonth == 0
-? Agent.Calendar.year[Agent.Calendar.year.length - 2].value   //1月选去年
-: Agent.Calendar.year[Agent.Calendar.year.length - 1].value; //否则选本年
-Agent.Calendar.lastMonthOfMonthSelect = Agent.Calendar.thisMonth == 0 ? 12 //1月选12月
-: Agent.Calendar.monthOfThisYear[Agent.Calendar.monthOfThisYear.length - 2].value; //否则选上月
-Agent.Calendar.lastYearOfQSelect = (Agent.Calendar.thisMonth == 0 || Agent.Calendar.thisMonth == 1 || Agent.Calendar.thisMonth == 2)
-? Agent.Calendar.yearWithout2011[Agent.Calendar.yearWithout2011.length - 2].value //1-3月选去年
-: Agent.Calendar.yearWithout2011[Agent.Calendar.yearWithout2011.length - 1].value;//否则选本年
-Agent.Calendar.lastQOfQSelect = (Agent.Calendar.thisMonth == 0 || Agent.Calendar.thisMonth == 1 || Agent.Calendar.thisMonth == 2) ? 4 //1-3月选第四季度
-: Agent.Calendar.quarterOfThisYear[Agent.Calendar.quarterOfThisYear.length - 2].value; //否则选上季度
+Atlantis.Calendar.yearWithout2011.shift(); //2011年波动本期不可选第四季度
+Atlantis.Calendar.lastYearOfMonthSelect = Atlantis.Calendar.thisMonth == 0
+? Atlantis.Calendar.year[Atlantis.Calendar.year.length - 2].value   //1月选去年
+: Atlantis.Calendar.year[Atlantis.Calendar.year.length - 1].value; //否则选本年
+Atlantis.Calendar.lastMonthOfMonthSelect = Atlantis.Calendar.thisMonth == 0 ? 12 //1月选12月
+: Atlantis.Calendar.monthOfThisYear[Atlantis.Calendar.monthOfThisYear.length - 2].value; //否则选上月
+Atlantis.Calendar.lastYearOfQSelect = (Atlantis.Calendar.thisMonth == 0 || Atlantis.Calendar.thisMonth == 1 || Atlantis.Calendar.thisMonth == 2)
+? Atlantis.Calendar.yearWithout2011[Atlantis.Calendar.yearWithout2011.length - 2].value //1-3月选去年
+: Atlantis.Calendar.yearWithout2011[Atlantis.Calendar.yearWithout2011.length - 1].value;//否则选本年
+Atlantis.Calendar.lastQOfQSelect = (Atlantis.Calendar.thisMonth == 0 || Atlantis.Calendar.thisMonth == 1 || Atlantis.Calendar.thisMonth == 2) ? 4 //1-3月选第四季度
+: Atlantis.Calendar.quarterOfThisYear[Atlantis.Calendar.quarterOfThisYear.length - 2].value; //否则选上季度
 
 /*
  * 初始化周/月参数(整体)
  */
-Agent.Calendar.initOverviewOfWM = function(view, start) {
+Atlantis.Calendar.initOverviewOfWM = function(view, start) {
     view.overviewArgsOfWM = {
         time: {
             type: 2, //周
@@ -39,11 +39,11 @@ Agent.Calendar.initOverviewOfWM = function(view, start) {
                  ? Util.date.curWeek(Util.date.yesterday())[1]   //本周日
                  : Util.date.curWeek(Util.date.lastWeek())[1],   //上周日
             year: start == "current"
-                  ? Agent.Calendar.year[Agent.Calendar.year.length - 1].value //本年
-                  : Agent.Calendar.lastYearOfMonthSelect,
+                  ? Atlantis.Calendar.year[Atlantis.Calendar.year.length - 1].value //本年
+                  : Atlantis.Calendar.lastYearOfMonthSelect,
             month: start == "current"
-                   ? Agent.Calendar.monthOfThisYear[Agent.Calendar.monthOfThisYear.length - 1].value //本月
-                   : Agent.Calendar.lastMonthOfMonthSelect
+                   ? Atlantis.Calendar.monthOfThisYear[Atlantis.Calendar.monthOfThisYear.length - 1].value //本月
+                   : Atlantis.Calendar.lastMonthOfMonthSelect
         },
         curAddExistDate: null,
         lastAddExistDate: null,
@@ -61,7 +61,7 @@ Agent.Calendar.initOverviewOfWM = function(view, start) {
 /*
  * 初始化日/周/月/季参数(整体)
  */
-Agent.Calendar.initOverviewOfDWMQ = function(view, start) {
+Atlantis.Calendar.initOverviewOfDWMQ = function(view, start) {
     view.overviewArgsOfDWMQ = {
         time: {
             type: 1, //日
@@ -73,13 +73,13 @@ Agent.Calendar.initOverviewOfDWMQ = function(view, start) {
                  ? Util.date.curWeek(Util.date.yesterday())[1]   //本周日
                  : Util.date.curWeek(Util.date.lastWeek())[1],   //上周日
             year: start == "current"
-                  ? Agent.Calendar.year[Agent.Calendar.year.length - 1].value //本年
-                  : Agent.Calendar.lastYearOfMonthSelect,
+                  ? Atlantis.Calendar.year[Atlantis.Calendar.year.length - 1].value //本年
+                  : Atlantis.Calendar.lastYearOfMonthSelect,
             month: start == "current"
-                   ? Agent.Calendar.monthOfThisYear[Agent.Calendar.monthOfThisYear.length - 1].value //本月
-                   : Agent.Calendar.lastMonthOfMonthSelect,
-            qYear: Agent.Calendar.lastYearOfQSelect,
-            q: Agent.Calendar.lastQOfQSelect
+                   ? Atlantis.Calendar.monthOfThisYear[Atlantis.Calendar.monthOfThisYear.length - 1].value //本月
+                   : Atlantis.Calendar.lastMonthOfMonthSelect,
+            qYear: Atlantis.Calendar.lastYearOfQSelect,
+            q: Atlantis.Calendar.lastQOfQSelect
         },
         curAddExistDate: null,
         lastAddExistDate: null,
@@ -97,7 +97,7 @@ Agent.Calendar.initOverviewOfDWMQ = function(view, start) {
 /*
  * 初始化日/周/月/季参数(波动)
  */
-Agent.Calendar.initContrastOfDWMQ = function(view) {
+Atlantis.Calendar.initContrastOfDWMQ = function(view) {
     view.contrastArgsOfDWMQ = {
         time: {
             type: 1, //日
@@ -134,7 +134,7 @@ Agent.Calendar.initContrastOfDWMQ = function(view) {
 /*
  * 初始化ESUI
  */
-Agent.Calendar.initEsui = function(view, start) {
+Atlantis.Calendar.initEsui = function(view, start) {
     esui.init(view.el, {
         /*
          * *********************
@@ -186,39 +186,39 @@ Agent.Calendar.initEsui = function(view, start) {
         
         //按月-年
         MonthOverViewY1: {
-            datasource: Agent.Calendar.year,
+            datasource: Atlantis.Calendar.year,
             value: view.overviewArgsOfWM.time.year
         },
         MonthOverViewY2: {
-            datasource: Agent.Calendar.year,
+            datasource: Atlantis.Calendar.year,
             value: view.overviewArgsOfWM.time.year
         },
         
         //按月-月
         MonthOverViewM1: {
-            datasource: start == "current" ? Agent.Calendar.monthOfThisYear
-                        : (Agent.Calendar.thisMonth == 0
-                        ? Agent.Calendar.monthOfLastYear : Agent.Calendar.monthOfThisYear),
+            datasource: start == "current" ? Atlantis.Calendar.monthOfThisYear
+                        : (Atlantis.Calendar.thisMonth == 0
+                        ? Atlantis.Calendar.monthOfLastYear : Atlantis.Calendar.monthOfThisYear),
             value: view.overviewArgsOfWM.time.month
         },
         MonthOverViewM2: {
-            datasource: start == "current" ? Agent.Calendar.monthOfThisYear
-                        : (Agent.Calendar.thisMonth == 0
-                        ? Agent.Calendar.monthOfLastYear : Agent.Calendar.monthOfThisYear),
+            datasource: start == "current" ? Atlantis.Calendar.monthOfThisYear
+                        : (Atlantis.Calendar.thisMonth == 0
+                        ? Atlantis.Calendar.monthOfLastYear : Atlantis.Calendar.monthOfThisYear),
             value: view.overviewArgsOfWM.time.month
         },
         
         //按季度-年
         QuarterOverViewY: {
-            datasource: Agent.Calendar.year,
-            value: Agent.Calendar.lastYearOfQSelect
+            datasource: Atlantis.Calendar.year,
+            value: Atlantis.Calendar.lastYearOfQSelect
         },
         
         //按季度-季度
         QuarterOverViewQ: {
-            datasource: (Agent.Calendar.thisMonth == 0 || Agent.Calendar.thisMonth == 1 || Agent.Calendar.thisMonth == 2)
-                        ? Agent.Calendar.quarterOfLastYear : Agent.Calendar.quarterOfThisYear,
-            value: Agent.Calendar.lastQOfQSelect
+            datasource: (Atlantis.Calendar.thisMonth == 0 || Atlantis.Calendar.thisMonth == 1 || Atlantis.Calendar.thisMonth == 2)
+                        ? Atlantis.Calendar.quarterOfLastYear : Atlantis.Calendar.quarterOfThisYear,
+            value: Atlantis.Calendar.lastQOfQSelect
         },
         
         //客户
@@ -277,28 +277,28 @@ Agent.Calendar.initEsui = function(view, start) {
         
         //按月-年
         MonthContrastY: {
-            datasource: Agent.Calendar.year,
-            value: Agent.Calendar.lastYearOfMonthSelect
+            datasource: Atlantis.Calendar.year,
+            value: Atlantis.Calendar.lastYearOfMonthSelect
         },
         
         //按月-月
         MonthContrastM: {
-            datasource: Agent.Calendar.thisMonth == 0
-                      ? Agent.Calendar.monthOfLastYear : Agent.Calendar.monthOfThisYear,
-            value: Agent.Calendar.lastMonthOfMonthSelect
+            datasource: Atlantis.Calendar.thisMonth == 0
+                      ? Atlantis.Calendar.monthOfLastYear : Atlantis.Calendar.monthOfThisYear,
+            value: Atlantis.Calendar.lastMonthOfMonthSelect
         },
         
         //按季度-年
         QuarterContrastY: {
-            datasource: Agent.Calendar.yearWithout2011,
-            value: Agent.Calendar.lastYearOfQSelect
+            datasource: Atlantis.Calendar.yearWithout2011,
+            value: Atlantis.Calendar.lastYearOfQSelect
         },
         
         //按季度-季度
         QuarterContrastQ: {
-            datasource: (Agent.Calendar.thisMonth == 0 || Agent.Calendar.thisMonth == 1 || Agent.Calendar.thisMonth == 2)
-                        ? Agent.Calendar.quarterOfLastYear : Agent.Calendar.quarterOfThisYear,
-            value: Agent.Calendar.lastQOfQSelect
+            datasource: (Atlantis.Calendar.thisMonth == 0 || Atlantis.Calendar.thisMonth == 1 || Atlantis.Calendar.thisMonth == 2)
+                        ? Atlantis.Calendar.quarterOfLastYear : Atlantis.Calendar.quarterOfThisYear,
+            value: Atlantis.Calendar.lastQOfQSelect
         },
         
         //客户
@@ -776,9 +776,9 @@ Agent.Calendar.initEsui = function(view, start) {
     }
 };
 
-Agent.Calendar.init = function(view, start) {
-    Agent.Calendar.initOverviewOfWM(view, start);
-    Agent.Calendar.initOverviewOfDWMQ(view, start);
-    Agent.Calendar.initContrastOfDWMQ(view);
-    Agent.Calendar.initEsui(view, start);
+Atlantis.Calendar.init = function(view, start) {
+    Atlantis.Calendar.initOverviewOfWM(view, start);
+    Atlantis.Calendar.initOverviewOfDWMQ(view, start);
+    Atlantis.Calendar.initContrastOfDWMQ(view);
+    Atlantis.Calendar.initEsui(view, start);
 };

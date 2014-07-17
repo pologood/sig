@@ -1,10 +1,10 @@
 /*
- * Agent Model - 用户管理
+ * Atlantis Model - 用户管理
  * @author : liangxiao
  * @date   : 2013
  */
 
-Agent.Models.AuthUser = Backbone.Model.extend({
+Atlantis.Models.AuthUser = Backbone.Model.extend({
     defaults: {
         company: null,
         client: null,
@@ -97,13 +97,13 @@ Agent.Models.AuthUser = Backbone.Model.extend({
         
         dwr.request.run({
             context: "noLoading",
-            method: "AgentUserManageAction.getOptRoles",
+            method: "AtlantisUserManageAction.getOptRoles",
             args: [{currentUser: parseInt($("#UserId").val(), 10)}],
             success: function(response) {
                 me.set({role: response.data});
                 
                 //获取客户列表第一页
-                var view = Agent.Page.cur;
+                var view = Atlantis.Page.cur;
                 view.lastArgs = {};
                 view.getArgs();
                 view.lastArgs.pageSize = 20;
@@ -131,7 +131,7 @@ Agent.Models.AuthUser = Backbone.Model.extend({
         me.set({account: null}, {silent : true});
         
         dwr.request.run({
-            method: "AgentUserManageAction.queryUserById",
+            method: "AtlantisUserManageAction.queryUserById",
             args: [args],
             success: function(response) {
                 response.data.hasSuperior = response.data.superiorId == null ? [] : [1];

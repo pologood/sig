@@ -1,10 +1,10 @@
 /*
- * Agent View - Perday
+ * Atlantis View - Perday
  * @author : liangxiao
  * @date   : 2012
  */
 
-Agent.Views.Perday = Backbone.View.extend({
+Atlantis.Views.Perday = Backbone.View.extend({
     el: document.body,
     
     initialize: function() {

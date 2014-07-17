@@ -1,10 +1,10 @@
 /*
- * Agent Model - TaskCost
+ * Atlantis Model - TaskCost
  * @author : liangxiao
  * @date   : 2012
  */
 
-Agent.Models.TaskCost = Backbone.Model.extend({
+Atlantis.Models.TaskCost = Backbone.Model.extend({
     defaults: {
         data: null
     },

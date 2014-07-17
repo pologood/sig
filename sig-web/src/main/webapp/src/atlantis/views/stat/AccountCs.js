@@ -1,10 +1,10 @@
 /*
- * Agent View - AccountCs
+ * Atlantis View - AccountCs
  * @author : liangxiao
  * @date   : 2012
  */
 
-Agent.Views.AccountCs = Backbone.View.extend({
+Atlantis.Views.AccountCs = Backbone.View.extend({
     el: $("#Right"),
     
     events: {
@@ -23,19 +23,19 @@ Agent.Views.AccountCs = Backbone.View.extend({
         this.model.unbind();
         this.$el.unbind();
         this.$el.html("");
-        Agent.Widgets.TreeNav.destroy();
+        Atlantis.Widgets.TreeNav.destroy();
     },
     
     renderTopNav: function() {
-        Agent.Widgets.TopNav.render(4);
+        Atlantis.Widgets.TopNav.render(4);
     },
     
     renderTreeNav: function() {
-        Agent.Widgets.TreeNav = new Agent.Views.TreeNav(1, 1, 0);
+        Atlantis.Widgets.TreeNav = new Atlantis.Views.TreeNav(1, 1, 0);
     },
     
     renderTabNav: function() {
-        Agent.Widgets.TabNav.render(Agent.TreeNav.Stat[1].sub, 1, 0, 0);
+        Atlantis.Widgets.TabNav.render(Atlantis.TreeNav.Stat[1].sub, 1, 0, 0);
     },
     
     render: function(query) {
@@ -57,7 +57,7 @@ Agent.Views.AccountCs = Backbone.View.extend({
         this.$(".query-form").after($.Mustache.render("tpl-account-cs-adquery"));
         
         //初始化控件
-        Agent.Component.init(this, query);
+        Atlantis.Component.init(this, query);
         
         //初始查询
         this.lastArgs = {};
@@ -111,7 +111,7 @@ Agent.Views.AccountCs = Backbone.View.extend({
         };
         
         var hash = e.target.href.split("#")[1] + T.url.jsonToQuery(param);
-        Agent.router.navigate(hash, {trigger: true});
+        Atlantis.router.navigate(hash, {trigger: true});
     },
     
     getArgs: function() {
@@ -266,10 +266,10 @@ Agent.Views.AccountCs = Backbone.View.extend({
     showError: function(msg) {
         clearTimeout(this.timer);
         
-        Agent.Widgets.MessageBox.show(msg);
+        Atlantis.Widgets.MessageBox.show(msg);
         
         this.timer = setTimeout(function() {
-            Agent.Widgets.MessageBox.hide();
+            Atlantis.Widgets.MessageBox.hide();
         }, 5000);
     }
 });

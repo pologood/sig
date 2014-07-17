@@ -1,10 +1,10 @@
 /*
- * Agent Model - Cust
+ * Atlantis Model - Cust
  * @author : liangxiao
  * @date   : 2012
  */
 
-Agent.Models.Cust = Backbone.Model.extend({
+Atlantis.Models.Cust = Backbone.Model.extend({
     defaults: {
         data: null,
         trade: null

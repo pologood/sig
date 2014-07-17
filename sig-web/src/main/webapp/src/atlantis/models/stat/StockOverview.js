@@ -1,10 +1,10 @@
 /*
- * Agent Model - StockOverview 
+ * Atlantis Model - StockOverview 
  * @author : liangxiao
  * @date   : 2012
  */
 
-Agent.Models.StockOverview = Backbone.Model.extend({
+Atlantis.Models.StockOverview = Backbone.Model.extend({
     defaults: {
         data: null
     },

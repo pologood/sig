@@ -1,10 +1,10 @@
 /*
- * Agent View - 基本信息
+ * Atlantis View - 基本信息
  * @author : liangxiao
  * @date   : 2013
  */
 
-Agent.Views.AccountInfo = Backbone.View.extend({
+Atlantis.Views.AccountInfo = Backbone.View.extend({
     el: $("#Right"),
     
     events: {
@@ -28,15 +28,15 @@ Agent.Views.AccountInfo = Backbone.View.extend({
         this.model.unbind();
         this.$el.unbind();
         this.$el.html("");
-        Agent.Widgets.TreeNavSimple.destroy();
+        Atlantis.Widgets.TreeNavSimple.destroy();
     },
     
     renderTopNav: function() {
-        Agent.Widgets.TopNav.render(7);
+        Atlantis.Widgets.TopNav.render(7);
     },
     
     renderTreeNav: function() {
-        Agent.Widgets.TreeNavSimple = new Agent.Views.TreeNavSimple(Agent.TreeNav.Admin, 1, 0);
+        Atlantis.Widgets.TreeNavSimple = new Atlantis.Views.TreeNavSimple(Atlantis.TreeNav.Admin, 1, 0);
     },
     
     render: function(query) {
@@ -157,7 +157,7 @@ Agent.Views.AccountInfo = Backbone.View.extend({
         
         var view = this;
         dwr.request.run({
-            method: "AgentUserManageAction.motifyPassword",
+            method: "AtlantisUserManageAction.motifyPassword",
             args: [{
                 userId: this.userId,
                 userPassword: md5(oldPsw),
@@ -170,7 +170,7 @@ Agent.Views.AccountInfo = Backbone.View.extend({
     },
     
     editAccount: function() {
-        Agent.Widgets.Panel.Account = new Agent.Views.Panel.Account({
+        Atlantis.Widgets.Panel.Account = new Atlantis.Views.Panel.Account({
             parentView: this,
             edit: true,
             editSelf: true
@@ -178,7 +178,7 @@ Agent.Views.AccountInfo = Backbone.View.extend({
     },
     
     editPay: function() {
-        Agent.Widgets.Panel.Pay = new Agent.Views.Panel.Pay({
+        Atlantis.Widgets.Panel.Pay = new Atlantis.Views.Panel.Pay({
             parentView: this
         });
     },

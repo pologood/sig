@@ -1,10 +1,10 @@
 /*
- * Agent View - 客户中心
+ * Atlantis View - 客户中心
  * @author : liangxiao
  * @date   : 2013
  */
 
-Agent.Views.AccountCenter = Backbone.View.extend({
+Atlantis.Views.AccountCenter = Backbone.View.extend({
     el: $("#Right"),
     
     events: {
@@ -24,7 +24,7 @@ Agent.Views.AccountCenter = Backbone.View.extend({
         this.model.unbind();
         this.$el.unbind();
         this.$el.html("");
-        Agent.Widgets.TreeNavSimple.destroy();
+        Atlantis.Widgets.TreeNavSimple.destroy();
     },
     
     sendLog: function(e) {
@@ -32,11 +32,11 @@ Agent.Views.AccountCenter = Backbone.View.extend({
     },
     
     renderTopNav: function() {
-        Agent.Widgets.TopNav.render(1);
+        Atlantis.Widgets.TopNav.render(1);
     },
     
     renderTreeNav: function() {
-        Agent.Widgets.TreeNavSimple = new Agent.Views.TreeNavSimple(Agent.TreeNav.Cust, 0, 1);
+        Atlantis.Widgets.TreeNavSimple = new Atlantis.Views.TreeNavSimple(Atlantis.TreeNav.Cust, 0, 1);
     },
     
     render: function(query) {
@@ -431,10 +431,10 @@ Agent.Views.AccountCenter = Backbone.View.extend({
     showError: function(msg) {
         clearTimeout(this.timer);
         
-        Agent.Widgets.MessageBox.show(msg);
+        Atlantis.Widgets.MessageBox.show(msg);
         
         this.timer = setTimeout(function() {
-            Agent.Widgets.MessageBox.hide();
+            Atlantis.Widgets.MessageBox.hide();
         }, 5000);
     }
 });

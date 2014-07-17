@@ -1,10 +1,10 @@
 /*
- * Agent View - TreeNavSimple
+ * Atlantis View - TreeNavSimple
  * @author : liangxiao
  * @date   : 2012
  */
 
-Agent.Views.TreeNavSimple = Backbone.View.extend({
+Atlantis.Views.TreeNavSimple = Backbone.View.extend({
     el: $("#Left"),
     
     events: {
@@ -136,7 +136,7 @@ Agent.Views.TreeNavSimple = Backbone.View.extend({
         
         //改变hash
         var hash = url.split("#")[1];
-        Agent.router.navigate(hash, {trigger: true});
+        Atlantis.router.navigate(hash, {trigger: true});
     },
     
     slide: function(e) {

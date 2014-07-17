@@ -1,10 +1,10 @@
 /*
- * Agent View - Head
+ * Atlantis View - Head
  * @author : liangxiao
  * @date   : 2012
  */
 
-Agent.Views.Head = Backbone.View.extend({
+Atlantis.Views.Head = Backbone.View.extend({
     el: $("#Head"),
     
     initialize: function() {

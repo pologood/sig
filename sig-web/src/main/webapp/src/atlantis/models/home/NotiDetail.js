@@ -1,10 +1,10 @@
 /*
- * Agent Model - 通知内容
+ * Atlantis Model - 通知内容
  * @author : liangxiao
  * @date   : 2013
  */
 
-Agent.Models.NotiDetail = Backbone.Model.extend({
+Atlantis.Models.NotiDetail = Backbone.Model.extend({
     defaults: {
         data: null
     },

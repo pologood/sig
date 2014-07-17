@@ -1,10 +1,10 @@
 /*
- * Agent Model - 系统消息
+ * Atlantis Model - 系统消息
  * @author : liangxiao
  * @date   : 2013
  */
 
-Agent.Models.Msg = Backbone.Model.extend({
+Atlantis.Models.Msg = Backbone.Model.extend({
     defaults: {
         data: null
     },

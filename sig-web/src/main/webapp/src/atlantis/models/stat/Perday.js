@@ -1,10 +1,10 @@
 /*
- * Agent Model - Perday
+ * Atlantis Model - Perday
  * @author : liangxiao
  * @date   : 2012
  */
 
-Agent.Models.Perday = Backbone.Model.extend({
+Atlantis.Models.Perday = Backbone.Model.extend({
     defaults: {
         data: null
     },

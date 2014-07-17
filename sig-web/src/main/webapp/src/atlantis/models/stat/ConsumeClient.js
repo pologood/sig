@@ -1,10 +1,10 @@
 /*
- * Agent Model - ConsumeClient 
+ * Atlantis Model - ConsumeClient 
  * @author : liangxiao
  * @date   : 2012
  */
 
-Agent.Models.ConsumeClient = Backbone.Model.extend({
+Atlantis.Models.ConsumeClient = Backbone.Model.extend({
     defaults: {
         data: null
     },

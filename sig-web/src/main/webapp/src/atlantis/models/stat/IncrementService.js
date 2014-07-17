@@ -1,10 +1,10 @@
 /*
- * Agent Model - IncrementService 
+ * Atlantis Model - IncrementService 
  * @author : liangxiao
  * @date   : 2012
  */
 
-Agent.Models.IncrementService = Backbone.Model.extend({
+Atlantis.Models.IncrementService = Backbone.Model.extend({
     defaults: {
         data: null
     },

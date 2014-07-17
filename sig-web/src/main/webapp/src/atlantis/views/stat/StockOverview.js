@@ -1,10 +1,10 @@
 /*
- * Agent View - StockOverview 
+ * Atlantis View - StockOverview 
  * @author : liangxiao
  * @date   : 2012
  */
 
-Agent.Views.StockOverview = Backbone.View.extend({
+Atlantis.Views.StockOverview = Backbone.View.extend({
     el: $("#Right"),
     
     events: {
@@ -22,15 +22,15 @@ Agent.Views.StockOverview = Backbone.View.extend({
         this.model.unbind();
         this.$el.unbind();
         this.$el.html("");
-        Agent.Widgets.TreeNav.destroy();
+        Atlantis.Widgets.TreeNav.destroy();
     },
     
     renderTopNav: function() {
-        Agent.Widgets.TopNav.render(4);
+        Atlantis.Widgets.TopNav.render(4);
     },
     
     renderTreeNav: function() {
-        Agent.Widgets.TreeNav = new Agent.Views.TreeNav(1, 3, 0);
+        Atlantis.Widgets.TreeNav = new Atlantis.Views.TreeNav(1, 3, 0);
     },
     
     pageRendered: false,
@@ -61,7 +61,7 @@ Agent.Views.StockOverview = Backbone.View.extend({
         this.contrastArgsOfDWMQ = null;
         
         //初始化日历相关元素
-        Agent.Calendar.init(this);
+        Atlantis.Calendar.init(this);
         /*
          * 初始化其他的元素
          */

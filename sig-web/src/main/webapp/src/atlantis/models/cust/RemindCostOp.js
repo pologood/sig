@@ -1,10 +1,10 @@
 /*
- * Agent Model - RemindCostOp
+ * Atlantis Model - RemindCostOp
  * @author : liangxiao
  * @date   : 2012
  */
 
-Agent.Models.RemindCostOp = Backbone.Model.extend({
+Atlantis.Models.RemindCostOp = Backbone.Model.extend({
     defaults: {
         data: null
     },

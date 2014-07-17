@@ -1,10 +1,10 @@
 /*
- * Agent View - TopNav
+ * Atlantis View - TopNav
  * @author : liangxiao
  * @date   : 2012
  */
 
-Agent.Views.TopNav = Backbone.View.extend({
+Atlantis.Views.TopNav = Backbone.View.extend({
     el: $("#Nav"),
     
     events: {
@@ -15,13 +15,13 @@ Agent.Views.TopNav = Backbone.View.extend({
     
     render: function(index) {
         //清除active类
-        $.each(Agent.TopNav, function(index, value) {
+        $.each(Atlantis.TopNav, function(index, value) {
             value.active = "";
         });
-        Agent.TopNav[index].active = " active";
+        Atlantis.TopNav[index].active = " active";
         
         //生成HTML
-        this.$el.html(this.createHTML(Agent.TopNav));
+        this.$el.html(this.createHTML(Atlantis.TopNav));
     },
     
     tpl: '<a href="javascript:void(0)" hidefocus="true" index="{{index}}" tid="{{tid}}" logid="{{logid}}" class="nav{{active}}">{{name}}</a>',
@@ -66,7 +66,7 @@ Agent.Views.TopNav = Backbone.View.extend({
         if (!$(e.target).hasClass("nav")) return;
         
         var index = $(e.target).attr("index"),
-            tree = Agent.TopNav[index]["tree"],
+            tree = Atlantis.TopNav[index]["tree"],
             url;
         
         if (tree != null) {
@@ -95,11 +95,11 @@ Agent.Views.TopNav = Backbone.View.extend({
                 }
             }
         } else {
-            url = Agent.TopNav[index]["url"];
+            url = Atlantis.TopNav[index]["url"];
         }
         
         //改变hash
         var hash = url.split("#")[1];
-        Agent.router.navigate(hash, {trigger: true});
+        Atlantis.router.navigate(hash, {trigger: true});
     }
 });

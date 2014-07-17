@@ -1,10 +1,10 @@
 /*
- * Agent View - ConsumeClient 
+ * Atlantis View - ConsumeClient 
  * @author : liangxiao
  * @date   : 2012
  */
 
-Agent.Views.ConsumeClient = Backbone.View.extend({
+Atlantis.Views.ConsumeClient = Backbone.View.extend({
     el: $("#Right"),
     
     events: {
@@ -23,15 +23,15 @@ Agent.Views.ConsumeClient = Backbone.View.extend({
         this.model.unbind();
         this.$el.unbind();
         this.$el.html("");
-        Agent.Widgets.TreeNav.destroy();
+        Atlantis.Widgets.TreeNav.destroy();
     },
     
     renderTopNav: function() {
-        Agent.Widgets.TopNav.render(4);
+        Atlantis.Widgets.TopNav.render(4);
     },
     
     renderTreeNav: function() {
-        Agent.Widgets.TreeNav = new Agent.Views.TreeNav(1, 0, 1);
+        Atlantis.Widgets.TreeNav = new Atlantis.Views.TreeNav(1, 0, 1);
     },
     
     pageRendered: false,
@@ -62,7 +62,7 @@ Agent.Views.ConsumeClient = Backbone.View.extend({
         this.contrastArgsOfDWMQ = null;
         
         //初始化日历相关元素
-        Agent.Calendar.init(this, "current");
+        Atlantis.Calendar.init(this, "current");
         
         this.overviewArgsOfDWMQ.queryType = 3;
         this.overviewArgsOfDWMQ.query = "";
@@ -349,7 +349,7 @@ Agent.Views.ConsumeClient = Backbone.View.extend({
     openPerday: function(e) {
         Util.stopDefault(e);
         var me = $(e.target),
-            args = Agent.Page.cur.model.lastAction.args,
+            args = Atlantis.Page.cur.model.lastAction.args,
             json = {
                 year: args.time.year,
                 month: args.time.month,
@@ -661,10 +661,10 @@ Agent.Views.ConsumeClient = Backbone.View.extend({
     showError: function(msg) {
         clearTimeout(this.timer);
         
-        Agent.Widgets.MessageBox.show(msg);
+        Atlantis.Widgets.MessageBox.show(msg);
         
         this.timer = setTimeout(function() {
-            Agent.Widgets.MessageBox.hide();
+            Atlantis.Widgets.MessageBox.hide();
         }, 5000);
     }
 });

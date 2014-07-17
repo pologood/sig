@@ -1,10 +1,10 @@
 /*
- * Agent Model - AccountCs
+ * Atlantis Model - AccountCs
  * @author : liangxiao
  * @date   : 2012
  */
 
-Agent.Models.AccountCs = Backbone.Model.extend({
+Atlantis.Models.AccountCs = Backbone.Model.extend({
     defaults: {
         data: null
     },

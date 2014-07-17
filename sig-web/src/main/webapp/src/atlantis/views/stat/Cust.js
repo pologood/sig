@@ -1,10 +1,10 @@
 /*
- * Agent View - Cust
+ * Atlantis View - Cust
  * @author : liangxiao
  * @date   : 2012
  */
 
-Agent.Views.Cust = Backbone.View.extend({
+Atlantis.Views.Cust = Backbone.View.extend({
     el: document.body,
     
     events: {

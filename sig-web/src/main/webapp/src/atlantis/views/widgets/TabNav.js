@@ -1,10 +1,10 @@
 /*
- * Agent View - TabNav
+ * Atlantis View - TabNav
  * @author : liangxiao
  * @date   : 2013
  */
 
-Agent.Views.TabNav = Backbone.View.extend({
+Atlantis.Views.TabNav = Backbone.View.extend({
     initialize: function() {},
     
     tpl: '<a href="{{url}}" class="{{className}}" tid="{{tid}}" hidefocus="true">{{name}}</a>',

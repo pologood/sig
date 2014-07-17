@@ -1,10 +1,10 @@
 /*
- * Agent View - MessageBox 
+ * Atlantis View - MessageBox 
  * @author : liangxiao
  * @date   : 2012
  */
 
-Agent.Views.MessageBox = Backbone.View.extend({
+Atlantis.Views.MessageBox = Backbone.View.extend({
     el: $("#MessageBox"),
     
     show: function(msg) {

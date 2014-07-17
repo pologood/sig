@@ -1,10 +1,10 @@
 /*
- * Agent View - ConsumeOverview 
+ * Atlantis View - ConsumeOverview 
  * @author : liangxiao
  * @date   : 2012
  */
 
-Agent.Views.ConsumeOverview = Backbone.View.extend({
+Atlantis.Views.ConsumeOverview = Backbone.View.extend({
     el: $("#Right"),
     
     events: {
@@ -21,15 +21,15 @@ Agent.Views.ConsumeOverview = Backbone.View.extend({
         this.model.unbind();
         this.$el.unbind();
         this.$el.html("");
-        Agent.Widgets.TreeNav.destroy();
+        Atlantis.Widgets.TreeNav.destroy();
     },
     
     renderTopNav: function() {
-        Agent.Widgets.TopNav.render(4);
+        Atlantis.Widgets.TopNav.render(4);
     },
     
     renderTreeNav: function() {
-        Agent.Widgets.TreeNav = new Agent.Views.TreeNav(1, 0, 0);
+        Atlantis.Widgets.TreeNav = new Atlantis.Views.TreeNav(1, 0, 0);
     },
     
     pageRendered: false,
@@ -54,7 +54,7 @@ Agent.Views.ConsumeOverview = Backbone.View.extend({
         this.contrastArgsOfDWMQ = null;
         
         //初始化日历相关元素
-        Agent.Calendar.init(this, "current");
+        Atlantis.Calendar.init(this, "current");
         
         /*
          * 初始化其他的元素

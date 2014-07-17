@@ -1,10 +1,10 @@
 /*
- * Agent View - Foot
+ * Atlantis View - Foot
  * @author : liangxiao
  * @date   : 2012
  */
 
-Agent.Views.Foot = Backbone.View.extend({
+Atlantis.Views.Foot = Backbone.View.extend({
     el: $("#Foot"),
     
     initialize: function() {

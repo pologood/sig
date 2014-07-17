@@ -1,10 +1,10 @@
 /*
- * Agent View - 账户优化详情
+ * Atlantis View - 账户优化详情
  * @author : liangxiao
  * @date   : 2013
  */
 
-Agent.Views.OptDetail = Backbone.View.extend({
+Atlantis.Views.OptDetail = Backbone.View.extend({
     el: $("#Right"),
     
     events: {
@@ -21,15 +21,15 @@ Agent.Views.OptDetail = Backbone.View.extend({
         this.model.unbind();
         this.$el.unbind();
         this.$el.html("");
-        Agent.Widgets.TreeNavSimple.destroy();
+        Atlantis.Widgets.TreeNavSimple.destroy();
     },
     
     renderTopNav: function() {
-        Agent.Widgets.TopNav.render(1);
+        Atlantis.Widgets.TopNav.render(1);
     },
     
     renderTreeNav: function() {
-        Agent.Widgets.TreeNavSimple = new Agent.Views.TreeNavSimple(Agent.TreeNav.Cust, 1, 0);
+        Atlantis.Widgets.TreeNavSimple = new Atlantis.Views.TreeNavSimple(Atlantis.TreeNav.Cust, 1, 0);
     },
     
     render: function(query) {
@@ -85,7 +85,7 @@ Agent.Views.OptDetail = Backbone.View.extend({
     },
     
     editMatch: function() {
-        Agent.Widgets.Panel.KeyWordMatch = new Agent.Views.Panel.KeyWordMatch({
+        Atlantis.Widgets.Panel.KeyWordMatch = new Atlantis.Views.Panel.KeyWordMatch({
             parentView: this,
             custId: parseInt($("#CustId").val(), 10),
             custName: $("#CustName").val()

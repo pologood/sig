@@ -1,10 +1,10 @@
 /*
- * Agent Model - IncrementOverview 
+ * Atlantis Model - IncrementOverview 
  * @author : liangxiao
  * @date   : 2012
  */
 
-Agent.Models.IncrementOverview = Backbone.Model.extend({
+Atlantis.Models.IncrementOverview = Backbone.Model.extend({
     defaults: {
         data: null
     },
@@ -207,7 +207,7 @@ Agent.Models.IncrementOverview = Backbone.Model.extend({
         data.sum.newCustsB = Util.format.number(data.sum.newCustsB);
         data.sum.newCustsCommon = Util.format.number(data.sum.newCustsCommon);
         
-       // data.sum.custsChangeAgent = Util.format.number(data.sum.custsChangeAgent);
+       // data.sum.custsChangeAtlantis = Util.format.number(data.sum.custsChangeAtlantis);
         
         data.sum.newInvest = Util.format.money(data.sum.newInvest);
         data.sum.newInvestCommon = Util.format.money(data.sum.newInvestCommon);
@@ -225,7 +225,7 @@ Agent.Models.IncrementOverview = Backbone.Model.extend({
             val.newCustsB = Util.format.number(val.newCustsB);
             val.newCustsCommon = Util.format.number(val.newCustsCommon);
             
-            //val.custsChangeAgent = Util.format.number(val.custsChangeAgent);
+            //val.custsChangeAtlantis = Util.format.number(val.custsChangeAtlantis);
             
             val.newInvest = Util.format.money(val.newInvest);
             val.newInvestCommon = Util.format.money(val.newInvestCommon);
@@ -263,10 +263,10 @@ Agent.Models.IncrementOverview = Backbone.Model.extend({
         //data.data.newCustsCommonSub = Util.format.number(data.data.newCustsCommonSub);
         //data.data.newCustsCommonCompare = Util.format.percent(data.data.newCustsCommonCompare);
 
-        //data.data.custsChangeAgent = Util.format.number(data.data.custsChangeAgent);
-        //data.data.lastCustsChangeAgent = Util.format.number(data.data.lastCustsChangeAgent);
-        //data.data.custsChangeAgentSub = Util.format.number(data.data.custsChangeAgentSub);
-        //data.data.custsChangeAgentCompare = Util.format.percent(data.data.custsChangeAgentCompare);
+        //data.data.custsChangeAtlantis = Util.format.number(data.data.custsChangeAtlantis);
+        //data.data.lastCustsChangeAtlantis = Util.format.number(data.data.lastCustsChangeAtlantis);
+        //data.data.custsChangeAtlantisSub = Util.format.number(data.data.custsChangeAtlantisSub);
+        //data.data.custsChangeAtlantisCompare = Util.format.percent(data.data.custsChangeAtlantisCompare);
         
         data.data.newInvest = Util.format.money(data.data.newInvest);
         data.data.lastNewInvest = Util.format.money(data.data.lastNewInvest);

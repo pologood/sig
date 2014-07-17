@@ -1,10 +1,10 @@
 /*
- * Agent View - ConsumeRealtimeCust
+ * Atlantis View - ConsumeRealtimeCust
  * @author : liangxiao
  * @date   : 2012
  */
 
-Agent.Views.ConsumeRealtimeCust = Backbone.View.extend({
+Atlantis.Views.ConsumeRealtimeCust = Backbone.View.extend({
     el: $("#Right"),
 
     events: {
@@ -24,15 +24,15 @@ Agent.Views.ConsumeRealtimeCust = Backbone.View.extend({
         this.model.unbind();
         this.$el.unbind();
         this.$el.html("");
-        Agent.Widgets.TreeNavSimple.destroy();
+        Atlantis.Widgets.TreeNavSimple.destroy();
     },
 
     renderTopNav: function() {
-        Agent.Widgets.TopNav.render(1);
+        Atlantis.Widgets.TopNav.render(1);
     },
 
     renderTreeNav: function() {
-        Agent.Widgets.TreeNavSimple = new Agent.Views.TreeNavSimple(Agent.TreeNav.Cust, 0, 0);
+        Atlantis.Widgets.TreeNavSimple = new Atlantis.Views.TreeNavSimple(Atlantis.TreeNav.Cust, 0, 0);
     },
 
     sendCustLog: function(e) {
@@ -235,10 +235,10 @@ Agent.Views.ConsumeRealtimeCust = Backbone.View.extend({
     showError: function(msg) {
         clearTimeout(this.timer);
         
-        Agent.Widgets.MessageBox.show(msg);
+        Atlantis.Widgets.MessageBox.show(msg);
         
         this.timer = setTimeout(function() {
-            Agent.Widgets.MessageBox.hide();
+            Atlantis.Widgets.MessageBox.hide();
         }, 5000);
     }
 });

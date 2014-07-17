@@ -72,9 +72,9 @@ ColSelector.prototype = {
     
     showError: function(msg) {
         clearTimeout(this.timer);
-        Agent.Widgets.MessageBox.show(msg);
+        Atlantis.Widgets.MessageBox.show(msg);
         this.timer = setTimeout(function() {
-            Agent.Widgets.MessageBox.hide();
+            Atlantis.Widgets.MessageBox.hide();
         }, 5000);
     }
 };

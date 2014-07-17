@@ -1,10 +1,10 @@
 /*
- * Agent Model - 基本信息
+ * Atlantis Model - 基本信息
  * @author : liangxiao
  * @date   : 2013
  */
 
-Agent.Models.AccountInfo = Backbone.Model.extend({
+Atlantis.Models.AccountInfo = Backbone.Model.extend({
     defaults: {
         company: null,
         account: null,
@@ -45,7 +45,7 @@ Agent.Models.AccountInfo = Backbone.Model.extend({
                 me.set({company: response.data});
                 
                 if (me.viewPay()) {
-                    me.getPay({agentId: parseInt($("#AgentId").val(), 10)});
+                    me.getPay({agentId: parseInt($("#AtlantisId").val(), 10)});
                 }
             }
         });
@@ -56,14 +56,14 @@ Agent.Models.AccountInfo = Backbone.Model.extend({
         me.set({account: null}, {silent : true});
         
         dwr.request.run({
-            method: "AgentUserManageAction.queryUserById",
+            method: "AtlantisUserManageAction.queryUserById",
             args: [args],
             success: function(response) {
                 response.data.hasSuperior = response.data.superiorId == null ? [] : [1];
                 me.set({account: response.data});
                 
                 if (me.viewPay()) {
-                    me.getPay({agentId: parseInt($("#AgentId").val(), 10)});
+                    me.getPay({agentId: parseInt($("#AtlantisId").val(), 10)});
                 }
             }
         });

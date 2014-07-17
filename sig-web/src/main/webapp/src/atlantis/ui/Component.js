@@ -8,9 +8,9 @@
  * @date   : 2012
  */
 
-Agent.Component = {};
+Atlantis.Component = {};
 
-Agent.Component.initEsui = function(view, json) {
+Atlantis.Component.initEsui = function(view, json) {
     if (json.monthData) {
         var monthData = []; //月的datasource
         $.each(json.monthData.split(","), function(index, val) {
@@ -48,15 +48,15 @@ Agent.Component.initEsui = function(view, json) {
 			value: !json.date ? Util.date.yesterdayString() : json.date
 		},
 		YearOfDM: {
-			datasource: Agent.Calendar.year,
+			datasource: Atlantis.Calendar.year,
 			value: !json.year
-                   ? Agent.Calendar.year[Agent.Calendar.year.length - 1].value //本月
+                   ? Atlantis.Calendar.year[Atlantis.Calendar.year.length - 1].value //本月
                    : json.year
 		},
 		MonthOfDM: {
-			datasource: !json.monthData ? Agent.Calendar.monthOfThisYear : monthData,
+			datasource: !json.monthData ? Atlantis.Calendar.monthOfThisYear : monthData,
 			value: !json.month
-                   ? Agent.Calendar.monthOfThisYear[Agent.Calendar.monthOfThisYear.length - 1].value //本月
+                   ? Atlantis.Calendar.monthOfThisYear[Atlantis.Calendar.monthOfThisYear.length - 1].value //本月
                    : json.month
 		},
 		//客户
@@ -120,7 +120,7 @@ Agent.Component.initEsui = function(view, json) {
     });
 };
 
-Agent.Component.initElement = function(view, json) {
+Atlantis.Component.initElement = function(view, json) {
     /*
      * 按日按月
      */
@@ -131,7 +131,7 @@ Agent.Component.initElement = function(view, json) {
     }
 };
 
-Agent.Component.bindEsui = function(view) {
+Atlantis.Component.bindEsui = function(view) {
     /*
      * 按日按月
      */
@@ -171,9 +171,9 @@ Agent.Component.bindEsui = function(view) {
  * @param view {Object}  View的实例
  * @param query {String} 页面跳转参数
  */
-Agent.Component.init = function(view, query) {
+Atlantis.Component.init = function(view, query) {
     var json = T.url.queryToJson(typeof query == "undefined" ? "" : decodeURIComponent(query));
-    Agent.Component.initEsui(view, json);
-    Agent.Component.initElement(view, json);
-    Agent.Component.bindEsui(view);
+    Atlantis.Component.initEsui(view, json);
+    Atlantis.Component.initElement(view, json);
+    Atlantis.Component.bindEsui(view);
 };

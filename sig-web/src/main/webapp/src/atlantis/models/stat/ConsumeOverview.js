@@ -1,10 +1,10 @@
 /*
- * Agent Model - ConsumeOverview 
+ * Atlantis Model - ConsumeOverview 
  * @author : liangxiao
  * @date   : 2012
  */
 
-Agent.Models.ConsumeOverview = Backbone.Model.extend({
+Atlantis.Models.ConsumeOverview = Backbone.Model.extend({
     defaults: {
         data: null
     },

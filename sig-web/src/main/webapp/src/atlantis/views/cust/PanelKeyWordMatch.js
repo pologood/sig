@@ -4,7 +4,7 @@
  * @date   : 2012
  */
 
-Agent.Views.Panel.KeyWordMatch = Agent.Views.Panel.Base.extend({
+Atlantis.Views.Panel.KeyWordMatch = Atlantis.Views.Panel.Base.extend({
     events: {
         "click .hide": "hidePanel",
         "click .close": "hidePanel",
@@ -260,7 +260,7 @@ Agent.Views.Panel.KeyWordMatch = Agent.Views.Panel.Base.extend({
     },
     
     editMatch: function() {
-        var view = Agent.Widgets.Panel.KeyWordMatch,
+        var view = Atlantis.Widgets.Panel.KeyWordMatch,
             ids = [];
         view.$(".grid td input:checked").each(function(index, elem) {
             ids.push(parseInt(elem.id, 10));

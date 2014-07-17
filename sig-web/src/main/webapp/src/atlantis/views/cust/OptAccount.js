@@ -1,10 +1,10 @@
 /*
- * Agent View - 账户优化
+ * Atlantis View - 账户优化
  * @author : liangxiao
  * @date   : 2013
  */
 
-Agent.Views.OptAccount = Backbone.View.extend({
+Atlantis.Views.OptAccount = Backbone.View.extend({
     el: $("#Right"),
     
     events: {
@@ -23,7 +23,7 @@ Agent.Views.OptAccount = Backbone.View.extend({
         this.model.unbind();
         this.$el.unbind();
         this.$el.html("");
-        Agent.Widgets.TreeNavSimple.destroy();
+        Atlantis.Widgets.TreeNavSimple.destroy();
     },
     
     sendLog: function(e) {
@@ -31,11 +31,11 @@ Agent.Views.OptAccount = Backbone.View.extend({
     },
     
     renderTopNav: function() {
-        Agent.Widgets.TopNav.render(1);
+        Atlantis.Widgets.TopNav.render(1);
     },
     
     renderTreeNav: function() {
-        Agent.Widgets.TreeNavSimple = new Agent.Views.TreeNavSimple(Agent.TreeNav.Cust, 1, Agent.Auth.ViewOptDetail ? 0 : 1);
+        Atlantis.Widgets.TreeNavSimple = new Atlantis.Views.TreeNavSimple(Atlantis.TreeNav.Cust, 1, Atlantis.Auth.ViewOptDetail ? 0 : 1);
     },
     
     render: function(query) {
@@ -173,7 +173,7 @@ Agent.Views.OptAccount = Backbone.View.extend({
             var op = true; //优化入口
             if ($("#AdminRoleID").val() == "1007") { //mis代管用户，且为只读权限
                 op = false;
-            } else if (!Agent.Auth.ViewOptDetail) {
+            } else if (!Atlantis.Auth.ViewOptDetail) {
                 op = false;
             }
             var table = $.Mustache.render("tpl-opt-account-table", {

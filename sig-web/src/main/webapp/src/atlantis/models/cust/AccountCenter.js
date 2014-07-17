@@ -1,10 +1,10 @@
 /*
- * Agent Model - 客户中心
+ * Atlantis Model - 客户中心
  * @author : liangxiao
  * @date   : 2013
  */
 
-Agent.Models.AccountCenter = Backbone.Model.extend({
+Atlantis.Models.AccountCenter = Backbone.Model.extend({
     defaults: {
         data: null
     },
