@@ -1,0 +1,17 @@
+document.write('<script src="assets/common/dwr/dwr.engine.js"></script>');
+document.write('<script src="assets/common/esui/tangram-1.5.2.1.js"></script>');
+document.write('<script src="assets/common/esui/esui-2.0.4.js"></script>');
+document.write('<script src="assets/common/jquery/jquery-1.8.2.js"></script>');
+document.write('<script src="assets/common/jquery/jquery-ui-1.9.1.custom.js"></script>');
+document.write('<script src="assets/common/jquery/jquery.multiselect.js"></script>');
+document.write('<script src="assets/common/jquery/jquery.cookie.js"></script>');
+document.write('<script src="assets/common/jquery/jquery.hotkeys.js"></script>');
+document.write('<script src="assets/common/jquery/jquery.jstree.js"></script>');
+document.write('<script src="assets/common/backbone/json2.js"></script>');
+document.write('<script src="assets/common/backbone/underscore.js"></script>');
+document.write('<script src="assets/common/backbone/backbone.js"></script>');
+document.write('<script src="assets/common/mustache.js"></script>');
+document.write('<script src="assets/common/jquery/jquery-Mustache.js"></script>');
+document.write('<script src="assets/common/amcharts.js"></script>');
+document.write('<script src="assets/common/date.js"></script>');
+document.write('<script src="assets/common/md5.js"></script>');

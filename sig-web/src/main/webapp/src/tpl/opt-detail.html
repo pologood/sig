@@ -1,0 +1,38 @@
+<script id="tpl-opt-detail-bread" type="text/html">
+<div class="bread"><a href="#cust/opt/account/">账户优化</a> -> 账户优化详情</div>
+</script>
+
+<script id="tpl-opt-detail-title" type="text/html">
+<h3>账户优化详情</h3>
+</script>
+
+<script id="tpl-opt-detail-summary" type="text/html">
+<div class="summary">
+    <strong>公司名称：</strong><span class="company" title="{{data.custName}}">{{data.custName}}</span>
+    <strong>联系人：</strong><span>{{data.contactor}}</span>
+    <strong>联系电话：</strong><span>{{data.phone}}</span>
+    <strong>常用邮箱：</strong><span>{{data.email}}</span>
+    <strong><a href="#stat/consume/realtime/query={{data.custId}}">实时消耗({{data.realTimeCost}}) <img src="../../asset/agent/css/img/chart-up.png"></a></strong>
+</div>
+<input type="hidden" value="{{data.custId}}" id="CustId" />
+<input type="hidden" value="{{data.custName}}" id="CustName" />
+</script>
+
+<script id="tpl-opt-detail-table" type="text/html">
+<table>
+<tr>
+    <th width="130">分类</th>
+    <th width="600">账户问题</th>
+    <th>优化建议</th>
+</tr>
+{{#detail}}
+{{#content}}
+<tr>
+    {{{firstCol}}}
+    <td class="text"><div class="break" style="width:600px">{{{problem}}}</div></td>
+    <td class="text">{{{link}}}</td>
+</tr>
+{{/content}}
+{{/detail}}
+</table>
+</script>

@@ -1,0 +1,70 @@
+<script id="tpl-account-wrap" type="text/html">
+<div class="account-info">
+    <div class="company-wrap" style="display:none"></div>
+    <div class="account-wrap" style="display:none"></div>
+    <div class="pay-wrap" style="display:none"></div>
+</div>
+</script>
+
+<script id="tpl-account-company" type="text/html">
+<h3>公司信息</h3>
+<p class="tips" id="Level1Tip" style="display:none"><span>如果您需要修改公司信息，请与搜狗客服联系，或发书面申请传真至62728300</span></p>
+<p class="tips" id="Level2Tip" style="display:none"><span>如果您需要修改公司信息，请与您的一级代理商联系</span></p>
+<p><span>公司名称：</span>{{company.companyName}}{{#op}}<a href="javascript:void(0)" hidefocus="true" class="edit-psw">修改密码</a>{{/op}}</p>
+<div class="psw" style="display:none">
+    <p><span>原密码：</span><input ui="type:TextInput;id:Psw1;width:180" type="password" /><span class="error error1" style="display:none"></span></p>
+    <p><span>新密码：</span><input ui="type:TextInput;id:Psw2;width:180" type="password" /><span class="error error2" style="display:none"></span></p>
+    <p><span>重复密码：</span><input ui="type:TextInput;id:Psw3;width:180" type="password" /><span class="error error3" style="display:none"></span></p>
+    <p>
+        <a href="javascript:void(0)" class="ok" hidefocus="true">&nbsp;</a>
+        <a href="javascript:void(0)" class="cancel" hidefocus="true">&nbsp;</a>
+    </p>
+</div>
+<p><span>公司网址：</span>{{company.website}}</p>
+<p><span>联系人：</span>{{company.contactor}}</p>
+<p><span>联系电话：</span>{{company.phone}}</p>
+<p><span>常用邮箱：</span>{{company.email}}</p>
+<p><span>所在地：</span>{{company.region}}</p>
+<p><span>通讯地址：</span>{{company.address}}</p>
+<p><span>邮政编码：</span>{{company.zipCode}}</p>
+<p><span>注册日期：</span>{{company.regDate}}</p>
+<p><span>合同到期：</span>{{company.expireDate}}</p>
+</script>
+
+<script id="tpl-account-info" type="text/html">
+<h3>账号信息{{#op}}<a href="javascript:void(0)" hidefocus="true" id="EditAccount">修改信息</a>{{/op}}</h3>
+<p><span>姓名：</span>{{account.userName}}</p>
+<p><span>账号：</span>{{account.account}}{{#op}}<a href="javascript:void(0)" hidefocus="true" class="edit-psw">修改密码</a>{{/op}}</p>
+<div class="psw" style="display:none">
+    <p><span>原密码：</span><input ui="type:TextInput;id:Psw1;width:180" type="password" /><span class="error error1" style="display:none"></span></p>
+    <p><span>新密码：</span><input ui="type:TextInput;id:Psw2;width:180" type="password" /><span class="error error2" style="display:none"></span></p>
+    <p><span>重复密码：</span><input ui="type:TextInput;id:Psw3;width:180" type="password" /><span class="error error3" style="display:none"></span></p>
+    <p>
+        <a href="javascript:void(0)" class="ok" hidefocus="true">&nbsp;</a>
+        <a href="javascript:void(0)" class="cancel" hidefocus="true">&nbsp;</a>
+    </p>
+</div>
+<p><span>系统角色：</span>{{account.roleName}}</p>
+{{#account.hasSuperior}}<p><span>直属上级：</span>{{account.superiorName}}</p>{{/account.hasSuperior}}
+<p><span>联系电话：</span>{{account.phone}}</p>
+<p><span>常用邮箱：</span>{{account.email}}</p>
+<p><span>备注：</span>{{account.mem}}</p>
+</script>
+
+<script id="tpl-account-pay" type="text/html">
+<h3>付款信息{{#op}}<a href="javascript:void(0)" hidefocus="true" id="EditPay">设置</a>{{/op}}</h3>
+<p class="tips" id="UnOpenTip" style="display:none"><span>不向客户公开付款信息</span></p>
+<p class="tips" id="OpenTip" style="display:none"><span>向客户公开付款信息</span></p>
+<p><span>联系人：</span>{{pay.contactor}}</p>
+<p><span>联系电话：</span>{{pay.tel}}</p>
+<p id="GatherUnit"><span>收款单位：</span>{{pay.gatherUnit}}</p>
+<p id="GatherAddr"><span>收款地址：</span>{{pay.gatherAddr}}</p>
+<p id="Zipp"><span>邮政编码：</span>{{pay.zipp}}</p>
+{{#pay.payBanks}}
+<div class="payee">
+<p><span>收款人：</span>{{name}}</p>
+<p><span>开户银行：</span>{{bank}}</p>
+<p><span>银行卡号：</span>{{cardNo}}</p>
+</div>
+{{/pay.payBanks}}
+</script>

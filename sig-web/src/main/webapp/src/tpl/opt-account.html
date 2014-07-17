@@ -1,0 +1,69 @@
+<script id="tpl-opt-account-tip" type="text/html">
+<div class="alert">优化概况仅统计余额大于0的旭日客户</div>
+</script>
+
+<script id="tpl-opt-account-title" type="text/html">
+<h3>账户优化概况</h3>
+</script>
+
+<script id="tpl-opt-account-query" type="text/html">
+<div class="block">
+    <strong>选择客户：</strong>
+    <div ui="type:Select;id:QueryType;width:75"></div>
+    <input ui="type:TextInput;id:Query;width:100" type="text" />
+</div>
+<div class="block">
+    <strong>优化类型：</strong>
+    <input type="checkbox" hidefocus="true" value="1" title="关键词" ui="type:CheckBox;id:OptType1" checked />
+    <input type="checkbox" hidefocus="true" value="2" title="预算" ui="type:CheckBox;id:OptType2" checked />
+    <input type="checkbox" hidefocus="true" value="3" title="排名" ui="type:CheckBox;id:OptType3" checked />
+    <input type="checkbox" hidefocus="true" value="4" title="质量度" ui="type:CheckBox;id:OptType4" checked />
+    <input type="checkbox" hidefocus="true" value="5" title="推广时段" ui="type:CheckBox;id:OptType5" checked />
+    <input type="checkbox" hidefocus="true" value="6" title="匹配方式" ui="type:CheckBox;id:OptType6" checked />
+    <input type="checkbox" hidefocus="true" value="7" title="计划/创意数/物料状态" ui="type:CheckBox;id:OptType7" checked />
+    <input type="checkbox" hidefocus="true" value="8" title="余额不足" ui="type:CheckBox;id:OptType8" checked />
+</div>
+<div class="block">
+    <strong>消耗提升潜力：</strong>
+    <div ui="type:Select;id:Potential;width:75"></div>
+</div>
+</script>
+
+<script id="tpl-opt-account-table" type="text/html">
+<table>
+<tr>
+    <th nowrap>客户ID</th>
+    <th width="120" nowrap>客户名称</th>
+    <th width="80" nowrap>客户账号</th>
+    <th nowrap>二级行业</th>
+    <th nowrap>关联客服</th>
+    <th class="sortable" sortby="yesterdayConsume" nowrap>昨日消耗 <span class="sort"></span></th>
+    <th class="sortable" sortby="dayCompare" nowrap>环比 <span class="help" title="周一的环比是上周五"></span> <span class="sort"></span></th>
+    <th class="sortable" sortby="weekCompare" nowrap>同比 <span class="sort"></span></th>
+    <th class="sortable" sortby="consumeBudgetRatio" nowrap><span style="display:inline-block; vertical-align:middle">昨日消耗<br>预算比</span> <span class="sort"></span></th>
+    <th class="sortable" sortby="enhancePotential" nowrap><span style="display:inline-block; vertical-align:middle">消耗<br>提升潜力</span> <span class="sort"></span></th>
+    <th width="200" nowrap>优化类型</th>
+    {{#op}}<th width="70" nowrap>操作</th>{{/op}}
+</tr>
+{{#data}}
+<tr>
+    <td class="text">{{customerId}}</td>
+    <td class="text">
+        <div class="ellipsis" style="width:120px">
+            <a class="custLog" href="../../delegate?agentUserId={{agentUserId}}&accountId={{customerId}}&toInfo=accountInfo" target="_blank" title="{{customerName}}">{{customerName}}</a>
+        </div>
+    </td>
+    <td class="text"><div class="ellipsis" style="width:80px" title="{{customerEmail}}">{{customerEmail}}</div></td>
+    <td class="text">{{secondTrade}}</td>
+    <td class="text">{{customerService}}</td>
+    <td>{{yesterdayConsume}}</td>
+    <td>{{dayCompare}}</td>
+    <td>{{weekCompare}}</td>
+    <td>{{consumeBudgetRatio}}</td>
+    <td class="text">{{enhancePotential}}</td>
+    <td class="text"><div class="break" style="width:200px; line-height:20px">{{optText}}</div></td>
+    {{#op}}<td class="text"><div style="width:70px"><a href="#cust/opt/detail/{{customerId}}">优化</a></div></td>{{/op}}
+</tr>
+{{/data}}
+</table>
+</script>

@@ -1,0 +1,134 @@
+<script id="tpl-auth-user" type="text/html">
+<div class="auth-wrap">
+    <div class="company-arch">
+        <div class="company-title">
+            <span>公司结构图</span>
+            {{#op}}<div class="company-op">
+                <a href="javascript:void(0)" hidefocus="true" class="add">添加</a>
+                <a href="javascript:void(0)" hidefocus="true" class="del">删除</a>
+                <div id="DelRolePanel" class="slide-dialog" style="display:none">
+                    <h3>删除用户</h3>
+                    <div class="content">
+                        <div class="block">
+                            <span>选择用户</span>
+                            <div ui="type:Select;id:RoleList;width:100"></div>
+                            <div ui="type:Select;id:UserList;width:95"></div>
+                        </div>
+                        <div class="bottom">
+                            <a href="javascript:void(0)" class="cancel" hidefocus="true">&nbsp;</a>
+                            <a href="javascript:void(0)" class="ok" hidefocus="true">&nbsp;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>{{/op}}
+        </div>
+        <div class="company-tree">加载中...</div>
+    </div>
+    
+    <div class="company-info">
+        <div class="tab">
+            <a href="javascript:void(0)" id="IntroTab" class="active" hidefocus="true">公司概况</a>
+            <a href="javascript:void(0)" id="ClientTab" hidefocus="true">客户列表</a>
+        </div>
+        <div class="company-intro"></div>
+        <div class="company-client" style="display:none">
+            <div class="query-form">
+                <div class="block">
+                    <strong>选择客户：</strong>
+                    <div ui="type:Select;id:QueryType;width:75"></div>
+                    <input ui="type:TextInput;id:Query;width:150" type="text" />
+                    <a href="javascript:void(0)" class="query" hidefocus="true" style="margin:0; float:left">&nbsp;</a>
+                </div>
+            </div>
+            <div class="info" style="display:none">很抱歉，您查询的条件没有相关数据。</div>
+            <div class="data" style="margin-top:10px; display:none">
+                {{#op}}<div id="Batch">
+                    <a href="javascript:void(0)" hidefocus="true" class="batch">&nbsp;</a>
+                    <div id="BatchPanel" class="slide-dialog" style="display:none">
+                        <h3>批量操作</h3>
+                        <div class="content">
+                            <div class="block">
+                                <span>关联关系</span>
+                                <div ui="type:Select;id:AssociationType;width:75"></div>
+                                <div ui="type:Select;id:AssociationCS;width:120"></div>
+                                <div ui="type:Select;id:AssociationOP;width:120" style="display:none"></div>
+                            </div>
+                            <div class="bottom">
+                                <a href="javascript:void(0)" class="cancel" hidefocus="true">&nbsp;</a>
+                                <a href="javascript:void(0)" class="ok" hidefocus="true">&nbsp;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>{{/op}}
+                <div class="grid"></div>
+                <div class="page">
+                    <div class="page-size">
+                        <span>每页显示</span><div ui="type:Select;id:PageSize;width:50"></div><span>条</span><span class="row-count"></span>
+                    </div>
+                    <div class="page-no"><div ui="type:Pager;id:PageNo"></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="account-info" style="display:none"></div>
+</div>
+</script>
+
+<script id="tpl-auth-account-info" type="text/html">
+<h3>账号信息{{#op}}<a href="javascript:void(0)" hidefocus="true" id="EditAccount">修改信息</a>{{/op}}</h3>
+<p><span>姓名：</span>{{account.userName}}</p>
+<p><span>账号：</span>{{account.account}}{{#op}}<a href="javascript:void(0)" hidefocus="true" class="edit-psw">修改密码</a>{{/op}}</p>
+<div class="psw" style="display:none">
+    <p><span>原密码：</span><input ui="type:TextInput;id:Psw1;width:180" type="password" /><span class="error error1" style="display:none"></span></p>
+    <p><span>新密码：</span><input ui="type:TextInput;id:Psw2;width:180" type="password" /><span class="error error2" style="display:none"></span></p>
+    <p><span>重复密码：</span><input ui="type:TextInput;id:Psw3;width:180" type="password" /><span class="error error3" style="display:none"></span></p>
+    <p>
+        <a href="javascript:void(0)" class="ok" hidefocus="true">&nbsp;</a>
+        <a href="javascript:void(0)" class="cancel" hidefocus="true">&nbsp;</a>
+    </p>
+</div>
+<p><span>系统角色：</span>{{account.roleName}}{{#opAuth}}<a href="javascript:void(0)" hidefocus="true" id="EditAuth">修改功能权限</a>{{/opAuth}}</p>
+{{#account.hasSuperior}}<p><span>直属上级：</span>{{account.superiorName}}</p>{{/account.hasSuperior}}
+<p><span>联系电话：</span>{{account.phone}}</p>
+<p><span>常用邮箱：</span>{{account.email}}</p>
+<p><span>备注：</span>{{account.mem}}</p>
+</script>
+
+<script id="tpl-auth-company-intro" type="text/html">
+<p><span>公司名称：</span>{{company.companyName}}</p>
+<p><span>公司网址：</span>{{company.website}}</p>
+<p><span>联系人：</span>{{company.contactor}}</p>
+<p><span>联系电话：</span>{{company.phone}}</p>
+<p><span>常用邮箱：</span>{{company.email}}</p>
+<p><span>所在地：</span>{{company.region}}</p>
+<p><span>通讯地址：</span>{{company.address}}</p>
+<p><span>邮政编码：</span>{{company.zipCode}}</p>
+</script>
+
+<script id="tpl-auth-client-table" type="text/html">
+<table>
+<tr>
+    <th width="22"><input type="checkbox" hidefocus="true" {{#op}}disabled{{/op}}/></th>
+    <th>客户ID</th>
+    <th width="130">客户名称</th>
+    <th width="130">客户账号</th>
+    <th>关联客服</th>
+    <th>关联销售</th>
+    <th>状态</th>
+    <th>产品类型</th>
+</tr>
+{{#data}}
+<tr>
+    <td class="text"><input type="checkbox" hidefocus="true" id="{{csId}},{{opId}},{{custId}}" {{#op}}disabled{{/op}}/></td>
+    <td class="text">{{custId}}</td>
+    <td class="text"><div class="ellipsis" style="width:130px" title="{{custName}}">{{custName}}</div></td>
+    <td class="text"><div class="ellipsis" style="width:130px" title="{{custEmail}}">{{custEmail}}</div></td>
+    <td class="text">{{custCs}}</td>
+    <td class="text">{{custOp}}</td>
+    <td class="text">{{status}}</td>
+    <td class="text">{{product}}</td>
+</tr>
+{{/data}}
+</table>
+</script>

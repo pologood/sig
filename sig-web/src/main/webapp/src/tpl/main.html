@@ -1,0 +1,366 @@
+<!--搜狗兼容提示-->
+<script id="tpl-se-tip" type="text/html">
+<p class="se-tip">
+    <span>您正在使用搜狗浏览器兼容模式，建议您切换为高速模式（地址栏右侧），以获得最佳使用体验。</span>
+    <span class="se-close" onclick="$(this.parentNode).remove();"></span>
+</p>
+</script>
+
+<!--头部-->
+<script id="tpl-head" type="text/html">
+<a href="javascript:void(0)" class="logo" hidefocus="true">&nbsp;</a>
+<div class="username"><span class="account-name">{{username}}</span> |
+<a href="help/home1.html" target="_blank">帮助中心</a>&nbsp;&nbsp;&nbsp;
+<a href="../../logout" class="logout">退出</a>
+</div>
+</script>
+
+<!--分时问候-->
+<script id="tpl-greetings" type="text/html">
+<span id="Greeting" class="{{icon}}">{{text}}</span>
+</script>
+
+<!--底部-->
+<script id="tpl-foot" type="text/html">
+<a href="http://www.sogou.com/" target="_blank">搜狗首页</a> -
+<a href="http://fuwu.sogou.com/buy.html" target="_blank">与我们联系</a> -
+<a href="http://fuwu.sogou.com/help.html" target="_blank">帮助</a><br />
+&copy; {{year}} SOGOU.COM 京ICP证050897号
+<a href="http://www.sogou.com/docs/terms.htm" target="_blank">免责声明</a>
+</script>
+
+<!--右侧-->
+<script id="tpl-right" type="text/html">
+<div class="report-switch"></div>
+<div class="query-form"></div>
+<a href="javascript:void(0)" class="query" hidefocus="true">&nbsp;</a>
+<div class="result" style="display:none">
+    <div class="info" style="display:none">很抱歉，您查询的条件没有相关数据。</div>
+    <div class="data" style="display:none">
+        <div class="topbar">
+            <div class="title"></div>
+            <div class="duration"></div>
+            <a href="#" class="download" hidefocus="true">&nbsp;</a>
+        </div>
+        <div class="grid"></div>
+        <div class="page">
+            <div class="page-size">
+                <span>每页显示</span><div ui="type:Select;id:PageSize;width:50"></div><span>条</span>
+                <span class="row-count"></span>
+            </div>
+            <div class="page-no">
+                <div ui="type:Pager;id:PageNo"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</script>
+
+<script id="tpl-cust-name" type="text/html">
+<a class="custLog" href="../../delegate?agentUserId={{userId}}&accountId={{custId}}&toInfo=accountInfo" target="_blank" title="{{custName}}">{{custName}}</a>
+</script>
+
+<!--统计信息-报告切换-->
+<script id="tpl-report-type1" type="text/html">
+<div>
+    <strong>选择报告：</strong>
+    <input type="radio" title="客服维度" name="report" ui="type:Radio;id:Report1" />
+    <input type="radio" title="客户维度" name="report" ui="type:Radio;id:Report2" />
+</div>
+</script>
+<script id="tpl-report-type2" type="text/html">
+<div>
+    <strong>选择报告：</strong>
+    <input type="radio" title="消耗分析" name="report" ui="type:Radio;id:Report1" />
+    <input type="radio" title="新开户和入资分析" name="report" ui="type:Radio;id:Report2" />
+    <input type="radio" title="客户上线情况" name="report" ui="type:Radio;id:Report3" />
+</div>
+</script>
+<script id="tpl-report-type3" type="text/html">
+<div>
+    <strong>选择报告：</strong>
+    <input type="radio" title="新开户和入资分析" name="report" ui="type:Radio;id:Report1" />
+    <input type="radio" title="客户上线情况" name="report" ui="type:Radio;id:Report2" />
+</div>
+</script>
+<script id="tpl-report-type4" type="text/html">
+<div>
+    <strong>选择报告：</strong>
+    <input type="radio" title="消耗分析" name="report" ui="type:Radio;id:Report1" />
+    <input type="radio" title="客户上线情况" name="report" ui="type:Radio;id:Report2" />
+</div>
+</script>
+<script id="tpl-report-type5" type="text/html">
+<div>
+    <strong>选择报告：</strong>
+    <input type="radio" title="消耗分析" name="report" ui="type:Radio;id:Report1" />
+    <input type="radio" title="本期无消耗（流失率）" name="report" ui="type:Radio;id:Report2" />
+    <input type="radio" title="续费分析" name="report" ui="type:Radio;id:Report3" />
+</div>
+</script>
+<script id="tpl-data-type" type="text/html">
+<div>
+    <strong>数据显示：</strong>
+    <input type="radio" title="整体趋势" name="data" ui="type:Radio;id:Data1" />
+    <input type="radio" title="波动分析" name="data" ui="type:Radio;id:Data2" />
+</div>
+</script>
+
+<!--统计信息-查询表单-->
+<!--周月-->
+<script id="tpl-query-form-wm" type="text/html">
+<div class="block block11">
+    <strong>时间范围：</strong>
+    <div ui="type:Select;id:DateRage11;width:75"></div>
+    <div class="time"><div ui="type:Calendar;id:WeekOverView1"></div></div>
+    <div class="time" style="display:none">
+        <div ui="type:Select;id:MonthOverViewY1;width:60"></div>
+        <div ui="type:Select;id:MonthOverViewM1;width:50"></div>
+    </div>
+</div>
+</script>
+<!--日周月季-->
+<script id="tpl-query-form-dwmq" type="text/html">
+<div class="block block12">
+    <strong>时间范围：</strong>
+    <div ui="type:Select;id:DateRage12;width:75"></div>
+    <div class="time"><div ui="type:Calendar;id:DayOverView"></div></div>
+    <div class="time" style="display:none"><div ui="type:Calendar;id:WeekOverView2"></div></div>
+    <div class="time" style="display:none">
+        <div ui="type:Select;id:MonthOverViewY2;width:60"></div>
+        <div ui="type:Select;id:MonthOverViewM2;width:50"></div>
+    </div>
+    <div class="time" style="display:none">
+        <div ui="type:Select;id:QuarterOverViewY;width:60"></div>
+        <div ui="type:Select;id:QuarterOverViewQ;width:75"></div>
+    </div>
+</div>
+</script>
+<!--波动-->
+<script id="tpl-query-form-compare" type="text/html">
+<div class="block block2" style="display:none">
+    <strong>时间范围：</strong>
+    <div ui="type:Select;id:DateRage2;width:75"></div>
+    <div class="time">
+        <span style="margin-right:0">本期时间：</span>
+        <div ui="type:Calendar;id:DayContrast"></div>
+        <span>上期时间：<strong class="day-contrast-prev"></strong></span>
+        <span>查看：<input type="radio" title="环比" name="contrast" value="0" ui="type:Radio;id:Contrast1" />
+        <input type="radio" title="周同比" name="contrast" value="1" ui="type:Radio;id:Contrast2" /></span>
+    </div>
+    <div class="time" style="display:none">
+        <span style="margin-right:0">本期时间：</span>
+        <div ui="type:Calendar;id:WeekContrast"></div>
+        <span>上期时间：<strong class="week-contrast-prev"></strong></span>
+    </div>
+    <div class="time" style="display:none">
+        <span style="margin-right:0">本期时间：</span>
+        <div ui="type:Select;id:MonthContrastY;width:60"></div>
+        <div ui="type:Select;id:MonthContrastM;width:50"></div>
+        <span>上期时间：<strong class="month-contrast-prev"></strong></span>
+    </div>
+    <div class="time" style="display:none">
+        <span style="margin-right:0">本期时间：</span>
+        <div ui="type:Select;id:QuarterContrastY;width:60"></div>
+        <div ui="type:Select;id:QuarterContrastQ;width:75"></div>
+        <span>上期时间：<strong class="quarter-contrast-prev"></strong></span>
+    </div>
+</div>
+</script>
+<!--客服-->
+<script id="tpl-query-form-cs" type="text/html">
+<div class="block block3">
+    <strong>选择客服：</strong>
+    <input ui="type:TextInput;id:ServiceName;width:100" type="text" />
+</div>
+</script>
+<!--客户-->
+<script id="tpl-query-form-client" type="text/html">
+<div class="block block4" style="display:none">
+    <strong>选择客户：</strong>
+    <div ui="type:Select;id:ClientOverView;width:75"></div>
+    <input ui="type:TextInput;id:ClientOverViewKw;width:100" type="text" />
+</div>
+</script>
+<!--客户&日均消耗-->
+<script id="tpl-query-form-cost" type="text/html">
+<div class="block block5" style="display:none">
+    <strong>选择客户：</strong>
+    <div ui="type:Select;id:ClientContrast;width:75"></div>
+    <input ui="type:TextInput;id:ClientContrastKw;width:100" type="text" />
+    <span class="song">且 日均消耗变化≥</span>
+    <input ui="type:TextInput;id:ClientConsume;width:100" type="text" />
+</div>
+</script>
+<!--销售-->
+<script id="tpl-query-form-sale" type="text/html">
+<div class="block block6">
+    <strong>选择销售：</strong>
+    <input ui="type:TextInput;id:SalesName;width:100" type="text" />
+</div>
+</script>
+<!--增存量-->
+<script id="tpl-query-form-duration" type="text/html">
+<div class="duration-cal" id="DurationCal1" style="display:none">
+    <span>增存量界定日期</span><div ui="type:Calendar;id:ThisDuration1"></div>
+</div>
+</script>
+<!--增存量波动-->
+<script id="tpl-query-form-duration-compare" type="text/html">
+<div class="duration-cal" id="DurationCal2" style="display:none">
+    <span>本期增存量界定日期</span><div ui="type:Calendar;id:ThisDuration2"></div>
+    <span>上期增存量界定日期</span><div ui="type:Calendar;id:PrevDuration"></div>
+</div>
+</script>
+<!--行业-->
+<script id="tpl-query-form-trade" type="text/html">
+<div class="block block7">
+    <strong>选择行业：</strong>
+    <div ui="type:Select;id:Trade;width:75"></div>
+    <select class="trade"></select>
+</div>
+</script>
+<!--产品-->
+<script id="tpl-query-form-product" type="text/html">
+<div class="block block9">
+    <strong>选择产品：</strong>
+    <div ui="type:Select;id:Product;width:200"></div>
+</div>
+</script>
+
+<!--统计信息-账户概况-->
+<script id="tpl-account-time" type="text/html">
+<div class="block">
+    <strong>时间范围：</strong>
+    <div ui="type:Select;id:DM;width:60"></div>
+    <div class="time" style="display:none">
+        <div ui="type:Calendar;id:DayOfDM"></div>
+    </div>
+    <div class="time">
+        <div ui="type:Select;id:YearOfDM;width:60"></div>
+        <div ui="type:Select;id:MonthOfDM;width:50"></div>
+    </div>
+</div>
+</script>
+<!--客服维度高级查询-->
+<script id="tpl-account-cs-adquery" type="text/html">
+<a href="javascript:void(0)" class="ad-query" hidefocus="true">&nbsp;</a>
+<div class="ad-block" style="display:none">
+<div class="block">
+    <span>标准账户达标情况：</span><div ui="type:Select;id:StandardSelect;width:70"></div>
+</div>
+<div class="block">
+    <span>户均推广计划数：</span>
+    <div ui="type:Select;id:LogicSelect1;width:40"></div>
+    <input ui="type:TextInput;id:AdQuery1;width:60" type="text" maxlength="4" />
+    <span>组均创意数：</span>
+    <div ui="type:Select;id:LogicSelect2;width:40"></div>
+    <input ui="type:TextInput;id:AdQuery2;width:60" type="text" maxlength="4" />
+    <span>户均关键词数：</span>
+    <div ui="type:Select;id:LogicSelect3;width:40"></div>
+    <input ui="type:TextInput;id:AdQuery3;width:60" type="text" maxlength="6" />
+    <span>关键词广泛匹配占比：</span>
+    <div ui="type:Select;id:LogicSelect4;width:40"></div>
+    <input ui="type:TextInput;id:AdQuery4;width:60" type="text" maxlength="3" />%
+</div>
+</div>
+</script>
+<!--客户维度高级查询-->
+<script id="tpl-account-client-adquery" type="text/html">
+<a href="javascript:void(0)" class="ad-query" hidefocus="true">&nbsp;</a>
+<div class="ad-block" style="display:none">
+<div class="block">
+    <span>标准账户达标情况：</span><div ui="type:Select;id:StandardSelect;width:70"></div>
+</div>
+<div class="block">
+    <span>推广计划数：</span>
+    <div ui="type:Select;id:LogicSelect1;width:40"></div>
+    <input ui="type:TextInput;id:AdQuery1;width:60" type="text" maxlength="4" />
+    <span>组均创意数：</span>
+    <div ui="type:Select;id:LogicSelect2;width:40"></div>
+    <input ui="type:TextInput;id:AdQuery2;width:60" type="text" maxlength="4" />
+    <span>关键词数：</span>
+    <div ui="type:Select;id:LogicSelect3;width:40"></div>
+    <input ui="type:TextInput;id:AdQuery3;width:60" type="text" maxlength="6" />
+    <span>关键词广泛匹配占比：</span>
+    <div ui="type:Select;id:LogicSelect4;width:40"></div>
+    <input ui="type:TextInput;id:AdQuery4;width:60" type="text" maxlength="3" />%
+</div>
+<div class="block">
+    <span>是否账户撞线：</span>
+    <div ui="type:Select;id:OutSelect;width:70"></div>
+    <span>账户撞线率：</span>
+    <div ui="type:Select;id:LogicSelect5;width:40"></div>
+    <input ui="type:TextInput;id:AdQuery5;width:60" type="text" maxlength="3" />%
+</div>
+</div>
+</script>
+
+<!--统计信息-任务完成情况-->
+<script id="tpl-task" type="text/html">
+<div class="query-form">
+    <div class="block block8">
+        <strong>时间范围：</strong>
+        <div ui="type:Select;id:Task;width:100"></div>
+        <div class="time" style="display:none">
+            <div ui="type:Select;id:TaskStartYear;width:60"></div>
+            <div ui="type:Select;id:TaskStartMonth;width:50"></div><span>—</span>
+            <div ui="type:Select;id:TaskEndYear;width:60"></div>
+            <div ui="type:Select;id:TaskEndMonth;width:50"></div>
+        </div>
+        <div class="time" style="display:none">
+            <div ui="type:Select;id:TaskQYear;width:60"></div>
+            <div ui="type:Select;id:TaskQ;width:75"></div>
+        </div>
+    </div>
+</div>
+<a href="javascript:void(0)" class="query" hidefocus="true">&nbsp;</a>
+<div class="result" style="display:none">
+    <div class="info" style="display:none">很抱歉，您查询的条件没有相关数据。</div>
+    <div class="data1" style="display:none; margin-bottom:10px">
+        <div class="topbar">
+            <div class="title">月度任务</div>
+            <a href="#" class="download" hidefocus="true">&nbsp;</a>
+        </div>
+        <div class="grid"></div>
+    </div>
+    <div class="data2" style="display:none">
+        <div class="topbar">
+            <div class="title">季度任务</div>
+            <a href="#" class="download" hidefocus="true">&nbsp;</a>
+        </div>
+        <div class="grid"></div>
+    </div>
+</div>
+</script>
+<!--标准账户任务-->
+<script id="tpl-task-account" type="text/html">
+<div class="query-form">
+    <div class="block">
+        <strong>时间范围：</strong>
+        <div ui="type:Select;id:AccountTask;width:120"></div>
+    </div>
+</div>
+<a href="javascript:void(0)" class="query" hidefocus="true">&nbsp;</a>
+<div class="result">
+    <div class="info" style="display:none">很抱歉，您查询的条件没有相关数据。</div>
+    <div class="data1" style="display:none; margin-bottom:10px">
+        <div class="topbar">
+            <div class="title">标准账户当前任务</div>
+            <a href="#" class="download" hidefocus="true">&nbsp;</a>
+        </div>
+        <div class="grid"></div>
+    </div>
+    <div class="data2" style="display:none">
+        <div class="topbar"><div class="title">标准账户各指标达标情况</div></div>
+        <div class="grid"></div>
+        </div>
+    <div class="data3" style="display:none">
+        <div class="topbar">
+            <div class="title">标准账户历史三个月任务</div>
+            <a href="#" class="download" hidefocus="true">&nbsp;</a>
+        </div>
+        <div class="grid"></div>
+    </div>
+</div>
+</script>

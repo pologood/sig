@@ -1,0 +1,55 @@
+<script id="tpl-kwmatch" type="text/html">
+<div class="plan-list">
+    <div class="plan-title"><span></span></div>
+    <div class="load-tip">加载推广计划...</div>
+</div>
+<div class="kw-list">
+    <div class="load-tip" style="display:none">加载关键词列表...</div>
+    <div class="bread" style="display:none">推广账户 -> <span></span></div>
+    <div class="data" style="display:none">
+		<div class="topbar">
+			<div ui="type:Select;id:MatchType;width:75"></div>
+			<div ui="type:Button;id:EditMatch;">修改</div>
+		</div>
+		<div class="grid"></div>
+		<div class="page">
+			<div class="page-size">
+				<span>每页显示</span>
+				<div ui="type:Select;id:PageSize;width:50"></div>
+				<span>条</span>
+				<span class="row-count"></span>
+			</div>
+			<div class="page-no"><div ui="type:Pager;id:PageNo"></div></div>
+		</div>
+    </div>
+</div>
+</script>
+
+<script id="tpl-kwmatch-plan" type="text/html">
+{{#plans}}
+<a href="javascript:void(0)" hidefocus="true" id="{{planId}}" title="{{planName}}（{{fullyMatchKeyNum}}）">{{planName}}({{fullyMatchKeyNum}})</a>
+{{/plans}}
+</script>
+
+<script id="tpl-kwmatch-table" type="text/html">
+<table>
+<tr>
+    <th width="22"><input type="checkbox" hidefocus="true" /></th>
+    <th>关键词</th>
+    <th>推广组</th>
+    <th>匹配方式</th>
+    <th>状态</th>
+    <th>出价</th>
+</tr>
+{{#keywords}}
+<tr>
+    <td class="text"><input id="{{keyId}}" type="checkbox" hidefocus="true" /></td>
+    <td class="text">{{keyName}}</td>
+    <td class="text">{{cpcGrpName}}</td>
+    <td class="text">精确匹配</td>
+    <td class="text">{{status}}</td>
+    <td>{{price}}</td>
+</tr>
+{{/keywords}}
+</table>
+</script>

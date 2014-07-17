@@ -1,0 +1,167 @@
+<script id="tpl-index" type="text/html">
+<div id="MsgBar">
+    <span class="msg-head"><a href="#mc/msg/" hidefocus="true" class="clickLog" logid="101">系统消息</a></span>
+    <span class="msg-body"></span>
+    <a href="#mc/msg/" hidefocus="true" class="msg-detail clickLog" logid="102" style="display:none">&nbsp;</a>
+</div>
+<div id="IndexMain">
+    <div id="IndexLeft">
+        <div id="TaskModule"></div>
+        <div id="NotiModule">
+            <div class="module-title"><a href="#mc/noti/" hidefocus="true" class="msg-detail clickLog" logid="107">&nbsp;</a></div>
+            <div class="notice-list"></div>
+            <a id="ADLink" href="javascript:void(0)" target="_blank" style="display:none"><img src="" /></a>
+        </div>
+    </div>
+    <div id="IndexRight">
+        <div id="CostModule">
+            <div id="CostRight" style="display:none"></div>
+            <div id="CostLeft">
+                <div id="CostTab">
+                    <a href="javascript:void(0)" hidefocus="true" class="total active">最近7天总消耗</a>
+                    <a href="javascript:void(0)" hidefocus="true" class="cpc" logid="122">旭日最近7天消耗</a>
+                    <a href="javascript:void(0)" hidefocus="true" class="cx" logid="123">晨星最近7天消耗</a>
+                </div>
+                <div id="LineChart"></div>
+            </div>
+        </div>
+        <div id="ClientModule">
+            <div class="module-title"></div>
+            <div id="ClientLeft" class="client-module">
+                <div class="r1c1">
+                    <a href="#stat/consume/client/actionindex=4&change=300" class="icon clickLog" logid="108">&nbsp;</a>
+                    <p><a href="#stat/consume/client/actionindex=4&change=300" class="clickLog" logid="108">消耗波动异常客户</a></p>
+                </div>
+                <div class="r1c2">
+                    <a href="#stat/stock/service/actionindex=3" class="icon clickLog" logid="109">&nbsp;</a>
+                    <p><a href="#stat/stock/service/actionindex=3" class="clickLog" logid="109">前日有消耗昨日无消耗</a></p>
+                </div>
+                <div class="r1c3">
+                    <a href="#stat/account/client/std=-1" class="icon clickLog" logid="110">&nbsp;</a>
+                    <p><a href="#stat/account/client/std=-1" class="clickLog" logid="110">标准账户未达标客户</a></p>
+                </div>
+                <div class="r2c1">
+                    <a href="#cust/opt/account/" class="icon clickLog" logid="111"></a>
+                    <p><a href="#cust/opt/account/" class="clickLog" logid="111">旭日待优化客户</a></p>
+                </div>
+                <div class="r2c2">
+                    <a href="#cust/remind/cost/cust/" class="icon clickLog" logid="112"></a>
+                    <p><a href="#cust/remind/cost/cust/" class="clickLog" logid="112">旭日影响消耗操作客户</a></p>
+                </div>
+                <div class="r2c3">
+                    <a href="../../jump?agentUserId={{agentUserId}}&toInfo=noCostAccount" target="_blank" class="icon clickLog" logid="113"></a>
+                    <p><a href="../../jump?agentUserId={{agentUserId}}&toInfo=noCostAccount" target="_blank" class="clickLog" logid="113">无消耗即将被处理客户</a></p>
+                </div>
+            </div>
+            <div id="ClientRight" class="client-module">
+                <div class="r1c4">
+                    <a href="../../jump?agentUserId={{agentUserId}}&toInfo=queryNeedinvest" target="_blank" class="icon clickLog" logid="114"></a>
+                    <p><a href="../../jump?agentUserId={{agentUserId}}&toInfo=queryNeedinvest" target="_blank" class="clickLog" logid="114">待续费客户</a></p>
+                </div>
+                <div class="r1c5">
+                    <a href="../../jump?agentUserId={{agentUserId}}&toInfo=viewSearchADExpired" target="_blank" class="icon clickLog" logid="115"></a>
+                    <p><a href="../../jump?agentUserId={{agentUserId}}&toInfo=viewSearchADExpired" target="_blank" class="clickLog" logid="115">金榜到期客户</a></p>
+                </div>
+                <div class="r1c6">
+                    <a href="#cust/overview/accountcenter/status=4" class="icon clickLog" logid="116"></a>
+                    <p><a href="#cust/overview/accountcenter/status=4" class="clickLog" logid="116">被拒绝的客户</a></p>
+                </div>
+                <div class="r2c4">
+                    <a href="#cust/overview/accountcenter/status=2" class="icon clickLog" logid="117"></a>
+                    <p><a href="#cust/overview/accountcenter/status=2" class="clickLog" logid="117">暂停的客户</a></p>
+                </div>
+                <div class="r2c5">
+                    <a href="#cust/overview/accountcenter/status=5" class="icon clickLog" logid="118"></a>
+                    <p><a href="#cust/overview/accountcenter/status=5" class="clickLog" logid="118">待审核的客户</a></p>
+                </div>
+            </div>
+            <span class="line"></span>
+        </div>
+    </div>
+</div>
+<div id="IndexFoot">
+    <span class="title"></span>
+    <span class="contact phone">010-62728080</span>
+    <span class="contact email">searchcs@sogou.com</span>
+    <span class="contact work">周一至周五 9:00-18:00</span>
+    <a href="http://www.sogou.com/fuwu/contact.html" hidefocus="true" class="more clickLog" logid="119" target="_blank">&nbsp;</a>
+    <a href="http://www.sogou.com/fuwu/agent/policy01.html" hidefocus="true" class="url clickLog" logid="120" target="_blank">《市场监管政策》</a>
+    <a href="http://fuwu.sogou.com/agent/policy02.html" hidefocus="true" class="url clickLog" logid="124" target="_blank">《行为规范细则》</a>
+    {{#isDelegate}}<a href="http://bbs.agent.sogou.com" hidefocus="true" class="url clickLog" logid="121" target="_blank">沟通平台</a>{{/isDelegate}}
+</div>
+</script>
+
+<script id="tpl-index-task" type="text/html">
+<div class="module-title"></div>
+<div class="task-type">
+{{#cost}}<input type="radio" title="消耗任务" name="type" hidefocus="true" ui="type:Radio;id:Cost" />{{/cost}}
+{{#newCust}}<input type="radio" title="开户任务" name="type" hidefocus="true" ui="type:Radio;id:NewCust" />{{/newCust}}
+{{#account}}<input type="radio" title="标准账户任务" name="type" hidefocus="true" ui="type:Radio;id:Account" />{{/account}}
+</div>
+{{#cost}}<div id="CostTaskContent" class="task-content" style="display:none"></div>{{/cost}}
+{{#newCust}}<div id="NewCustTaskContent" class="task-content" style="display:none"></div>{{/newCust}}
+{{#account}}<div id="AccountTaskContent" class="task-content" style="display:none"></div>{{/account}}
+<a href="" id="PieChartLink" class="clickLog"><div id="PieChart"></div></a>
+</script>
+
+<script id="tpl-index-cost-task" type="text/html">
+<p class="item"><strong>月度任务：</strong>{{totalPayTask}}元&nbsp;&nbsp;&nbsp;&nbsp;<strong>已经完成：</strong>{{totalPay}}元</p>
+<p class="item"><strong>时间进度：</strong>{{monthTimeProgress}}（进度差：<span class="task-sub">{{monthTimeProgressSub}}</span>）</p>
+<div class="pie-holder"></div>
+<p class="item perday">日均消耗至少 > <span>{{monthTaskNeedDayPay}} 元</span> 可达标</p>
+</script>
+
+<script id="tpl-index-new-cust-task" type="text/html">
+<p class="item"><strong>月度任务：</strong>{{newCustTask}}&nbsp;&nbsp;&nbsp;&nbsp;<strong>有效开户数：</strong>{{newCustNum}}</p>
+<p class="item"><strong>时间进度：</strong>{{monthTimeProgress}}（进度差：<span class="task-sub">{{monthTimeProgressSub}}</span>）</p>
+<div class="pie-holder"></div>
+<p class="item perday">日均开户数至少 > <span>{{newCustRemainedPerDay}}</span> 可达标</p>
+</script>
+
+<script id="tpl-index-account-task" type="text/html">
+<p class="item"><strong>达标任务：</strong>{{stdTask}}&nbsp;&nbsp;&nbsp;&nbsp;<strong>目前达标率：</strong>{{reachPercent}}</p>
+<p class="item"><strong>任务差距：</strong><span class="task-sub">{{taskSub}}</span></p>
+</script>
+
+<script id="tpl-index-profile" type="text/html">
+<div class="module-title profile"></div>
+<div id="DonutChart"></div>
+<div id="DonutTotal"><div class="title"></div><div class="value"></div></div>
+</script>
+
+<script id="tpl-index-profile1" type="text/html">
+<p class="item"><strong>旭日总消耗：</strong>{{cpcPay}}元&nbsp;&nbsp;&nbsp;&nbsp;<strong>晨星总消耗：</strong>{{cxPay}}元</p>
+<p class="item"><strong>开户数：</strong>{{newCustNum}}&nbsp;&nbsp;&nbsp;&nbsp;<strong>标准账户达标率：</strong>{{reachPercent}}</p>
+</script>
+
+<script id="tpl-index-profile2" type="text/html">
+<p class="item"><strong>旭日总消耗：</strong>{{cpcPay}}元&nbsp;&nbsp;&nbsp;&nbsp;<strong>晨星总消耗：</strong>{{cxPay}}元</p>
+<p class="item"><strong>标准账户达标率：</strong>{{reachPercent}}</p>
+</script>
+
+<script id="tpl-index-profile3" type="text/html">
+<p class="item"><strong>首次入资金额：</strong>{{newInvest}}元</p>
+<p class="item"><strong>新开有消耗客户数：</strong>{{newCostCusts}}&nbsp;&nbsp;&nbsp;&nbsp;<strong>新开无消耗客户数：</strong>{{newNoCostCusts}}</p>
+</script>
+
+<script id="tpl-index-msg" type="text/html">
+：{{date}}&nbsp;&nbsp;&nbsp;{{content}}
+</script>
+
+<script id="tpl-index-notice-list" type="text/html">
+{{#data}}
+<div>
+    <span class="title"><a href="#/mc/notidetail/{{id}}" target="_blank" hidefocus="true" class="{{className}} clickLog" logid="106" title="{{alt}}">{{title}}</a></span>
+    <span class="date">{{date}}</span>
+</div>
+{{/data}}
+</script>
+
+<script id="tpl-index-invest" type="text/html">
+<p class="company-name">{{data.accountName}}</p>
+<p>资金总额：{{data.invest}}元</p>
+<p>可用金额：{{data.remain}}元</p>
+<p>花费金额：{{data.spend}}元</p>
+<p>保证金额度：{{data.depositInvest}}元</p>
+<p>保证金余额：{{data.depositRemain}}元</p>
+</script>

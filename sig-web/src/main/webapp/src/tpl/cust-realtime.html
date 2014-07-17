@@ -1,0 +1,69 @@
+<script id="tpl-cust-realtime-query" type="text/html">
+    <div class="block">
+    <strong>选择客户：</strong>
+    <div ui="type:Select;id:Cust;width:75"></div>
+    <input ui="type:TextInput;id:CustKw;width:100" type="text" />
+</div>
+<div class="block">
+    <strong>消耗变化率：</strong>
+    <div ui="type:Select;id:ConsumeCompare;width:75"></div>
+    <span class="song">≥</span>
+    <input type="text" ui="type:TextInput;id:ConsumeCompareKw;width:100" />
+</div>
+</script>
+
+<script id="tpl-cust-realtime-tip" type="text/html">
+<div class="alert">实时消耗仅统计竞价服务产品（包括旭日、晨星）</div>
+</script>
+
+<script id="tpl-cust-realtime-start" type="text/html">
+<div class="alert">实时消耗同比数据从2012年11月16日（周五）开始提供</div>
+</script>
+
+<script id="tpl-cust-realtime-table" type="text/html">
+<table>
+<tr>
+    <th>客户ID</th>
+    <th width="140">客户名称</th>
+    <th width="140">客户账号</th>
+    <th width="85">关联客服</th>
+    <th width="85">今日实时消耗</th>
+    <th class="sortable" sortby="currentQoQSub" nowrap>消耗环比<span class="help" title="与昨日同时段消耗差值"></span> <span class="sort"></span></th>
+    <th class="sortable" sortby="currentYoYSub" nowrap>消耗同比<span class="help" title="与上周同期同时段消耗差值"></span> <span class="sort"></span></th>
+    <th>账户余额</th>
+    {{#op}}<th width="150">操作</th>{{/op}}
+</tr>
+<tr class="sum">
+    <td class="text" colspan="4"><strong>总计</strong></td>
+    <td>{{sum.currentCost}}</td>
+    <td>{{sum.currentQoQSub}}（{{sum.currentQoQ}}）</td>
+    <td>{{sum.currentYoYSub}}（{{sum.currentYoY}}）</td>
+    <td>{{sum.balance}}</td>
+    {{#op}}<td class="text">-</td>{{/op}}
+</tr>
+{{#data}}
+<tr>
+    <td class="text">{{id}}</td>
+    <td class="text">
+        <div class="ellipsis" style="width:140px">
+            <a class="custLog" href="../../delegate?agentUserId={{agentUserId}}&accountId={{id}}&toInfo=accountInfo" target="_blank" title="{{name}}">{{name}}</a>
+        </div>
+    </td>
+    <td class="text"><div class="ellipsis" style="width:140px" title="{{account}}">{{account}}</div></td>
+    <td class="text">{{relatedESQName}}</td>
+    <td>
+        <a href="#stat/consume/realtime/query={{id}}&queryType=1&verifyCust=false" target="_blank">{{currentCost}}</a>&nbsp;&nbsp;
+        <a href="#stat/consume/realtime/query={{id}}&queryType=1&verifyCust=false" target="_blank"><img style="vertical-align:middle" src="../../asset/agent/css/img/chart-up.png" /></a>
+    </td>
+    <td>{{currentQoQSub}}（{{currentQoQ}}）</td>
+    <td>{{currentYoYSub}}（{{currentYoY}}）</td>
+    <td>{{balance}}</td>
+    {{#op}}<td class="text">
+        <a class="clickLog" logid="205" href="../../delegate?agentUserId={{agentUserId}}&accountId={{id}}&toInfo=keysRecommend" target="_blank" title="推词工具"><img src="../../asset/agent/css/img/icon-realtime1.png" style="vertical-align:middle; margin-right:3px" />推词</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="clickLog" logid="206" href="../../jump?agentUserId={{agentUserId}}&accountId={{id}}&toInfo=queryAccOptList" target="_blank" title="客户优化系统"><img src="../../asset/agent/css/img/icon-realtime2.png" style="vertical-align:middle; margin-right:3px" />新客</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="clickLog" logid="207" href="../../jump?agentUserId={{agentUserId}}&accountId={{id}}&toInfo=getAccountTrackList" target="_blank" title="跟踪记录"><img src="../../asset/agent/css/img/icon-realtime3.png" style="vertical-align:middle; margin-right:3px" />跟踪</a>
+    </td>{{/op}}
+</tr>
+{{/data}}
+</table>
+</script>

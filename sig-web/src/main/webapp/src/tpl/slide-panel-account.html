@@ -1,0 +1,82 @@
+<script id="tpl-new-account" type="text/html">
+<div class="row">
+    <label><span>*</span>账号：</label>
+    <input type="text" ui="type:TextInput;width:250;id:Account" maxlength="40" />
+    <span class="tips">必须是Email格式，如：ZH@sogou.com</span>
+</div>
+<div class="row">
+    <label><span>*</span>密码：</label>
+    <input type="password" ui="type:TextInput;width:250;id:Psw1" />
+    <span class="tips">密码长度8-16位，仅包含字母、数字、英文符号</span>
+</div>
+<div class="row">
+    <label><span>*</span>重复密码：</label>
+    <input type="password" ui="type:TextInput;width:250;id:Psw2" />
+</div>
+<div class="row">
+    <label><span>*</span>姓名：</label>
+    <input type="text" ui="type:TextInput;width:250;id:Name" maxlength="12" />
+    <span class="tips">姓名长度小于6个字</span>
+</div>
+</script>
+
+<script id="tpl-edit-account" type="text/html">
+<div class="row">
+    <label><span>*</span>姓名：</label>
+    <input type="text" ui="type:TextInput;width:250;id:Name" maxlength="12" />
+    <span class="tips">姓名长度小于6个字</span>
+</div>
+<div class="row">
+    <label><span>*</span>账号：</label>
+    <input type="text" ui="type:TextInput;width:250;id:Account;disabled:true" />
+</div>
+</script>
+
+<script id="tpl-account-role" type="text/html">
+{{#role}}<input type="radio" title="{{roleName}}" name="role" hidefocus="true" ui="type:Radio;id:R{{roleId}}" />{{/role}}
+</script>
+
+<script id="tpl-account-superior" type="text/html">
+<div class="superior-wrap">
+{{#superior}}<input type="radio" title="{{userName}}" name="superior" hidefocus="true" ui="type:Radio;id:S{{userId}}" />{{/superior}}
+</div>
+</script>
+
+<script id="tpl-account-novp" type="text/html">
+<label><span>*</span>直属上级：</label><span class="error">请先建立总监账号</span>
+</script>
+
+<script id="tpl-account-nomanager" type="text/html">
+<label><span>*</span>直属上级：</label><span class="error">请先建立主管账号</span>
+</script>
+
+<script id="tpl-account-common" type="text/html">
+<div class="row" id="Role">
+    <label><span>*</span>系统角色：</label>
+</div>
+<div class="row" id="ChiefRow" style="display:none">
+    <label><span>&nbsp;</span></label>
+    <input type="checkbox" title="该总监为销售总监" ui="type:CheckBox;id:Chief" />
+    <span class="tips">（销售总监没有物料操作、转账、开户的功能）</span>
+</div>
+<div class="row" id="ManagerRow" style="display:none">
+    <label><span>&nbsp;</span></label>
+    <input type="checkbox" title="该主管为销售主管" ui="type:CheckBox;id:Manager" />
+    <span class="tips">（销售主管没有物料操作、转账、开户的功能）</span>
+</div>
+<div class="row" id="Superior" style="display:none">
+    <label><span>*</span>直属上级：</label>
+</div>
+<div class="row">
+    <label><span>*</span>联系电话：</label>
+    <input type="text" ui="type:TextInput;width:250;id:Tel" maxlength="32" />
+</div>
+<div class="row">
+    <label><span>*</span>常用邮箱：</label>
+    <input type="text" ui="type:TextInput;width:250;id:Email" maxlength="40" />
+</div>
+<div class="row" style="height:auto">
+    <label><span>&nbsp;</span>备注：</label>
+    <textarea ui="type:TextInput;width:250;height:100;id:Remark"></textarea>
+</div>
+</script>

@@ -1,0 +1,48 @@
+<script id="tpl-pay" type="text/html">
+<p class="tips"><span>填写的付款信息，将会出现在客户的增资页面，可根据您的需要选择使用</span></p>
+<div class="row">
+    <label><span>*</span>联系人：</label>
+    <input type="text" ui="type:TextInput;width:250;id:Contactor" value="{{pay.contactor}}" maxlength="50" />
+</div>
+<div class="row">
+    <label><span>*</span>联系电话：</label>
+    <input type="text" ui="type:TextInput;width:250;id:Tel" value="{{pay.tel}}" maxlength="50" />
+</div>
+<div class="row">
+    <label><span>&nbsp;</span>收款单位：</label>
+    <input type="text" ui="type:TextInput;width:250;id:Unit" value="{{pay.gatherUnit}}" maxlength="100" />
+</div>
+<div class="row">
+    <label><span>&nbsp;</span>收款地址：</label>
+    <input type="text" ui="type:TextInput;width:250;id:Addr" value="{{pay.gatherAddr}}" maxlength="50" />
+</div>
+<div class="row">
+    <label><span>&nbsp;</span>邮政编码：</label>
+    <input type="text" ui="type:TextInput;width:250;id:Zip" value="{{pay.zipp}}" maxlength="10" />
+</div>
+<div class="row" id="AddPayee" style="display:none">
+    <label><span>&nbsp;</span></label>
+    <a href="javascript:void(0)" hidefocus="true" class="add">添加付款信息</a>
+</div>
+<div class="row">
+    <input type="radio" title="不向客户公开付款信息" name="open" hidefocus="true" ui="type:Radio;id:OpenType1" />
+    <input type="radio" title="向客户公开付款信息" name="open" hidefocus="true" ui="type:Radio;id:OpenType2" />
+</div>
+</script>
+
+<script id="tpl-payee" type="text/html">
+<div id="Payee{{no}}" class="payee">
+    <div class="row">
+        <label><span>&nbsp;</span>收款人：</label>
+        <input type="text" ui="type:TextInput;width:250;id:Payee{{no}}" value="{{name}}" maxlength="100" />
+    </div>
+    <div class="row">
+        <label><span>&nbsp;</span>开户银行：</label>
+        <input type="text" ui="type:TextInput;width:250;id:Bank{{no}}" value="{{bank}}" maxlength="100" />
+    </div>
+    <div class="row">
+        <label><span>&nbsp;</span>银行卡号：</label>
+        <input type="text" ui="type:TextInput;width:250;id:CardNo{{no}}" value="{{cardNo}}" maxlength="50" />
+    </div>
+</div>
+</script>

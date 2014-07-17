@@ -1,0 +1,57 @@
+<script id="tpl-noti-treenav" type="text/html">
+<div class="tab"><span class="mc">消息中心</span></div>
+<div id="TreeNav">
+    <a href="#mc/msg/" class="leaf" tid="4100" hidefocus="true">系统消息</a>
+    <a href="#mc/noti/" class="leaf active" tid="4200" hidefocus="true">通知</a>
+</div>
+<div id="Slider" class="slide-left"></div>
+</script>
+
+<script id="tpl-noti" type="text/html">
+<div class="report-switch"><h3>通知</h3></div>
+<div class="query-form">
+    <div class="block">
+        <strong>关键字：</strong>
+        <input ui="type:TextInput;id:Keyword;width:200" type="text" />
+        <strong>时间段：</strong>
+        <div ui="type:MultiCalendar;id:NotiRange"></div>
+        <a href="javascript:void(0)" class="query" hidefocus="true" style="margin:0; float:left">&nbsp;</a>
+    </div>
+</div>
+<div class="result" style="margin-top:10px">
+    <div class="info" style="display:none">很抱歉，您查询的条件没有相关数据。</div>
+    <div class="data" style="display:none">
+        <div class="grid noti-grid"></div>
+        <div class="page">
+            <div class="page-size">
+                <span>每页显示</span><div ui="type:Select;id:PageSize;width:50"></div><span>条</span><span class="row-count"></span>
+            </div>
+            <div class="page-no"><div ui="type:Pager;id:PageNo"></div></div>
+        </div>
+    </div>
+</div>
+</script>
+
+<script id="tpl-noti-list" type="text/html">
+<table>
+<tr>
+    <th width="30">编号</th>
+    <th>标题</th>
+    <th width="200">时间</th>
+</tr>
+{{#data}}
+<tr>
+    <td class="text">{{no}}</td>
+    <td class="text"><a href="#/mc/notidetail/{{id}}" target="_blank" class="{{className}}">{{title}}</a></td>
+    <td class="text">{{date}}</td>
+</tr>
+{{/data}}
+</table>
+</script>
+
+<script id="tpl-noti-detail" type="text/html">
+<div id="NoticeContent">
+    <h1 class="mc-title">{{title}}</h1>
+    <div class="mc-content">{{{content}}}</div>
+</div>
+</script>
