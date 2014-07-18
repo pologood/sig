@@ -31,7 +31,7 @@ Atlantis.Views.Msg = Backbone.View.extend({
         this.renderTopNav();
         
         var view = this;
-        $.Mustache.load('../../asset/agent/tpl/msg.html').done(function() {
+        $.Mustache.load('assets/tpl/msg.html').done(function() {
             $("#Left").html($.Mustache.render("tpl-msg-treenav"));
             $("#Slider").click(view.slide);
             view.$el.html($.Mustache.render("tpl-msg"));

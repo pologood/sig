@@ -45,11 +45,11 @@ Atlantis.Views.AccountInfo = Backbone.View.extend({
         this.renderTreeNav();
         
         //加载模版
-        $.Mustache.load('../../asset/agent/tpl/slide-panel.html');
-        $.Mustache.load('../../asset/agent/tpl/slide-panel-account.html');
-        $.Mustache.load('../../asset/agent/tpl/slide-panel-pay.html');
+        $.Mustache.load('assets/tpl/slide-panel.html');
+        $.Mustache.load('assets/tpl/slide-panel-account.html');
+        $.Mustache.load('assets/tpl/slide-panel-pay.html');
         var view = this;
-        $.Mustache.load('../../asset/agent/tpl/account-info.html').done(function() {
+        $.Mustache.load('assets/tpl/account-info.html').done(function() {
             view.$el.html($.Mustache.render("tpl-account-wrap"));
             
             view.userId = parseInt($("#UserId").val(), 10);

@@ -69,14 +69,14 @@ Atlantis.Views.Index = Backbone.View.extend({
         
         //我关注的客户权限
         this.hideStdAccount = false;
-        if (!Atlantis.Auth.ViewAccountClient || this.isKaAtlantis) {
+   //     if (!Atlantis.Auth.ViewAccountClient || this.isKaAtlantis) {
             this.hideStdAccount = true;
-        }
+      //  }
         this.hideXuri = false;
-        if (roleId == 103 || roleId == 106 || roleId == 109 || roleId == 110) {
+     //   if (roleId == 103 || roleId == 106 || roleId == 109 || roleId == 110) {
             //财务、销售、二代财务、二代销售
             this.hideXuri = true;
-        }
+       // }
         
         this.initChart();
         
@@ -132,11 +132,11 @@ Atlantis.Views.Index = Backbone.View.extend({
     },
     
     render: function(query) {
-        this.renderTopNav();
-        this.setIndexStyle();
+      //  this.renderTopNav();
+     //   this.setIndexStyle();
         
         var view = this;
-        $.Mustache.load('../../asset/agent/tpl/index.html').done(function() {
+        $.Mustache.load('assets/tpl/index.html').done(function() {
             view.$el.mustache("tpl-index", {
                 agentUserId: $("#UserId").val(),
                 isDelegate: $("#Delegate").val() == "true" ? [] : [1]
@@ -378,7 +378,7 @@ Atlantis.Views.Index = Backbone.View.extend({
          */
         this.lineChart = new AmCharts.AmSerialChart();
         var lineChart = this.lineChart;
-        lineChart.pathToImages = "../../asset/common/amcharts/";
+        lineChart.pathToImages = "assets/common/amcharts/";
         lineChart.marginRight = 40;
         lineChart.startDuration = 0.5;
         lineChart.colors = ["#90c01f", "#6aa6dc"];

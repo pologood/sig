@@ -32,7 +32,7 @@ Atlantis.Views.Noti = Backbone.View.extend({
         this.renderTopNav();
         
         var view = this;
-        $.Mustache.load('../../asset/agent/tpl/noti.html').done(function() {
+        $.Mustache.load('assets/tpl/noti.html').done(function() {
             $("#Left").html($.Mustache.render("tpl-noti-treenav"));
             $("#Slider").click(view.slide);
             view.$el.html($.Mustache.render("tpl-noti"));

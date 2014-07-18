@@ -62,10 +62,10 @@ Atlantis.Views.AuthUser = Backbone.View.extend({
         this.renderTreeNav();
         
         //加载模版
-        $.Mustache.load('../../asset/agent/tpl/slide-panel.html');
-        $.Mustache.load('../../asset/agent/tpl/slide-panel-account.html');
+        $.Mustache.load('assets/tpl/slide-panel.html');
+        $.Mustache.load('assets/tpl/slide-panel-account.html');
         var view = this;
-        $.Mustache.load('../../asset/agent/tpl/auth-user.html').done(function() {
+        $.Mustache.load('assets/tpl/auth-user.html').done(function() {
             view.$el.mustache("tpl-auth-user", {
                 op: view.delegateAndReadonly ? [] : [1]
             });

@@ -84,7 +84,7 @@ Atlantis.Views.Panel.Auth = Atlantis.Views.Panel.Base.extend({
             themes : {
                 dots: false,
                 icons: false,
-                url: "../../asset/common/jstree/department/style.css"
+                url: "assets/common/jstree/department/style.css"
             },
             json_data: this.menu,
             checkbox: {
