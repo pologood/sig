@@ -101,7 +101,7 @@ Atlantis.Router = Backbone.Router.extend({
         //设置标题
         document.title = title;
         
-        //创建新View
+        //创建新View和Model
         Atlantis.Page.cur = new Atlantis.Views[name]({
             model: Atlantis.Cache[name] || (Atlantis.Cache[name] = new Atlantis.Models[name]())
         });
