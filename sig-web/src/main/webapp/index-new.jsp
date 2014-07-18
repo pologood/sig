@@ -19,8 +19,8 @@
 	<div id="Mask" style="display:none"></div>
 	
 	<script src="assets/js/lib.js"></script>
-     <script src="assets/js/all.js"></script>
-     <script>document.write('<script src="pages/atlantis/auth.jsp?t=' + (new Date()).getTime() + '"><\/script>');</script>
+    <script src="assets/js/all.js"></script>
+    <script>document.write('<script src="pages/atlantis/auth.jsp?t=' + (new Date()).getTime() + '"><\/script>');</script>
      
 </body>
 </html>
