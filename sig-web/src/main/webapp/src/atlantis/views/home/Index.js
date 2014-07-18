@@ -132,7 +132,7 @@ Atlantis.Views.Index = Backbone.View.extend({
     },
     
     render: function(query) {
-      //  this.renderTopNav();
+           this.renderTopNav();
      //   this.setIndexStyle();
         
         var view = this;
