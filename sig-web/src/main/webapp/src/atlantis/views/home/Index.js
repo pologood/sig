@@ -136,59 +136,59 @@ Atlantis.Views.Index = Backbone.View.extend({
            this.renderTopNav();
      //   this.setIndexStyle();
         
-        var view = this;
-        $.Mustache.load('assets/tpl/index.html').done(function() {
-            view.$el.mustache("tpl-index", {
-                agentUserId: $("#UserId").val(),
-                isDelegate: $("#Delegate").val() == "true" ? [] : [1]
-            });
-            
-            /*
-             * 权限处理
-             */
-            if (view.viewTask) { //显示任务完成情况
-                view.$("#TaskModule").mustache("tpl-index-task", {
-                    cost: view.viewCostTask ? [1] : [],       //消耗任务
-                    newCust: view.viewNewCustTask ? [1] : [], //开户任务
-                    account: view.viewAccountTask ? [1] : []  //标准账户任务
-                });
-                esui.init();
-                //选中第一个
-                var ctrlId = $(view.$(".task-type input")[0]).attr("data-control");
-                esui.get(ctrlId).setChecked(true);
-                //显示第一个
-                $(view.$("#TaskModule .task-content")[0]).show();
-            } else {
-                view.$("#TaskModule").html($.Mustache.render("tpl-index-profile"));
-            }
-            
-            if (view.viewInvest) { //显示资金记录
-                view.$("#CostLeft").addClass("invest");
-                view.$("#CostRight").show();
-            }
-            
-            if (view.hideStdAccount) { //隐藏'标准账户未达标客户'
-                view.$(".r1c3").remove();
-            }
-            if (view.hideXuri) {
-                view.$(".r2c1").remove(); //隐藏'旭日待优化客户'
-                view.$(".r2c2").remove(); //隐藏'旭日影响消耗操作客户'
-            }
-            
-            //密码过简提示
-            if ($("#SafePwd").val() == "false") {
-                view.floatWindow = new FloatWindow('SafeTip', '安全提示', '尊敬的用户：<br>&nbsp;&nbsp;&nbsp;&nbsp;您的密码过于简单，为了保护您的账户安全，请您尽快修改密码！');
-            }
+          var view = this;
+//        $.Mustache.load('assets/tpl/index.html').done(function() {
+//            view.$el.mustache("tpl-index", {
+//                agentUserId: $("#UserId").val(),
+//                isDelegate: $("#Delegate").val() == "true" ? [] : [1]
+//            });
+//            
+//            /*
+//             * 权限处理
+//             */
+//            if (view.viewTask) { //显示任务完成情况
+//                view.$("#TaskModule").mustache("tpl-index-task", {
+//                    cost: view.viewCostTask ? [1] : [],       //消耗任务
+//                    newCust: view.viewNewCustTask ? [1] : [], //开户任务
+//                    account: view.viewAccountTask ? [1] : []  //标准账户任务
+//                });
+//                esui.init();
+//                //选中第一个
+//                var ctrlId = $(view.$(".task-type input")[0]).attr("data-control");
+//                esui.get(ctrlId).setChecked(true);
+//                //显示第一个
+//                $(view.$("#TaskModule .task-content")[0]).show();
+//            } else {
+//                view.$("#TaskModule").html($.Mustache.render("tpl-index-profile"));
+//            }
+//            
+//            if (view.viewInvest) { //显示资金记录
+//                view.$("#CostLeft").addClass("invest");
+//                view.$("#CostRight").show();
+//            }
+//            
+//            if (view.hideStdAccount) { //隐藏'标准账户未达标客户'
+//                view.$(".r1c3").remove();
+//            }
+//            if (view.hideXuri) {
+//                view.$(".r2c1").remove(); //隐藏'旭日待优化客户'
+//                view.$(".r2c2").remove(); //隐藏'旭日影响消耗操作客户'
+//            }
+//            
+//            //密码过简提示
+//            if ($("#SafePwd").val() == "false") {
+//                view.floatWindow = new FloatWindow('SafeTip', '安全提示', '尊敬的用户：<br>&nbsp;&nbsp;&nbsp;&nbsp;您的密码过于简单，为了保护您的账户安全，请您尽快修改密码！');
+//            }
             
             //获取饼图
-            view.getTaskData();
+        //    view.getTaskData();
             
             //获取折线图(->资金记录)
-            view.getCostData();
+      //      view.getCostData();
             
             //获取系统消息->最新通知->广告位->我关注的客户
-            view.getMsg();
-        });
+      //      view.getMsg();
+//        });
     },
     
     getMsg: function() {
