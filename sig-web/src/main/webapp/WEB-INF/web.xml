@@ -31,12 +31,12 @@
 	
 		<servlet>
 		        <servlet-name>login</servlet-name>
-		        <servlet-class>org.sig.web.Servlet.LoginServlet</servlet-class>
+		        <servlet-class>org.atlantis.web.Servlet.LoginServlet</servlet-class>
 		</servlet>
 		
 		<servlet>
 		        <servlet-name>register</servlet-name>
-		        <servlet-class>org.sig.web.Servlet.RegisterServlet</servlet-class>
+		        <servlet-class>org.atlantis.web.Servlet.RegisterServlet</servlet-class>
 		</servlet>
 
 	<servlet-mapping>

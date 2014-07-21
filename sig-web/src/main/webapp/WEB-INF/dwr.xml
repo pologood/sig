@@ -3,19 +3,8 @@
     "http://getahead.org/dwr/dwr20.dtd">
 <dwr>
 	<allow>
-		<convert converter="bean" match="org.sig.core.bo.TestBean">
-		</convert>
-		
-	    <convert converter="bean" match="org.sig.web.Form.Query">
-		</convert>
-		
-	    <convert converter="bean" match="org.sig.core.bo.Post">
-		</convert>
-		
-        <convert converter="bean" match="org.sig.core.bo.PostClass">
-		</convert>
-		
-	   <convert converter="bean" match="org.sig.core.bo.SrcWebsite">
+
+	    <convert converter="bean" match="org.atlantis.web.Form.Query">
 		</convert>
 		
 		<create creator="spring" javascript="TestAction" scope="request">
