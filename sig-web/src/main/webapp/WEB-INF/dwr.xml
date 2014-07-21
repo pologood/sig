@@ -11,8 +11,8 @@
 			<param name="beanName" value="TestAction" />
 		</create>
 		
-		 <create creator="spring" javascript="PostManageAction" scope="request">
-			<param name="beanName" value="PostManageAction" />
+		 <create creator="spring" javascript="GrapManageAction" scope="request">
+			<param name="beanName" value="GraphManageAction" />
 		</create>
 		
 		<create creator="spring" javascript="UserManageAction" scope="request">
