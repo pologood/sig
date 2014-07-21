@@ -3,8 +3,6 @@ package org.atlantis.web.taglib;
 import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.tagext.TagSupport;
 
-import org.apache.commons.lang.StringUtils;
-
 
 public class AuthChecker extends TagSupport {
 	private static final long serialVersionUID = 339306968881056890L;
