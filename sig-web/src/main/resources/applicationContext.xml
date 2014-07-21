@@ -73,7 +73,7 @@
      	       <value>${mongo.password}</value>
      	</property>
 	</bean>
-	<context:component-scan base-package="org.sig" />
+
 	<context:component-scan base-package="org.atlantis" />
 	
 </beans>

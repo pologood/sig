@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 
-
-
-
-
-
 <!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.1//EN" "http://java.sun.com/j2ee/dtds/web-jsptaglibrary_1_1.dtd">
 
 <taglib>
@@ -27,7 +22,7 @@ access information contained in the ServletContext for a web application.
 </info>
 <tag>
 <name>auth</name>
-<tagclass>org.sig.web.taglib.AuthChecker</tagclass>
+<tagclass>org.atlantis.web.taglib.AuthChecker</tagclass>
 <bodycontent>JSP</bodycontent>
 
 <attribute>
