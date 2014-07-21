@@ -134,7 +134,7 @@ Atlantis.Views.Index = Backbone.View.extend({
     // render function
     render: function(query) {
            this.renderTopNav();
-     //   this.setIndexStyle();
+           this.setIndexStyle();
         
           var view = this;
 //        $.Mustache.load('assets/tpl/index.html').done(function() {
