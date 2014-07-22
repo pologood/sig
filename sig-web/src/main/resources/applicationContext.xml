@@ -16,7 +16,7 @@
 
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
-		<property name="mapperLocations" value="classpath*:org/sig/core/dao/*.xml" />
+		<property name="mapperLocations" value="classpath*:org/atlantis/core/dao/*.xml" />
 	</bean>
 
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
@@ -55,7 +55,7 @@
 	<tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true" />
 
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="org.sig.core.dao" />
+		<property name="basePackage" value="org.atlantis.core.dao" />
 	</bean>
 
 	<bean id="mongoOptions" class="com.mongodb.MongoOptions">
