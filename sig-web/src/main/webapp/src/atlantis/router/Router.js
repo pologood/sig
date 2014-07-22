@@ -9,54 +9,22 @@ Atlantis.Router = Backbone.Router.extend({
         //管理首页
         '': 'index',
         'index/*query': 'index',
-        
-        //消息中心
-        'mc/msg/': 'msg',
-        'mc/noti/': 'noti',
-        'mc/notidetail/*query': 'notiDetail',
-        
+
         /*
-         * 客户管理
+         * 用户管理
          */
         'cust/': 'custAdmin', //外部入口, url不宜修改
         //客户概况
         "cust/overview/accountcenter/*query": "accountCenter",
         "cust/overview/consume/realtime/*query": "consumeRealtimeCust", //外部入口, url不宜修改
-        //客户优化
-        "cust/opt/account/*query": "optAccount",
-        "cust/opt/detail/*query": "optDetail",
-        //客户提醒
-        "cust/remind/cost/cust/*query": "remindCostCust",
-        "cust/remind/cost/custdetail/*query": "remindCostCustDetail",
-        "cust/remind/cost/op/*query": "remindCostOp",
-        "cust/remind/cost/opdetail/*query": "remindCostOpDetail",
         
         /*
-         * 统计信息
+         * Graph管理
          */
         //任务完成情况
         'stat/task/cost/*query': 'taskCost',
         'stat/task/new/*query': 'taskNew',
         'stat/task/account/*query': 'taskAccount',
-        //竞价服务
-        'stat/consume/overview/*query': 'consumeOverview',
-        'stat/consume/client/*query'  : 'consumeClient',
-        'stat/consume/realtime/*query'  : 'consumeRealtimeStat',
-        'stat/account/cs/*query': 'accountCs',
-        'stat/account/client/*query': 'accountClient',
-        'stat/increment/overview/*query': 'incrementOverview',
-        'stat/increment/sales/*query'   : 'incrementSales',
-        'stat/increment/service/*query' : 'incrementService',
-        'stat/stock/overview/*query': 'stockOverview',
-        'stat/stock/service/*query' : 'stockService',
-        
-        /*
-         * 弹窗
-         */
-        //客户情况列表
-        'stat/cust/*query': 'cust',
-        //客户每日消耗
-        'stat/perday/*query': 'perday',
         
         /*
          * 系统管理

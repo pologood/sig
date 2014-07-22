@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
  *  @Description:   
  *
  **/
-@Component("PostManageAction")
+@Component("GraphManageAction")
 public class GraphManageAction {
 	
 

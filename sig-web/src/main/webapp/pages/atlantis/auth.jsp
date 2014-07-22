@@ -12,7 +12,7 @@ Atlantis.TopNav = [
     {name: "数据", index: 6, tid: 8000, logid: 700, tree: null, url: "null", target: "_self"},
     {name: "经典", index: 7, tid: 3000, logid: 800, tree: null, url: "null", target: "_self"},
     {<authcheck:auth authid="400000001">name: "用户管理", index: 11, tid: 1000, logid: 2000, tree: null, url: "#cust/"</authcheck:auth>},
-    {<authcheck:auth authid="400000002">name: "内容管理", index: 12, tid: 1000, logid: 3000, tree: null, url: "#content/"</authcheck:auth>}
+    {<authcheck:auth authid="400000002">name: "图谱管理", index: 12, tid: 1000, logid: 3000, tree: null, url: "#content/"</authcheck:auth>}
     
 ];
 
