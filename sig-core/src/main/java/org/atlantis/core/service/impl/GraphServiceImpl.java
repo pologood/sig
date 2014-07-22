@@ -1,6 +1,7 @@
 package org.atlantis.core.service.impl;
 
 import org.atlantis.core.service.GraphService;
+import org.springframework.stereotype.Service;
 
 import com.mongodb.BasicDBList;
 import com.mongodb.DBObject;
@@ -13,6 +14,7 @@ import com.mongodb.DBObject;
  *
  * @description 
  */
+@Service
 public class GraphServiceImpl implements GraphService {
 
 	@Override

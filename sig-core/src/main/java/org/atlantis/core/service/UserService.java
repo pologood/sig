@@ -1,16 +1,16 @@
-package org.atlantis.core.dao;
+package org.atlantis.core.service;
 
 import org.atlantis.common.po.User;
 
 /**
  * @copyright  www.sogou.com
  * @author       denghongshuai@sogou-inc.com
- * @time           2014-7-22   上午10:50:43
+ * @time           2014-7-22   下午3:43:57
  * @version    
  *
  * @description 
  */
-public interface UserDao {
+public interface UserService {
 	
 	public void addUser(User user);
 	

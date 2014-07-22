@@ -1,5 +1,8 @@
 package org.atlantis.web.action;
 
+import org.atlantis.common.po.User;
+import org.atlantis.core.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
@@ -11,5 +14,23 @@ import org.springframework.stereotype.Component;
  **/
 @Component("UserManageAction")
 public class UserManageAction {
+	
+	@Autowired
+	private UserService userService;
 
+	public void addUser(User user){
+		
+	}
+	
+	public void delUser(String email){
+		
+	}
+	
+	public void modiUser(User user){
+		
+	}
+	
+	public User findUser(String email){
+		return userService.findUser(email);
+	}
 }

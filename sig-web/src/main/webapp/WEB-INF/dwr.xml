@@ -7,6 +7,9 @@
 	    <convert converter="bean" match="org.atlantis.web.Form.Query">
 		</convert>
 		
+	     <convert converter="bean" match="org.atlantis.common.po.User">
+		</convert>
+		
 		<create creator="spring" javascript="TestAction" scope="request">
 			<param name="beanName" value="TestAction" />
 		</create>

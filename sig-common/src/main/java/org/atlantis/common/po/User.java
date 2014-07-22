@@ -15,11 +15,11 @@ public class User {
 	
 	@Getter @Setter private String name;
 	
-	@Getter @Setter private int age;
-	
 	@Getter @Setter private String email;
 	
 	@Getter @Setter private String pwd;
+	
+	@Getter @Setter private int status;
 	
 	@Getter @Setter private int level;
 
