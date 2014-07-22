@@ -311,14 +311,13 @@
 				<artifactId>maven-war-plugin</artifactId>
 				<version>2.0.2</version>
 				<configuration>
-					<webResources>
-                        <resource>
-                            <!-- this is relative to the pom.xml directory -->
-                            <directory>${basedir}/src/main/resources/</directory>
-                            <targetPath>WEB-INF/classes</targetPath>
-                            <filtering>true</filtering>
-                        </resource>     
-                    </webResources>
+			          <webResources>
+			            <resource>
+			              <directory>${basedir}/src/main/resources/${package.environment}</directory>
+			              <targetPath>WEB-INF/classes</targetPath>
+			              <filtering>true</filtering>
+			            </resource>
+			          </webResources>
 				</configuration>
 			</plugin>
 
@@ -334,6 +333,12 @@
 	        <resources>
 	          <resource>
 	            <directory>${basedir}/src/main/resources</directory>
+	            <filtering>false</filtering>
+	            <excludes>
+	              <exclude>dev/**</exclude>
+	              <exclude>qa/**</exclude>
+	              <exclude>sync/**</exclude>
+	            </excludes>
 	          </resource>
 	        </resources>
 	      </build>
@@ -341,7 +346,7 @@
     <profile>
 	      <id>dev</id>
 	      <properties>
-	        <package.environment>dev</package.environment>
+	            <package.environment>dev</package.environment>
 	      </properties>
     </profile>
     <profile>
