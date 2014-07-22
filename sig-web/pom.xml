@@ -324,5 +324,46 @@
 
 		</plugins>
 	</build>
-	
+	<profiles>
+    <profile>
+	      <id>product</id>
+	      <properties>
+	        <package.environment>product</package.environment>
+	      </properties>
+	      <build>
+	        <resources>
+	          <resource>
+	            <directory>${basedir}/src/main/resources</directory>
+	            <filtering>false</filtering>
+	            <excludes>
+	              <exclude>dev/**</exclude>
+	              <exclude>qa/**</exclude>
+	              <exclude>sync/**</exclude>
+	            </excludes>
+	          </resource>
+	        </resources>
+	      </build>
+    </profile>
+    <profile>
+	      <id>dev</id>
+	      <properties>
+	        <package.environment>dev</package.environment>
+	      </properties>
+    </profile>
+    <profile>
+	      <id>qa</id>
+	      <properties>
+	        <package.environment>qa</package.environment>
+	      </properties>
+    </profile>
+    <profile>
+	      <id>local</id>
+	      <activation>
+	        <activeByDefault>true</activeByDefault>
+	      </activation>
+	      <properties>
+	        <package.environment>dev</package.environment>
+	      </properties>
+    </profile>
+  </profiles>
 </project>
