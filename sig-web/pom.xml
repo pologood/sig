@@ -8,9 +8,7 @@
 		<artifactId>sig-atlantis</artifactId>
 		<version>1.0.0</version>
 	</parent>   
-	<groupId>org.ceode.sig</groupId>
 	<artifactId>sig-web</artifactId>
-	<version>1.0.0</version>
 	<packaging>war</packaging>
 	<name>sig-web</name>
 	<url>http://maven.apache.org</url>
