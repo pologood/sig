@@ -46,6 +46,10 @@ Atlantis.Views.Index = Backbone.View.extend({
            var view = this;
            esui.init();
            $.Mustache.load('assets/tpl/index.html').done(function() {
+               view.$el.mustache("tpl-index", {
+                   agentUserId: $("#UserId").val(),
+                   isDelegate: $("#Delegate").val() == "true" ? [] : [1]
+               });
            })
     },
     

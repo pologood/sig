@@ -190,11 +190,11 @@ Atlantis.Views.AccountCenter = Backbone.View.extend({
                 ],
                 value: status ? status : 0
             },
-            Logic1: {datasource:　logic, value: 1},
-            Logic2: {datasource:　logic, value: 1},
-            Logic3: {datasource:　logic, value: 1},
-            Logic4: {datasource:　logic, value: 1},
-            Logic5: {datasource:　logic, value: 1}
+            Logic1: {datasource:logic, value: 1},
+            Logic2: {datasource:logic, value: 1},
+            Logic3: {datasource:logic, value: 1},
+            Logic4: {datasource:logic, value: 1},
+            Logic5: {datasource:logic, value: 1}
         });
         
         $(".ui-mmcal").hide();
