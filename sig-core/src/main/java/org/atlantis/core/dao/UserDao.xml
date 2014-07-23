@@ -4,7 +4,7 @@
 <mapper namespace="org.atlantis.core.dao.UserDao">
 	
 	<select id="findUser" parameterType="java.lang.String" resultType="org.atlantis.common.po.User">
-		select * from atlantis.user user where user.email = #{email}
+		select * from user user where user.email = #{email}
 	</select>
 	
 		

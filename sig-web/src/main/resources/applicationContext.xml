@@ -15,9 +15,10 @@
 		</bean>
 
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-		<property name="dataSource" ref="dataSource" />
+		 <property name="dataSource" ref="dataSource" />
 		<property name="mapperLocations" value="classpath*:org/atlantis/core/dao/*.xml" />
 	</bean>
+
 
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
 		destroy-method="close">
@@ -34,10 +35,10 @@
 			<value>${password}</value>
 		</property>
 		<property name="maxPoolSize">
-			<value>25</value>
+			<value>1</value>
 		</property>
 		<property name="minPoolSize">
-			<value>3</value>
+			<value>1</value>
 		</property>
 		<property name="idleConnectionTestPeriod">
 			<value>1800</value>
