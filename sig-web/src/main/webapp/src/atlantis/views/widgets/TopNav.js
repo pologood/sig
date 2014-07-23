@@ -1,7 +1,7 @@
 /*
  * Atlantis View - TopNav
- * @author : liangxiao
- * @date   : 2012
+ * @author : aris
+ * @date   : 2014
  */
 
 Atlantis.Views.TopNav = Backbone.View.extend({
@@ -25,17 +25,14 @@ Atlantis.Views.TopNav = Backbone.View.extend({
     },
     
     tpl: '<a href="javascript:void(0)" hidefocus="true" index="{{index}}" tid="{{tid}}" logid="{{logid}}" class="nav{{active}}">{{name}}</a>',
-    externalTpl: '<a href="{{url}}" target="{{target}}" hidefocus="true" class="external" index="{{index}}" tid="{{tid}}" logid="{{logid}}">{{name}}</a>',
+    externalTpl: '<a  class="external" index="{{index}}" tid="{{tid}}" logid="{{logid}}">{{name}}</a>',
     
     createHTML: function(data) {
-        var html = [],
-            me = this;
+        var html = [], me = this;
         $.each(data, function(index, value) {
             if (value.name != undefined) {
-               if (value.url && !/^#/.test(value.url)) { //外部链接
+               if (value.index < 0) { //外部链接
                    html.push(Mustache.to_html(me.externalTpl, {
-                        url: value.url,
-                        target: value.target,
                         index: value.index,
                         name: value.name,
                         tid: value.tid,
