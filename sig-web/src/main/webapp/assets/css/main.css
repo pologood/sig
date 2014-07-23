@@ -1,7 +1,6 @@
 /*
- * 通用样式
- * @author : liangxiao
- * @date   : 2012
+ * @author : aris
+ * @date   : 2014
  */
 
 body{margin:0; font-size:12px; font-family:Arial; background:#fff; height:100%; cursor:default}
@@ -68,7 +67,7 @@ a.add{color:#06c; background:url(img/icon-add.png) left center no-repeat; paddin
 a.del{color:#06c; background:url(img/icon-del.png) left center no-repeat; padding-left:15px; text-decoration:none}
 a.add:hover, a.del:hover{text-decoration:underline}
 
-/*搜狗兼容提示*/
+/*兼容提示*/
 .se-tip{margin:0; padding-left:30px; height:40px; line-height:40px; border-bottom:1px #c1c1c1 solid; background:url(img/se-tip-bg.png)}
 .se-tip span{float:left}
 .se-tip span.se-close{width:80px; height:24px; margin-top:8px; background:url(img/btn.png) -94px -531px; cursor:pointer}
