@@ -1,38 +1,15 @@
 /*
  * Atlantis Router
- * @author : liangxiao
- * @date   : 2012
+ * @author : aris
+ * @date   : 2014
  */
 
 Atlantis.Router = Backbone.Router.extend({
     routes: {
-        //管理首页
+        //首页
         '': 'index',
         'index/*query': 'index',
 
-        /*
-         * 用户管理
-         */
-        'cust/': 'custAdmin', //外部入口, url不宜修改
-        //客户概况
-        "cust/overview/accountcenter/*query": "accountCenter",
-        "cust/overview/consume/realtime/*query": "consumeRealtimeCust", //外部入口, url不宜修改
-        
-        /*
-         * Graph管理
-         */
-        //任务完成情况
-        'stat/task/cost/*query': 'taskCost',
-        'stat/task/new/*query': 'taskNew',
-        'stat/task/account/*query': 'taskAccount',
-        
-        /*
-         * 系统管理
-         */
-        //权限管理
-        'admin/auth/user/*query': 'authUser',
-        //账号管理
-        'admin/account/info/*query': 'accountInfo'
     },
     
     /*
@@ -87,124 +64,7 @@ Atlantis.Router = Backbone.Router.extend({
     },
     
     index: function(query) {
-        this.startRout('管理首页', 'Index', query);
-    },
-    
-    msg: function(query) {
-        this.startRout('系统消息', 'Msg', query);
-    },
-    
-    noti: function(query) {
-        this.startRout('通知', 'Noti', query);
-    },
-    
-    notiDetail: function(query) {
-        this.startRout('通知', 'NotiDetail', query);
-    },
-    
-    custAdmin: function() {
-        var hash = this.getFirstHash(Atlantis.TreeNav.Cust);
-        Atlantis.router.navigate(hash, {trigger: true});
-    },
-    
-    accountCenter: function(query) {
-        this.startRout('客户中心', 'AccountCenter', query);
-    },
-    
-    consumeRealtimeCust: function(query) {
-        this.startRout('客户实时消耗', 'ConsumeRealtimeCust', query);
-    },
-    
-    optAccount: function(query) {
-        this.startRout('账户优化', 'OptAccount', query);
-    },
-    
-    optDetail: function(query) {
-        this.startRout('账户优化详情', 'OptDetail', query);
-    },
-    
-    remindCostCust: function(query) {
-        this.startRout('影响消耗操作提醒', 'RemindCostCust', query);
-    },
-    
-    remindCostCustDetail: function(query) {
-        this.startRout('影响消耗操作提醒', 'RemindCostCustDetail', query);
-    },
-    
-    remindCostOp: function(query) {
-        this.startRout('影响消耗操作提醒', 'RemindCostOp', query);
-    },
-    
-    remindCostOpDetail: function(query) {
-        this.startRout('影响消耗操作提醒', 'RemindCostOpDetail', query);
-    },
-    
-    taskCost: function(query) {
-        this.startRout('消耗任务', 'TaskCost', query);
-    },
-    
-    taskNew: function(query) {
-        this.startRout('开户任务', 'TaskNew', query);
-    },
-    
-    taskAccount: function(query) {
-        this.startRout('标准账户任务', 'TaskAccount', query);
-    },
-    
-    consumeRealtimeStat: function(query) {
-        this.startRout('实时消耗', 'ConsumeRealtimeStat', query);
-    },
-    
-    consumeOverview: function(query) {
-        this.startRout('总体消耗统计', 'ConsumeOverview', query);
-    },
-    
-    consumeClient: function(query) {
-        this.startRout('客户消耗统计', 'ConsumeClient', query);
-    },
-    
-    accountCs: function(query) {
-        this.startRout('账户概况', 'AccountCs', query);
-    },
-    
-    accountClient: function(query) {
-        this.startRout('账户概况', 'AccountClient', query);
-    },
-    
-    incrementOverview: function(query) {
-        this.startRout('总体统计', 'IncrementOverview', query);
-    },
-    
-    incrementSales: function(query) {
-        this.startRout('销售员维度统计', 'IncrementSales', query);
-    },
-    
-    incrementService: function(query) {
-        this.startRout('客服维度统计', 'IncrementService', query);
-    },
-    
-    stockOverview: function(query) {
-        this.startRout('总体统计', 'StockOverview', query);
-    },
-    
-    stockService: function(query) {
-        this.startRout('客服维度统计', 'StockService', query);
-    },
-    
-    cust: function(query) {
-        this.startRout('客户情况列表', 'Cust', query);
-    },
-    
-    perday: function(query) {
-        this.startRout('客户每日消耗统计', 'Perday', query);
-    },
-    
-    authUser: function(query) {
-        this.startRout('用户管理', 'AuthUser', query);
-    },
-    
-    accountInfo: function(query) {
-        this.startRout('基本信息', 'AccountInfo', query);
+        this.startRout('首页', 'Index', query);
     },
     
     getFirstHash: function(tree) {
