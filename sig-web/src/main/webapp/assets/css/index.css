@@ -3,14 +3,6 @@
  * @date   : 2014
  */
 
-/*系统消息*/
-#MsgBar{height:40px; line-height:40px; padding-left:35px; background:url(img/bg.png) 0px -330px}
-#MsgBar .msg-head{float:left; width:55px; padding-left:23px; background:url(img/index.png) -132px -164px no-repeat}
-#MsgBar .msg-head a{text-decoration:none; color:#06c; font-weight:bold}
-#MsgBar .msg-head a:hover{text-decoration:underline}
-#MsgBar .msg-body{float:left}
-#MsgBar .msg-detail{float:left; margin:8px 0 0 30px; width:80px; height:24px; text-decoration:none; background:url(img/btn.png) 0px -483px}
-
 /*框架*/
 #IndexMain{height:640px; background:#f5f7ff}
 #IndexLeft{height:640px; margin-left:200px; padding-top:150px; border-right:1px #bec3d6 solid}
@@ -43,78 +35,4 @@
 #ClientModule .module-title{background-position:0 -58px}
 #NotiModule .module-title a{float:right; margin-right:10px; width:80px; height:24px; text-decoration:none; background:url(img/btn.png) -80px -483px}
 
-/*饼图*/
-.task-type{height:20px; line-height:20px; margin:20px 0 5px 0}
-.task-type input, .task-type label{float:left}
-.task-type input{margin:0 5px 0 0}
-.task-type label{margin-right:20px; color:#252525}
-.pie-holder{width:329px; height:150px}
-.negative{color:#cf0000}
-#PieChart{width:329px; height:150px; background:url(img/loading.gif) 140px 40px no-repeat}
-#PieChartLink{display:block; width:329px; height:150px; position:absolute; left:25px; top:149px; cursor:pointer}
-#TaskModule p.item{margin:0; height:30px; line-height:30px; color:#252525}
-#TaskModule p.perday{text-align:center; font-weight:bold; font-family:"宋体"}
-#TaskModule p.perday span{color:#cf0000; font-family:Arial}
 
-/*环图*/
-#DonutChart{width:329px; height:220px; background:url(img/loading.gif) 155px 75px no-repeat}
-#DonutChart svg{z-index:1; zoom:1}
-#DonutTotal{position:absolute; z-index:0; top:115px; left:125px; width:130px; height:40px; text-align:center; line-height:20px}
-#DonutTotal .title{font-family:"微软雅黑"; font-size:15px}
-
-/*消耗折线*/
-#CostTab{height:38px; padding:10px 0 0 15px; background:url(img/index-bg.png) 0 -650px; border-bottom:2px #2c599b solid}
-#CostTab a{float:left; width:132px; height:24px; padding-top:14px; text-decoration:none; text-align:center; color:#3c3c3c; background-image:url(img/index.png); background-position:0 -154px}
-#CostTab a.active{color:#fff; background-position:0 -116px}
-#LineChart{height:290px; background:url(img/loading.gif) center center no-repeat}
-
-/*资金记录*/
-#CostRight p{margin:0; line-height:30px}
-#CostRight p.company-name{font-weight:bold; line-height:24px; margin-bottom:5px}
-
-/*最新通知*/
-.notice-list{padding-left:25px; margin-top:15px}
-.notice-list div{height:26px; line-height:26px}
-.notice-list div .title{float:left; width:245px; padding-left:10px; background:url(img/li.png) left center no-repeat}
-.notice-list div .title a{color:#252525; text-decoration:none}
-.notice-list div .title a.top{color:#06c}
-.notice-list div .title a.first{color:#cf0000}
-.notice-list div .title a:hover{text-decoration:underline}
-.notice-list div .date{float:left}
-#ADLink{display:block; width:335px; height:65px; margin:40px 0 0 10px}
-#ADLink img{width:335px; height:65px; border:0}
-
-/*我关注的客户*/
-#ClientLeft{left:25px; width:420px}
-#ClientRight{left:445px; width:360px}
-#ClientModule .line{position:absolute; top:70px; left:453px; height:190px; width:1px; font-size:0; background:url(img/index-bg.png) 0 -770px}
-.client-module{position: absolute; top:50px; height:240px}
-.client-module div{float:left; width:140px; height:95px; padding-top:25px; position:relative}
-#ClientRight  div{width:120px}
-.client-module div .icon{display:block; width:53px; height:53px; margin:0 auto; text-decoration:none; background-image:url(img/icon-myclient.png)}
-.client-module div p{text-align:center; margin:7px 0 0 0}
-.client-module div p a{text-decoration:none; color:#252525}
-.client-module div p a:hover{text-decoration:underline}
-.client-module div .num{position:absolute; top:20px; left:80px; height:12px; line-height:12px; padding:0 3px;
-color:#fff; background:url(img/index-bg.png) 0 -750px; border-radius:6px; border:1px #f0ac35 solid; box-shadow:0 1px 3px #999}
-.r1c1 .icon{background-position:0 0}
-.r1c2 .icon{background-position:0 -53px}
-.r1c3 .icon{background-position:0 -106px}
-.r2c1 .icon{background-position:0 -159px}
-.r2c2 .icon{background-position:0 -212px}
-.r2c3 .icon{background-position:0 -265px}
-.r1c4 .icon{background-position:0 -318px}
-.r1c5 .icon{background-position:0 -371px}
-.r1c6 .icon{background-position:0 -424px}
-.r2c4 .icon{background-position:0 -477px}
-.r2c5 .icon{background-position:0 -530px}
-.client-module .r1c4 .num,
-.client-module .r1c5 .num,
-.client-module .r1c6 .num,
-.client-module .r2c4 .num,
-.client-module .r2c5 .num{left:70px}
-
-/*消息详情*/
-#NoticeContent{width:860px; height:500px; padding:20px 180px 0 180px; background:url(img/notice-bg.png) 14px 20px no-repeat}
-#NoticeContent .mc-title{margin:0; color:#252525; padding:50px 0 37px 0; font-family:"微软雅黑"; font-weight:normal; text-align:center}
-#NoticeContent .mc-content{height:350px; padding-right:20px; overflow:auto}

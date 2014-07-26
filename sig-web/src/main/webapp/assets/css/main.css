@@ -23,13 +23,9 @@ img{border:0}
 /*页面框架*/
 #Main{background:#e8f0fa}
 #Main #Left{float:left; padding-bottom:10px; border-top:1px #fff solid; position:relative}
-#Main #Right{background-color:#fff; background-repeat:repeat-y; padding-bottom:30px}
-#Main .left-show{width:190px}
-#Main .left-hide{width:20px}
-#Main .no-left{display:none}
-#Main .right-normal{margin-left:190px; background-image:url(img/split.png); padding-left:5px}
-#Main .right-expand{margin-left:20px}
-#Main .right-max{margin-left:0; background-image:none; padding-left:0}
+#Main #Right{background-color:#fff; background-repeat:repeat-y; padding-bottom:10px}
+#Main .left-show{width:190px;height:1040px;}
+#Main .right-normal{margin-left:190px;height:1040px; background-image:url(img/split.png); padding-left:5px}
 
 /*底部*/
 #Foot{height:80px; padding-top:20px; line-height:25px; text-align:center; color:#333; border-top:1px #a7bfd1 solid}
