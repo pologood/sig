@@ -4,35 +4,11 @@
  */
 
 /*框架*/
-#IndexMain{height:640px; background:#f5f7ff}
 #IndexLeft{height:640px; margin-left:200px; padding-top:150px; border-right:1px #bec3d6 solid}
-#IndexRight{height:640px; margin-left:358px; border-left:1px #bec3d6 solid}
+#IndexRight{ color:#bec3d6; border-left:1px #bec3d6 solid}
 
-/*底部*/
-#IndexFoot{height:40px; line-height:40px; background:url(img/index-bg.png) 0 -700px; border-top:1px #a8b1bf solid; border-bottom:1px #a8b1bf solid}
-#IndexFoot .title{float:left; width:92px; height:40px; background:url(img/index.png) 0 -192px}
-#IndexFoot .contact{float:left; height:16px; line-height:16px; padding-left:20px; margin:13px 40px 0 0; background-image:url(img/index.png); background-repeat:no-repeat}
-#IndexFoot .phone{margin-left:30px; background-position:-132px -116px}
-#IndexFoot .email{background-position:-132px -132px}
-#IndexFoot .work{background-position:-132px -148px}
-#IndexFoot .more{float:left; margin:8px 0 0 0; width:106px; height:24px; text-decoration:none; background:url(img/btn.png) 0px -507px}
-#IndexFoot .url{color:#06c; text-decoration:none; margin-left:40px}
-#IndexFoot .url:hover{text-decoration:underline}
-
-/*模块*/
-#TaskModule{height:325px; padding:15px 0 0 25px; position:relative; background:url(img/index-bg.png); border-bottom:1px #abc2ca solid}
-#CostModule{height:340px; background:#eff6fe; border-bottom:1px #abc2ca solid}
-#NotiModule{height:284px; padding-top:15px; background:url(img/index-bg.png) 0 -350px}
-#ClientModule{height:284px; padding:15px 0 0 25px; background:url(img/index-bg.png) 0 -350px; position:relative}
-#CostLeft{height:340px}
-#CostModule .invest{margin-right:240px}
-#CostRight{height:232px; width:200px; float:right; padding:108px 20px 0 20px; background:url(img/index.png) 0 -232px}
-
-/*模块标题*/
-.module-title{height:29px; background-image:url(img/index.png); background-repeat:no-repeat}
-#TaskModule .profile{background-position:0 -87px}
-#NotiModule .module-title{background-position:0 -29px; margin-left:25px}
-#ClientModule .module-title{background-position:0 -58px}
-#NotiModule .module-title a{float:right; margin-right:10px; width:80px; height:24px; text-decoration:none; background:url(img/btn.png) -80px -483px}
-
-
+#IndexRight  .search-wrap{padding-left:200px; padding-top: 150px; width:650px; height:44px;}
+#IndexRight  .search-wrap  .search__input{padding-left:12px; width:432px; height:44px;font-size: 16px;}
+#IndexRight   .btn_wr{width: 107px;height: 50px;position: absolute;left:460;display: inline-block;}
+#IndexRight   .btn{width: 105px;height: 50px;padding: 0;border: 0; font-size: 16px;background-color: #21BDDE;cursor: pointer}
+#IndexRight  .search_span  .search__submit{width:54px; height:44px;}

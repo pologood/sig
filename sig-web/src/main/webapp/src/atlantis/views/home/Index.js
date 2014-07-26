@@ -50,7 +50,7 @@ Atlantis.Views.Index = Backbone.View.extend({
                    agentUserId: $("#UserId").val(),
                    isDelegate: $("#Delegate").val() == "true" ? [] : [1]
                });
-           })
+           });
     },
     
     queryGraph: function(e) {
