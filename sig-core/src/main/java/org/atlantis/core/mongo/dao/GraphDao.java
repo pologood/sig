@@ -1,4 +1,4 @@
-package org.atlantis.core.dao;
+package org.atlantis.core.mongo.dao;
 
 import com.mongodb.BasicDBList;
 import com.mongodb.DBObject;

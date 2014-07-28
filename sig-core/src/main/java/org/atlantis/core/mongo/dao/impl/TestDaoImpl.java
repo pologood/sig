@@ -1,10 +1,11 @@
-package org.atlantis.core.dao.impl;
+package org.atlantis.core.mongo.dao.impl;
 
 import lombok.Getter;
 import lombok.Setter;
 
-import org.atlantis.core.dao.TestDao;
+
 import org.atlantis.core.dao.impl.base.MongodbTemplate;
+import org.atlantis.core.mongo.dao.TestDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

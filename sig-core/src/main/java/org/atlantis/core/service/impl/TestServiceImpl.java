@@ -1,7 +1,7 @@
 package org.atlantis.core.service.impl;
 
 
-import org.atlantis.core.dao.TestDao;
+import org.atlantis.core.mongo.dao.TestDao;
 import org.atlantis.core.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,7 +22,7 @@ public class TestServiceImpl implements TestService{
 	
 	@Override
 	public String sayHello(){
-		return "Hello, my dear friends !";
+		return "Hello, my dear friends ! ";
 	}
 	
 	@Override
