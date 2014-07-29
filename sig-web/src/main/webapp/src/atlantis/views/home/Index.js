@@ -38,10 +38,14 @@ Atlantis.Views.Index = Backbone.View.extend({
         $("#Foot").css({"border-top-width": 1});
     },
     
+    renderTreeNav: function() {
+        Atlantis.Widgets.TreeNav = new Atlantis.Views.TreeNav(1, 0, 2);
+    },
+    
     // render function
     render: function(query) {
            this.renderTopNav();
-        //   this.recoverIndexStyle();
+           this.renderTreeNav();
            
            var view = this;
            esui.init();

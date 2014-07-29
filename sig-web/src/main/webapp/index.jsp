@@ -8,7 +8,6 @@
 	<link href="assets/css/import.all.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-	<div id="Head"></div>
 	<div id="Nav"></div>
 	<div id="Main">
 		<div id="Left" class="left-show"></div>

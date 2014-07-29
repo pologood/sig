@@ -34,7 +34,7 @@ Atlantis.Views.TreeNav = Backbone.View.extend({
     
     createHTML: function(config) {
         var html = [],
-            me = this;
+         me = this;
         //title
         html.push('<div class="tab"><span></span></div>');
         //tree
