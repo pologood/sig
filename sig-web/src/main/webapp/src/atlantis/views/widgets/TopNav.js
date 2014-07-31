@@ -25,6 +25,7 @@ Atlantis.Views.TopNav = Backbone.View.extend({
     },
     
     tpl: '<a href="javascript:void(0)" hidefocus="true" index="{{index}}" tid="{{tid}}" logid="{{logid}}" class="nav{{active}}">{{name}}</a>',
+    tplu: '<a href="javascript:void(0)" hidefocus="true" index="{{index}}" tid="{{tid}}" logid="{{logid}}" class="nav u">{{name}}</a>',
     externalTpl: '<a  class="external" index="{{index}}" tid="{{tid}}" logid="{{logid}}">{{name}}</a>',
     
     createHTML: function(data) {
@@ -38,7 +39,14 @@ Atlantis.Views.TopNav = Backbone.View.extend({
                         tid: value.tid,
                         logid: value.logid
                     }));
-               } else { //内部链接
+               } else if (value.index > 30) { //外部链接
+                   html.push(Mustache.to_html(me.tplu, {
+                       index: value.index,
+                       name: value.name,
+                       tid: value.tid,
+                       logid: value.logid
+                   }));
+              } else { //内部链接
                    html.push(Mustache.to_html(me.tpl, {
                        index: value.index,
                        active: value.active,
