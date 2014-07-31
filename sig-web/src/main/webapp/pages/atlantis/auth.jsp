@@ -3,11 +3,18 @@
 <%response.setContentType("application/javascript");%>
 Atlantis.TreeNav = {};
 Atlantis.TreeNav.Stat = [
-    {name: "竞价服务", className: "pay", index: 1, tid: 22, sub: [
-        {name: "消耗统计", index: 0, tid: 2200, sub: [
-            {<authcheck:auth authid="202000002">name: "消耗总体统计", index: 0, tid: 2210, url: "#stat/consume/overview/"</authcheck:auth>},
-            {<authcheck:auth authid="202000006">name: "客户消耗统计", index: 1, tid: 2220, url: "#stat/consume/client/"</authcheck:auth>},
-            {<authcheck:auth authid="202000001">name: "实时消耗", index: 2, tid: 2230, url: "#stat/consume/realtime/"</authcheck:auth>}
+    {name: "Test服务1", className: "pay", index: 1, tid: 22, sub: [
+        {name: "Test服务11", index: 0, tid: 2200, sub: [
+            {<authcheck:auth authid="202000002">name: "Test服务111", index: 0, tid: 2210, url: "#stat/consume/overview/"</authcheck:auth>},
+            {<authcheck:auth authid="202000006">name: "Test服务112", index: 1, tid: 2220, url: "#stat/consume/client/"</authcheck:auth>},
+            {<authcheck:auth authid="202000001">name: "Test服务113", index: 2, tid: 2230, url: "#stat/consume/realtime/"</authcheck:auth>}
+        ]}
+    ]},
+        {name: "Test服务2", className: "task", index: 0, tid: 22, sub: [
+        {name: "Test服务21", index: 0, tid: 2200, sub: [
+            {<authcheck:auth authid="202000002">name: "Test服务211", index: 0, tid: 2210, url: "#stat/consume/overview/"</authcheck:auth>},
+            {<authcheck:auth authid="202000006">name: "Test服务212", index: 1, tid: 2220, url: "#stat/consume/client/"</authcheck:auth>},
+            {<authcheck:auth authid="202000001">name: "Test服务213", index: 2, tid: 2230, url: "#stat/consume/realtime/"</authcheck:auth>}
         ]}
     ]}
 ];

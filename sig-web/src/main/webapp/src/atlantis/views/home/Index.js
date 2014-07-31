@@ -39,7 +39,7 @@ Atlantis.Views.Index = Backbone.View.extend({
     },
     
     renderTreeNav: function() {
-        Atlantis.Widgets.TreeNav = new Atlantis.Views.TreeNav(1, 0, 2);
+        Atlantis.Widgets.TreeNav = new Atlantis.Views.TreeNav(1, 0, 0);
     },
     
     // render function
